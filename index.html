@@ -1269,6 +1269,21 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
   .contact{padding:40px 22px}
 }
 @media (prefers-reduced-motion: reduce){*{animation:none!important; transition:none!important}}
+
+/* celular: nada pode passar da largura da tela (evita a página "pender" para o lado no iPhone) */
+@media (max-width:860px){
+  html, body{overflow-x:hidden; overscroll-behavior-x:none}
+  @supports (overflow:clip){ html, body{overflow-x:clip} }
+  .pc-head{display:grid; min-width:0}
+  .pc-head > *{min-width:0; max-width:100%}
+  .pc-tabs{max-width:100%; overflow-x:auto; scrollbar-width:none}
+  .pc-tabs::-webkit-scrollbar{display:none}
+  .pc-sticky{right:-6% !important; width:min(150px,44%)}
+  .rb-sticky{right:-4% !important}
+  .cr, .pc-stage, .jr-stage, .aud-stage{overflow:hidden}
+  .cr-slide:not(.is-on){transform:none !important}
+  .code{max-width:100%}
+}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
