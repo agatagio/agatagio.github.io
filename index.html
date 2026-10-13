@@ -604,17 +604,17 @@ button.pv-phone{cursor:zoom-in}
 /* mockup de iPhone (v3): o elemento é a própria tela; a moldura é desenhada no ::after com espessura relativa ao aparelho (cqw),
    então fica fina e proporcional em qualquer tamanho. Barra de status com Dynamic Island acima da screenshot. */
 .pv-phone.iphone, .phone.iphone, .lb-phone.iphone{container-type:inline-size; position:relative; display:flex; flex-direction:column;
-  padding:0; border:0; background:none; border-radius:12.5cqw; box-shadow:none; --sb:#fff}
-.iphone::before{content:"9:41"; display:block; flex:none; height:10.5cqw; padding-left:10cqw; border-radius:12.5cqw 12.5cqw 0 0;
-  font:600 3.9cqw/10.5cqw -apple-system, "SF Pro Text", "Segoe UI", system-ui, sans-serif; color:#111; text-align:left;
+  padding:0; border:0; background:none; border-radius:calc(var(--u, 1cqw) * 12.5); box-shadow:none; --sb:#fff}
+.iphone::before{content:"9:41"; display:block; flex:none; height:calc(var(--u, 1cqw) * 10.5); padding-left:calc(var(--u, 1cqw) * 10); border-radius:calc(var(--u, 1cqw) * 12.5) calc(var(--u, 1cqw) * 12.5) 0 0;
+  font:600 calc(var(--u, 1cqw) * 3.9)/calc(var(--u, 1cqw) * 10.5) -apple-system, "SF Pro Text", "Segoe UI", system-ui, sans-serif; color:#111; text-align:left;
   background:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='18'%3E%3Crect width='60' height='18' rx='9' fill='%23000'/%3E%3C/svg%3E") center 62% / 31% auto no-repeat,
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='54' height='12'%3E%3Cg fill='%23111'%3E%3Crect x='0' y='7' width='3' height='5' rx='1'/%3E%3Crect x='5' y='5' width='3' height='7' rx='1'/%3E%3Crect x='10' y='3' width='3' height='9' rx='1'/%3E%3Crect x='15' y='1' width='3' height='11' rx='1'/%3E%3Crect x='34' y='3' width='13' height='6' rx='1.5'/%3E%3Crect x='52' y='4' width='1.6' height='4' rx='.8'/%3E%3C/g%3E%3Crect x='32' y='1' width='19' height='10' rx='3' fill='none' stroke='%23111' stroke-width='1.2'/%3E%3Cpath d='M21.5 5.5a8 8 0 0 1 9 0M23.5 8.2a4.5 4.5 0 0 1 5 0' fill='none' stroke='%23111' stroke-width='1.4' stroke-linecap='round'/%3E%3C/svg%3E") right 9cqw center / 15cqw auto no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='54' height='12'%3E%3Cg fill='%23111'%3E%3Crect x='0' y='7' width='3' height='5' rx='1'/%3E%3Crect x='5' y='5' width='3' height='7' rx='1'/%3E%3Crect x='10' y='3' width='3' height='9' rx='1'/%3E%3Crect x='15' y='1' width='3' height='11' rx='1'/%3E%3Crect x='34' y='3' width='13' height='6' rx='1.5'/%3E%3Crect x='52' y='4' width='1.6' height='4' rx='.8'/%3E%3C/g%3E%3Crect x='32' y='1' width='19' height='10' rx='3' fill='none' stroke='%23111' stroke-width='1.2'/%3E%3Cpath d='M21.5 5.5a8 8 0 0 1 9 0M23.5 8.2a4.5 4.5 0 0 1 5 0' fill='none' stroke='%23111' stroke-width='1.4' stroke-linecap='round'/%3E%3C/svg%3E") right calc(var(--u, 1cqw) * 9) center / calc(var(--u, 1cqw) * 15) auto no-repeat,
     var(--sb)}
 /* moldura: borda preta fina + aro de 1px + sombra suave, tudo em volta da tela */
-.iphone::after{content:""; position:absolute; inset:-3.4cqw; border:3.4cqw solid #0A0A0C; border-radius:15.9cqw; pointer-events:none;
+.iphone::after{content:""; position:absolute; inset:-calc(var(--u, 1cqw) * 3.4); border:calc(var(--u, 1cqw) * 3.4) solid #0A0A0C; border-radius:calc(var(--u, 1cqw) * 15.9); pointer-events:none;
   box-shadow:0 0 0 1px #48474F, inset 0 0 0 1px rgba(0,0,0,.6), 0 30px 50px -14px rgba(0,0,0,.65), 0 10px 20px -6px rgba(0,0,0,.35)}
-.iphone .scr{position:relative; display:block; flex:none; aspect-ratio:393/852 !important; border-radius:0 0 12.5cqw 12.5cqw !important; overflow:hidden; background:var(--sb); margin:0}
+.iphone .scr{position:relative; display:block; flex:none; aspect-ratio:393/852 !important; border-radius:0 0 calc(var(--u, 1cqw) * 12.5) calc(var(--u, 1cqw) * 12.5) !important; overflow:hidden; background:var(--sb); margin:0}
 /* a imagem cobre 1px além de cada lado para não deixar fresta escura na borda da tela */
 .iphone .scr img{position:absolute; top:0; left:-1px; width:calc(100% + 2px); height:calc(100% + 1px); max-width:none; object-fit:cover; object-position:top center !important}
 .phone.iphone.phone-back{position:absolute}
@@ -913,7 +913,7 @@ button.pv-phone{cursor:zoom-in}
 .iphone.sb-dark{--sb:#0A2B6E}
 .iphone.sb-dark::before{color:#fff; background:
   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='18'%3E%3Crect width='60' height='18' rx='9' fill='%23000'/%3E%3C/svg%3E") center 60% / 31% auto no-repeat,
-  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='54' height='12'%3E%3Cg fill='%23fff'%3E%3Crect x='0' y='7' width='3' height='5' rx='1'/%3E%3Crect x='5' y='5' width='3' height='7' rx='1'/%3E%3Crect x='10' y='3' width='3' height='9' rx='1'/%3E%3Crect x='15' y='1' width='3' height='11' rx='1'/%3E%3Crect x='34' y='3' width='13' height='6' rx='1.5'/%3E%3C/g%3E%3Crect x='32' y='1' width='19' height='10' rx='3' fill='none' stroke='%23fff' stroke-width='1.2'/%3E%3C/svg%3E") right 9cqw center / 15cqw auto no-repeat, var(--sb)}
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='54' height='12'%3E%3Cg fill='%23fff'%3E%3Crect x='0' y='7' width='3' height='5' rx='1'/%3E%3Crect x='5' y='5' width='3' height='7' rx='1'/%3E%3Crect x='10' y='3' width='3' height='9' rx='1'/%3E%3Crect x='15' y='1' width='3' height='11' rx='1'/%3E%3Crect x='34' y='3' width='13' height='6' rx='1.5'/%3E%3C/g%3E%3Crect x='32' y='1' width='19' height='10' rx='3' fill='none' stroke='%23fff' stroke-width='1.2'/%3E%3C/svg%3E") right calc(var(--u, 1cqw) * 9) center / calc(var(--u, 1cqw) * 15) auto no-repeat, var(--sb)}
 .rb-logo-tile{display:grid; place-items:center; width:min(300px,90%); padding:20px 24px; margin-top:clamp(20px,3vw,36px); border-radius:22px; background:#fff;
   box-shadow:0 0 0 1px rgba(255,255,255,.6), 0 24px 50px -20px rgba(0,0,0,.6), 0 0 50px rgba(19,81,180,.35); transition:transform .4s ease}
 .rb-logo-tile:hover{transform:translateY(-4px) rotate(-1deg)}
@@ -992,7 +992,7 @@ button.pv-phone{cursor:zoom-in}
 /* ===== CINOVA ===== */
 .cn-banner img{aspect-ratio:1916/821 !important}
 .iphone.own-sb::before{display:none}
-.iphone.own-sb .scr{aspect-ratio:440/956 !important; border-radius:12.5cqw !important}
+.iphone.own-sb .scr{aspect-ratio:440/956 !important; border-radius:calc(var(--u, 1cqw) * 12.5) !important}
 .cn .iphone .scr img{height:auto !important}
 .cn-stack-chips{display:flex; flex-wrap:wrap; gap:6px; margin-top:clamp(20px,3vw,32px)}
 .cn-stack-chips span{font:500 .74rem/1 var(--mono); padding:8px 11px; border-radius:999px; color:#FFD7C8; background:rgba(242,50,7,.12); border:1px solid rgba(242,50,7,.4)}
@@ -1284,6 +1284,30 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
   .cr-slide:not(.is-on){transform:none !important}
   .code{max-width:100%}
 }
+
+/* seção 03: telas clicáveis */
+.aud-stage .phone{cursor:pointer; -webkit-tap-highlight-color:transparent}
+.aud-stage .phone:focus-visible{outline:2px solid var(--cyan); outline-offset:6px}
+.aud-stage .phone-front:hover{filter:drop-shadow(0 0 22px rgba(201,184,255,.35))}
+.aud-hint{position:absolute; left:50%; bottom:-6px; transform:translateX(-50%); z-index:4; display:inline-flex; align-items:center; gap:8px; white-space:nowrap;
+  padding:7px 12px; border-radius:999px; font:500 .66rem/1 var(--mono); letter-spacing:.06em; color:#E4DCFF; background:rgba(20,16,36,.75);
+  border:1px solid rgba(201,184,255,.3); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); pointer-events:none}
+.aud-hint i{width:6px; height:6px; border-radius:50%; background:#FF5FA8; box-shadow:0 0 8px #FF5FA8; animation:twinkle 1.8s ease-in-out infinite}
+@media (max-width:520px){ .aud-hint{font-size:.58rem; white-space:normal; width:88%; text-align:center; justify-content:center} }
+
+/* home: seções aparecem ao rolar, depois de uma estrelinha cadente */
+.rv-on .rv{opacity:0; transform:translateY(34px); transition:opacity .9s ease, transform 1s cubic-bezier(.2,.7,.2,1)}
+.rv-on .rv.rv-in{opacity:1; transform:none}
+.rv-on .rv.rv-in .sec-head{animation:rvHead .9s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rvHead{from{opacity:0; transform:translateX(-18px)}}
+.rv-star{position:absolute; z-index:6; left:0; top:0; width:30px; height:30px; pointer-events:none; animation:rvFly 1.25s cubic-bezier(.45,.05,.4,1) forwards}
+.rv-star svg{position:absolute; inset:0; width:100%; height:100%; filter:drop-shadow(0 0 8px #fff) drop-shadow(0 0 18px #C9B8FF); animation:spin 1.2s linear infinite}
+.rv-tail{position:absolute; right:50%; top:50%; width:180px; height:3px; margin-top:-1.5px; border-radius:3px; transform-origin:right center; transform:rotate(-10deg);
+  background:linear-gradient(90deg, transparent, rgba(255,155,214,.35) 40%, rgba(201,184,255,.9) 85%, #fff)}
+.rv-star b{position:absolute; width:4px; height:4px; border-radius:50%; background:#fff; box-shadow:0 0 6px #FF9BD6; opacity:0; animation:rvDust 1.2s ease-out forwards}
+.rv-star b:nth-of-type(1){left:-20px; top:20px; animation-delay:.25s} .rv-star b:nth-of-type(2){left:-46px; top:8px; animation-delay:.45s; background:#8FD8FF} .rv-star b:nth-of-type(3){left:-70px; top:26px; animation-delay:.65s}
+@keyframes rvFly{0%{transform:translate(-8vw, -10px) scale(.6); opacity:0} 12%{opacity:1} 80%{opacity:1} 100%{transform:translate(min(100vw, 1180px), 70px) scale(1); opacity:0}}
+@keyframes rvDust{0%{opacity:0; transform:scale(.4)} 30%{opacity:1} 100%{opacity:0; transform:translateY(16px) scale(.2)}}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -2780,7 +2804,9 @@ document.querySelectorAll('.jr-stepper').forEach(function(root){
   var holder = document.getElementById('lb-phone'), cap = document.getElementById('lb-cap');
   var prev = lb.querySelector('.lb-prev'), next = lb.querySelector('.lb-next'), list = [], i = 0, opener = null;
   function show(){
+    holder.className = 'lb-phone iphone' + ['own-sb', 'sb-dark', 'sb-gray'].filter(function(c){ return list[i].classList.contains(c); }).map(function(c){ return ' ' + c; }).join('');
     holder.innerHTML = ''; holder.appendChild(list[i].querySelector('.scr').cloneNode(true));
+    if(window.__scanPhones) requestAnimationFrame(window.__scanPhones);
     var img = holder.querySelector('img'); if(img) img.loading = 'eager';
     cap.textContent = list[i].dataset.name + '  ·  ' + (i + 1) + ' / ' + list.length;
     prev.disabled = i === 0; next.disabled = i === list.length - 1;
@@ -2790,6 +2816,7 @@ document.querySelectorAll('.jr-stepper').forEach(function(root){
     i = list.indexOf(btn); opener = btn; lb.hidden = false; document.body.style.overflow = 'hidden'; show(); next.focus();
   }
   function close(){ lb.hidden = true; document.body.style.overflow = ''; if(opener) opener.focus(); }
+  window.__lbOpen = function(nodes, idx){ list = nodes; i = idx || 0; opener = nodes[i]; lb.hidden = false; document.body.style.overflow = 'hidden'; show(); next.focus(); };
   document.querySelectorAll('.jr-panel button.pv-phone, [data-lb] button.pv-phone').forEach(function(b){ b.addEventListener('click', function(){ open(b); }); });
   lb.querySelectorAll('[data-close]').forEach(function(el){ el.addEventListener('click', close); });
   prev.addEventListener('click', function(){ if(i > 0){ i--; show(); } });
@@ -2909,7 +2936,7 @@ document.querySelectorAll('.cr').forEach(function(root){
     ['.card, .ax-card, .sk, .ch-card', 440, 0.16],
     ['.cr-arrow, .sl-arrow, .lb-btn', 880, 0.09],
     ['.pc-tab, .jr-step, .cr-dots button, .cr-group, .index a:not([href="#sobre"]), .back-link', 740, 0.08],
-    ['.pr, .evo-final, .pv-phone, .symbol-wrap, .me-orbit, .tt-feats li, .hub-node, .arch-node, .gh-btn, .kpi', 520, 0.14]
+    ['.pr, .evo-final, .pv-phone, .aud-stage .phone, .symbol-wrap, .me-orbit, .tt-feats li, .hub-node, .arch-node, .gh-btn, .kpi', 520, 0.14]
   ];
   groups.forEach(function(gp){ document.querySelectorAll(gp[0]).forEach(function(el){ el.addEventListener('mouseenter', function(){ tone(gp[1], gp[2]); }); }); });
   function sparkle(){
@@ -2923,6 +2950,23 @@ document.querySelectorAll('.cr').forEach(function(root){
     });
   }
   document.querySelectorAll('#scroll-hint, .index a[href="#sobre"]').forEach(function(el){ el.addEventListener('mouseenter', sparkle); });
+  function swoosh(){
+    if(!on || !unlocked || !ctx) return; var now = ctx.currentTime, o = ctx.createOscillator(), g = ctx.createGain();
+    o.type = 'triangle'; o.frequency.setValueAtTime(320, now); o.frequency.exponentialRampToValueAtTime(880, now + .32);
+    g.gain.setValueAtTime(.0001, now); g.gain.exponentialRampToValueAtTime(.03, now + .05); g.gain.exponentialRampToValueAtTime(.0001, now + .4);
+    o.connect(g).connect(ctx.destination); o.start(now); o.stop(now + .45);
+    setTimeout(function(){ tone(1320, .18, 'sine', .02); }, 300);
+  }
+  function chime(){
+    if(!on || !unlocked || !ctx) return; var now = ctx.currentTime;
+    [2637, 1976, 3136, 3951].forEach(function(f, n){
+      var t = now + n * .07, o = ctx.createOscillator(), g = ctx.createGain();
+      o.type = 'sine'; o.frequency.setValueAtTime(f, t); o.frequency.exponentialRampToValueAtTime(f * .985, t + .5);
+      g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(.014, t + .01); g.gain.exponentialRampToValueAtTime(.0001, t + .6);
+      o.connect(g).connect(ctx.destination); o.start(t); o.stop(t + .65);
+    });
+  }
+  window.__sfx = { sparkle: sparkle, swoosh: swoosh, chime: chime };
   document.addEventListener('click', function(e){ var first = !unlocked; unlock(); if(first && ctx && on) tone(600, 0.1); }, true);
   document.addEventListener('keydown', unlock, true);
   btn.addEventListener('click', function(e){ e.stopPropagation(); unlock(); on = !on; try { localStorage.setItem('sfx', on ? 'on' : 'off'); } catch(err){} ui(); if(on) { last = 0; tone(780, 0.14); } });
@@ -2953,6 +2997,84 @@ document.querySelectorAll('.cr').forEach(function(root){
     nodes.forEach(function(m, j){ m.classList.toggle('is-on', j === i); m.setAttribute('aria-selected', j === i ? 'true' : 'false'); });
     panels.forEach(function(p, j){ p.classList.toggle('is-on', j === i); });
   }); });
+})();
+
+// molduras de iPhone: --u = 1% da largura do aparelho, em px (o Safari às vezes erra a unidade cqw em painéis escondidos)
+(function(){
+  function set(el){ var w = el.offsetWidth; if(w) el.style.setProperty('--u', (w / 100) + 'px'); }
+  var ro = window.ResizeObserver ? new ResizeObserver(function(es){ es.forEach(function(e){ set(e.target); }); }) : null;
+  function scan(){ document.querySelectorAll('.iphone').forEach(function(el){ set(el); if(ro && !el.__ro){ el.__ro = 1; ro.observe(el); } }); }
+  scan(); addEventListener('load', scan); addEventListener('hashchange', function(){ requestAnimationFrame(scan); });
+  document.addEventListener('click', function(e){ if(e.target.closest('.jr-step, .pv-phone, .phone')) requestAnimationFrame(scan); }, true);
+  window.__scanPhones = scan;
+})();
+
+// público-alvo (seção 03): toque na tela de trás = trocam de lugar; toque na da frente = amplia
+document.querySelectorAll('.aud-stage').forEach(function(stage){
+  var phones = [].slice.call(stage.querySelectorAll('.phone')); if(phones.length < 2) return;
+  phones.forEach(function(p){
+    var im = p.querySelector('img');
+    if(!p.dataset.name) p.dataset.name = im ? im.alt.split(/[:,]/)[0].replace(/^Tela /, '').slice(0, 40) : 'Tela';
+    p.tabIndex = 0; p.setAttribute('role', 'button');
+  });
+  var hint = document.createElement('span'); hint.className = 'aud-hint';
+  hint.innerHTML = '<i></i>Toque na tela de trás para trocar · na da frente para ampliar'; stage.appendChild(hint);
+  var busy = false, still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function front(){ return stage.querySelector('.phone-front'); }
+  function back(){ return stage.querySelector('.phone-back'); }
+  function label(){ var f = front(), b = back(); f.setAttribute('aria-label', 'Ampliar: ' + f.dataset.name); b.setAttribute('aria-label', 'Trazer para frente: ' + b.dataset.name); }
+  function swap(){
+    if(busy) return; busy = true;
+    var f = front(), b = back(), BT = getComputedStyle(b).transform;
+    if(BT === 'none') BT = 'translate(46%, -6%) rotate(8deg) scale(.86)';
+    if(window.__sfx) window.__sfx.swoosh();
+    var finished = false;
+    function done(){
+      if(finished) return; finished = true;
+      f.classList.replace('phone-front', 'phone-back'); b.classList.replace('phone-back', 'phone-front');
+      [f, b].forEach(function(p){ p.style.zIndex = ''; p.style.animation = ''; p.getAnimations && p.getAnimations().forEach(function(a){ if(a.id === 'swap') a.cancel(); }); });
+      label(); busy = false;
+    }
+    if(still || !b.animate){ done(); return; }
+    var D = 760, ease = 'cubic-bezier(.3,.7,.15,1)';
+    f.style.animation = 'none'; f.style.zIndex = 3; b.style.zIndex = 2;
+    var a1 = b.animate([
+      { transform: BT, opacity: .5, filter: 'saturate(.8)' },
+      { transform: 'translate(64%, -2%) rotate(6deg) scale(.95)', opacity: .9, filter: 'saturate(1)', offset: .45 },
+      { transform: 'none', opacity: 1, filter: 'none' }], { duration: D, easing: ease, fill: 'forwards', id: 'swap' });
+    f.animate([
+      { transform: 'none', opacity: 1, filter: 'none' },
+      { transform: 'translate(-40%, 3%) rotate(-7deg) scale(.94)', opacity: .95, offset: .45 },
+      { transform: BT, opacity: .5, filter: 'saturate(.8)' }], { duration: D, easing: ease, fill: 'forwards', id: 'swap' });
+    setTimeout(function(){ f.style.zIndex = 1; b.style.zIndex = 3; }, D * .45);
+    a1.onfinish = done; setTimeout(done, D + 60);
+  }
+  stage.addEventListener('click', function(e){
+    var p = e.target.closest('.phone'); if(!p || busy) return;
+    if(p.classList.contains('phone-back')) swap();
+    else if(window.__lbOpen) window.__lbOpen([front(), back()], 0);
+  });
+  stage.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ var p = e.target.closest('.phone'); if(p){ e.preventDefault(); p.click(); } } });
+  label();
+});
+
+// home: cada seção aparece ao rolar, com uma estrelinha cadente passando antes
+(function(){
+  var secs = ['projetos', 'processo', 'sobre', 'contato'].map(function(id){ return document.getElementById(id); }).filter(Boolean);
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches || !window.IntersectionObserver) return;
+  document.documentElement.classList.add('rv-on');
+  secs.forEach(function(s){ s.classList.add('rv'); });
+  function show(sec){
+    var star = document.createElement('span'); star.className = 'rv-star'; star.setAttribute('aria-hidden', 'true');
+    star.innerHTML = '<i class="rv-tail"></i><svg viewBox="0 0 100 100"><use href="#star4"/></svg><b></b><b></b><b></b>';
+    sec.appendChild(star);
+    if(window.__sfx) window.__sfx.chime();
+    setTimeout(function(){ sec.classList.add('rv-in'); }, 260);
+    setTimeout(function(){ star.remove(); }, 1700);
+  }
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ io.unobserve(e.target); show(e.target); } }); }, { rootMargin: '0px 0px -12% 0px', threshold: .08 });
+  secs.forEach(function(s){ io.observe(s); });
+  setTimeout(function(){ secs.forEach(function(s){ if(!s.classList.contains('rv-in') && s.getBoundingClientRect().top < innerHeight){ io.unobserve(s); show(s); } }); }, 2500);
 })();
 
 // slide de imagens dos projetos: troca a cada 3,5s, pausa com o mouse em cima
