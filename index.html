@@ -1520,14 +1520,14 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
         <div class="mo-photo"><img src="agata-sm.jpg" width="640" height="853" fetchpriority="high" alt="Foto de Ágata Giovanna, de cabelos cacheados, em um quarto com luzes de LED vermelhas ao fundo"></div>
         <span class="mo-sticker s1">UX/UI</span>
         <span class="mo-sticker s2">CIn · UFPE</span>
-        <span class="mo-sticker s3">20 anos</span>
+        <span class="mo-sticker s3">Dev Front-end</span>
         <svg class="spark mo-sp1" viewBox="0 0 100 100" aria-hidden="true"><use href="#star4"/></svg>
         <svg class="spark mo-sp2" viewBox="0 0 100 100" aria-hidden="true"><use href="#star4"/></svg>
       </figure>
       <div class="about-copy2">
-        <p class="lead2">Acho que meu interesse por UX/UI e por desenvolvimento começou muito antes de eu saber o que essas letras significavam. Quando criança, eu me perguntava por que uma máquina de caixa eletrônico precisava de tantos botões para realizar uma tarefa tão simples. Hoje, continuo fazendo perguntas parecidas, mas, em vez de apenas tentar entender interfaces complicadas, busco criar experiências tão intuitivas que ninguém precise se perguntar onde clicar.</p>
-        <p>Sou <strong>Ágata Giovanna</strong>, tenho 20 anos e curso o 5º período de Sistemas de Informação no Centro de Informática (CIn) da UFPE. Minha trajetória também passou pelo Instituto Federal de Pernambuco (IFPE), onde ampliei meu contato com a criatividade e o design.</p>
-        <p>Hoje, encontro no UX/UI e no desenvolvimento web front-end a união entre tecnologia, criatividade e resolução de problemas: desenho a experiência e também sei levá-la para o código. Meu objetivo é transformar necessidades reais em experiências digitais acessíveis, funcionais e que façam sentido para as pessoas.</p>
+        <p class="lead2">Acho que meu interesse por UX/UI e por desenvolvimento começou bem antes de eu saber o que essas letras queriam dizer. Quando criança, eu me pegava pensando por que o caixa eletrônico precisava de tantos botões para fazer uma coisa tão simples. Continuo fazendo esse tipo de pergunta até hoje. A diferença é que agora, em vez de só tentar decifrar interfaces complicadas, eu crio experiências em que ninguém precise se perguntar onde clicar.</p>
+        <p>Prazer, sou a <strong>Ágata Giovanna</strong>! Tenho 20 anos e estou no 5º período de Sistemas de Informação no Centro de Informática (CIn) da UFPE. Antes disso, passei pelo Instituto Federal de Pernambuco (IFPE), e foi lá que a criatividade e o design ganharam um espaço de verdade na minha vida.</p>
+        <p>Hoje, é no UX/UI e no desenvolvimento front-end que tecnologia, criatividade e vontade de resolver problemas se encontram para mim: eu desenho a experiência e gosto de colocar a mão no código para ela sair do papel. O que me move é transformar necessidades reais em produtos acessíveis, que funcionem bem e façam sentido para quem usa.</p>
       </div>
     </div>
 
@@ -2958,13 +2958,29 @@ document.querySelectorAll('.cr').forEach(function(root){
     setTimeout(function(){ tone(1320, .18, 'sine', .02); }, 300);
   }
   function chime(){
-    if(!on || !unlocked || !ctx) return; var now = ctx.currentTime;
-    [2637, 1976, 3136, 3951].forEach(function(f, n){
-      var t = now + n * .07, o = ctx.createOscillator(), g = ctx.createGain();
-      o.type = 'sine'; o.frequency.setValueAtTime(f, t); o.frequency.exponentialRampToValueAtTime(f * .985, t + .5);
-      g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(.014, t + .01); g.gain.exponentialRampToValueAtTime(.0001, t + .6);
-      o.connect(g).connect(ctx.destination); o.start(t); o.stop(t + .65);
+    if(!on || !unlocked || !ctx) return;
+    var now = ctx.currentTime;
+    // saída com filtro (tira o áspero da onda quadrada) e um eco curto, como reverb de videogame
+    var out = ctx.createGain(); out.gain.value = .9;
+    var lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 4200; lp.Q.value = .3;
+    var dl = ctx.createDelay(); dl.delayTime.value = .12;
+    var fb = ctx.createGain(); fb.gain.value = .26;
+    var wet = ctx.createGain(); wet.gain.value = .32;
+    lp.connect(out); lp.connect(dl); dl.connect(fb); fb.connect(dl); dl.connect(wet); wet.connect(out); out.connect(ctx.destination);
+    function note(f, t, d, type, v){
+      var o = ctx.createOscillator(), g = ctx.createGain();
+      o.type = type; o.frequency.setValueAtTime(f, t);
+      g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(v, t + .008); g.gain.exponentialRampToValueAtTime(.0001, t + d);
+      o.connect(g); g.connect(lp); o.start(t); o.stop(t + d + .05);
+    }
+    note(1318.5, now, .08, 'square', .009);          // "pl-"
+    note(1975.5, now + .07, .26, 'square', .008);    // "-im" (moeda retrô)
+    [2637, 3136, 3951, 5274].forEach(function(f, n){  // brilho cristalino subindo
+      var t = now + .17 + n * .055;
+      note(f, t, .5, 'sine', .011);
+      note(f * 2, t, .22, 'triangle', .0025);
     });
+    setTimeout(function(){ try { out.disconnect(); dl.disconnect(); fb.disconnect(); } catch(e){} }, 2600);
   }
   window.__sfx = { sparkle: sparkle, swoosh: swoosh, chime: chime };
   document.addEventListener('click', function(e){ var first = !unlocked; unlock(); if(first && ctx && on) tone(600, 0.1); }, true);
@@ -3068,7 +3084,7 @@ document.querySelectorAll('.aud-stage').forEach(function(stage){
     var star = document.createElement('span'); star.className = 'rv-star'; star.setAttribute('aria-hidden', 'true');
     star.innerHTML = '<i class="rv-tail"></i><svg viewBox="0 0 100 100"><use href="#star4"/></svg><b></b><b></b><b></b>';
     sec.appendChild(star);
-    if(window.__sfx) window.__sfx.chime();
+    if(window.__sfx) setTimeout(window.__sfx.chime, 130);
     setTimeout(function(){ sec.classList.add('rv-in'); }, 260);
     setTimeout(function(){ star.remove(); }, 1700);
   }
