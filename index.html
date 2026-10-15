@@ -1270,6 +1270,177 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
   .process,.about-text{padding:22px}
   .contact{padding:40px 22px}
 }
+
+/* ===== CIntegre+ ===== */
+.ci{--ci:#0F57BF; --ci-l:#D1E4FF; --ci-s:#9FC6FF}
+.sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0}
+.card.feature.rev .thumb{order:2} .card.feature.rev .info{padding:24px 8px 24px 26px}
+.ci-card .tags span{border-color:rgba(159,198,255,.45)}
+.card:focus-visible{outline:3px solid #C9B8FF; outline-offset:4px}
+.ci-banner{margin-top:8px} .ci-banner img{aspect-ratio:2172/724 !important}
+.ci-head{display:grid; grid-template-columns:auto minmax(0,1fr); gap:clamp(18px,3vw,40px) clamp(20px,4vw,48px); align-items:center; padding-block:clamp(28px,4vw,48px) 0}
+.ci-head .case-title{padding:0}
+.ci-logo{width:clamp(96px,11vw,150px); aspect-ratio:1; border-radius:28%; background:#fff; display:grid; place-items:center;
+  box-shadow:0 20px 50px rgba(15,87,191,.4), 0 0 0 1px rgba(159,198,255,.6), 0 0 0 8px rgba(159,198,255,.08)}
+.ci-logo img{width:74%; height:auto}
+.ci-introbox{grid-column:1 / -1; display:grid; gap:20px}
+.ci-intro{font-size:clamp(1.02rem,1.3vw,1.14rem); line-height:1.75; color:#CFCBE0; max-width:70ch}
+.ci-links{display:flex; flex-wrap:wrap; gap:12px}
+.ci-btn{display:inline-flex; align-items:center; gap:10px; padding:15px 24px; border-radius:999px; font:600 .98rem/1 var(--body); text-decoration:none; transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease}
+.ci-btn.pri{background:#0F57BF; color:#fff; box-shadow:0 10px 30px rgba(15,87,191,.45), inset 0 0 0 1px rgba(255,255,255,.25)}
+.ci-btn.pri:hover{transform:translateY(-2px); background:#1366D9; box-shadow:0 14px 40px rgba(15,87,191,.65), inset 0 0 0 1px rgba(255,255,255,.4)}
+.ci-btn.sec{color:#D1E4FF; background:rgba(15,87,191,.12); box-shadow:inset 0 0 0 1px rgba(159,198,255,.55)}
+.ci-btn.sec:hover{transform:translateY(-2px); color:#fff; background:rgba(15,87,191,.3)}
+.ci-btn:focus-visible, .bw:focus-visible, .ci-tab:focus-visible, .ci-gh:focus-visible{outline:3px solid #9FC6FF; outline-offset:3px}
+.ci-facts{grid-template-columns:repeat(4,minmax(0,1fr)) !important; margin-top:6px !important}
+.ci-facts dt{color:#9FC6FF !important}
+.ci-sec{display:grid; gap:16px}
+.ci-sec h2, .ci-prob h2, .ci-game h2, .ci .cr-top h2{font:600 clamp(1.9rem,4.2vw,3.2rem)/1.1 var(--display); letter-spacing:-.03em; color:#F4F2FB; max-width:22ch}
+.ci b{color:#F4F2FB}
+/* moldura de navegador */
+.bw{position:relative; display:block; width:100%; padding:0; border:0; margin:0; cursor:zoom-in; text-align:left; font:inherit; color:inherit; border-radius:12px; overflow:hidden; background:#fff;
+  box-shadow:0 24px 60px -20px rgba(4,16,48,.7), 0 0 0 1px rgba(159,198,255,.35); transition:transform .35s ease, box-shadow .35s ease}
+.bw:hover{transform:translateY(-4px); box-shadow:0 34px 70px -20px rgba(15,87,191,.65), 0 0 0 1px rgba(159,198,255,.8)}
+.bw-bar{display:flex; align-items:center; gap:5px; height:24px; padding:0 10px; background:#EAF2FF; border-bottom:1px solid #D1E4FF}
+.bw-bar i{width:8px; height:8px; flex:none; border-radius:50%; background:#FF6159} .bw-bar i:nth-child(2){background:#FFBD2E} .bw-bar i:nth-child(3){background:#28C941}
+.bw-url{margin-left:8px; flex:1; min-width:0; max-width:260px; height:14px; border-radius:7px; background:#fff; font:500 .55rem/14px var(--mono); color:#4A5A75; padding:0 8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.bw-scr{display:block; background:#fff}
+.bw-scr img{display:block; width:100%; height:auto}
+.bw.crop .bw-scr{aspect-ratio:1440/1080; overflow:hidden} .bw.crop .bw-scr img{height:100%; object-fit:cover; object-position:top}
+.bw-zoom{position:absolute; right:10px; bottom:10px; padding:7px 11px; border-radius:999px; font:600 .62rem/1 var(--mono); letter-spacing:.08em; text-transform:uppercase; color:#fff; background:rgba(15,87,191,.94); box-shadow:0 6px 18px rgba(0,0,0,.25); opacity:0; transform:translateY(6px); transition:opacity .3s ease, transform .3s ease}
+.bw:hover .bw-zoom, .bw:focus-visible .bw-zoom{opacity:1; transform:none}
+@media (hover:none){ .bw-zoom{opacity:1; transform:none} }
+/* 01 problema */
+.ci-prob{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,.9fr); gap:clamp(28px,5vw,72px); align-items:center}
+.ci-prob-text{display:grid; gap:18px}
+.ci-prob-text > p{color:#CFCBE0; line-height:1.75; max-width:58ch}
+.ci-goals{list-style:none; margin:4px 0 0; padding:0; display:grid; gap:10px}
+.ci-goals li{display:flex; gap:14px; align-items:flex-start; padding:14px 16px; border-radius:16px; background:rgba(15,87,191,.08); border:1px solid rgba(159,198,255,.18); transition:border-color .3s ease, background .3s ease}
+.ci-goals li:hover{border-color:rgba(159,198,255,.5); background:rgba(15,87,191,.16)}
+.ci-gi{flex:none; width:38px; height:38px; border-radius:12px; display:grid; place-items:center; background:#0F57BF; box-shadow:0 6px 18px rgba(15,87,191,.45)}
+.ci-gi svg{width:20px; height:20px; fill:none; stroke:#fff; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round}
+.ci-goals b{display:block; font:600 1rem/1.3 var(--display)} .ci-goals small{display:block; margin-top:3px; color:var(--muted); font-size:.88rem; line-height:1.5}
+.ci-panel{padding:clamp(14px,2.4vw,26px); border-radius:26px; background:linear-gradient(140deg,#D1E4FF,#9FC6FF); box-shadow:0 30px 70px -30px rgba(15,87,191,.7); display:grid; gap:12px}
+.ci-panel-cap{font:500 .8rem/1.5 var(--body); color:#0B2A5C} .ci-panel-cap b{color:#0F57BF}
+/* 02 fluxos */
+.ci-tabs{justify-self:start; display:inline-flex; gap:4px; padding:5px; border-radius:999px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.12)}
+.ci-tab{padding:12px 24px; border-radius:999px; border:0; background:none; color:#CFCBE0; font:600 .95rem/1 var(--body); cursor:pointer; transition:background .3s ease, color .3s ease, box-shadow .3s ease}
+.ci-tab:hover{color:#fff; background:rgba(255,255,255,.06)}
+.ci-tab[aria-selected="true"]{background:#0F57BF; color:#fff; box-shadow:0 8px 24px rgba(15,87,191,.5)}
+.ci-flow{list-style:none; margin:6px 0 0; padding:0; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:22px; animation:ciIn .45s ease both}
+.ci-flow[hidden]{display:none}
+@keyframes ciIn{from{opacity:0; transform:translateY(10px)}}
+.ci-step{position:relative; display:grid; gap:12px; align-content:start; padding:16px; border-radius:20px; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.09)}
+.ci-step:not(:last-child)::after{content:""; position:absolute; z-index:2; right:-17px; top:118px; width:12px; height:12px; border-top:2px solid #9FC6FF; border-right:2px solid #9FC6FF; transform:rotate(45deg)}
+.ci-step h3{font:600 1.05rem/1.25 var(--display); color:#F4F2FB}
+.ci-step p{font-size:.88rem; line-height:1.55; color:var(--muted)}
+.ci-n{font:600 .72rem/1 var(--mono); letter-spacing:.14em; color:#9FC6FF}
+.ci-mini{margin:0; display:grid; place-items:center; aspect-ratio:1440/1104; border-radius:12px; background:linear-gradient(140deg,#D1E4FF,#9FC6FF); padding:10px}
+.ci-mini img{width:100%; height:auto; border-radius:6px; box-shadow:0 10px 24px rgba(15,87,191,.3)}
+.ci-st{display:flex; flex-wrap:wrap; gap:6px; margin-top:auto}
+.ci-st span, .ci-elems em{font:500 .62rem/1 var(--mono); font-style:normal; letter-spacing:.06em; padding:6px 9px; border-radius:999px; white-space:nowrap}
+.ci-st .fig, .ci-elems .fig{color:#D1E4FF; background:rgba(159,198,255,.12); border:1px solid rgba(159,198,255,.45)}
+.ci-st .cod, .ci-elems .cod{color:#B9FFE0; background:rgba(125,223,176,.12); border:1px solid rgba(125,223,176,.45)}
+.ci-st .no{color:#FFD08A; background:rgba(255,208,138,.1); border:1px solid rgba(255,208,138,.4)}
+/* 03 galeria */
+.ci-gal{display:grid; gap:clamp(36px,5vw,64px); margin-top:8px}
+.ci-row{display:grid; gap:clamp(20px,3.5vw,44px); align-items:center}
+.ci-row.big{grid-template-columns:minmax(0,1.65fr) minmax(0,.75fr)}
+.ci-row.big.flip{grid-template-columns:minmax(0,.75fr) minmax(0,1.65fr)} .ci-row.big.flip > .ci-cap{order:-1}
+.ci-row.pair{grid-template-columns:repeat(2,minmax(0,1fr)); align-items:start}
+.ci-fig{position:relative; margin:0; display:grid; gap:16px}
+.ci-cap{display:grid; gap:8px; align-content:start}
+.ci-cap h3{font:600 clamp(1.15rem,1.8vw,1.45rem)/1.2 var(--display); color:#F4F2FB}
+.ci-cap p{color:var(--muted); font-size:.95rem; line-height:1.6; max-width:46ch}
+.ci-cap .cr-idx{color:#9FC6FF}
+.ci-zoom{position:absolute; right:-4%; top:22%; width:42%; padding:12px; border-radius:16px; background:linear-gradient(140deg,#D1E4FF,#9FC6FF); box-shadow:0 24px 50px rgba(0,0,0,.45); pointer-events:none; animation:ciFloat 5s ease-in-out infinite}
+.ci-zoom img{display:block; width:100%; height:auto; border-radius:8px}
+.ci-zoom-tag{position:absolute; top:-11px; left:14px; padding:5px 9px; border-radius:999px; font:600 .58rem/1 var(--mono); letter-spacing:.1em; text-transform:uppercase; color:#fff; background:#0F57BF}
+@keyframes ciFloat{50%{transform:translateY(-6px)}}
+/* 04 gamificação */
+.ci-game{display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:clamp(28px,5vw,64px); align-items:center}
+.ci-game-text{display:grid; gap:18px}
+.ci-game-text > p{color:#CFCBE0; line-height:1.75}
+.ci-elems{list-style:none; margin:0; padding:0; display:grid; gap:0}
+.ci-elems li{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:2px 12px; align-items:center; padding-block:12px; border-top:1px solid rgba(255,255,255,.08)}
+.ci-elems b{font:600 .98rem/1.3 var(--display)} .ci-elems span{grid-column:1; color:var(--muted); font-size:.86rem} .ci-elems em{grid-row:1 / 3; grid-column:2}
+.ci-rule{display:grid; gap:10px; padding:18px; border-radius:18px; background:rgba(15,87,191,.1); border:1px solid rgba(159,198,255,.3)}
+.ci-rule p{color:#CFCBE0; line-height:1.6; font-size:.95rem}
+.ci-rule .code code{font-size:.74rem}
+.ci-game-vis{position:relative; display:grid; gap:14px; padding:clamp(16px,2.6vw,28px); padding-top:clamp(34px,4vw,44px); border-radius:28px; background:linear-gradient(150deg,#D1E4FF,#9FC6FF); box-shadow:0 30px 70px -30px rgba(15,87,191,.7)}
+.ci-shot{display:block; max-width:100%; height:auto; border-radius:12px; background:#fff; box-shadow:0 14px 34px -12px rgba(15,87,191,.45)}
+.ci-pts{position:absolute; top:-20px; right:clamp(10px,3vw,28px); width:min(46%,240px); height:auto; border-radius:999px; background:#fff; box-shadow:0 14px 34px rgba(15,87,191,.45), 0 0 0 3px #fff; animation:ciFloat 4.5s ease-in-out infinite}
+/* 05 identidade */
+.ci .cr-dots button.is-on::before{background:linear-gradient(90deg,#0F57BF,#9FC6FF)}
+.ci .cr-arrow:hover, .ci .cr-arrow:focus-visible{background:#0F57BF; box-shadow:0 0 0 4px rgba(159,198,255,.35), 0 10px 30px rgba(15,87,191,.55)}
+.ci .cr-stage{min-height:0; display:grid; align-content:center}
+.ci-sw{grid-template-columns:repeat(5,minmax(0,1fr)); gap:12px; align-items:start}
+.ci-sw div{display:grid; gap:8px}
+.ci-sw i{display:block; aspect-ratio:1/1.25; border-radius:16px; background:var(--c); box-shadow:inset 0 0 0 1px rgba(255,255,255,.25), 0 14px 30px -14px rgba(0,0,0,.6); transition:transform .3s ease}
+.ci-sw div:hover i{transform:translateY(-4px)}
+.ci-sw b{font:600 .78rem/1 var(--mono)} .ci-sw small{font-size:.76rem; color:var(--muted)}
+.ci-grad{grid-column:1 / -1; height:46px; border-radius:14px; background:linear-gradient(90deg,#D1E4FF,#9FC6FF); position:relative}
+.ci-grad::after{content:"Degradê #D1E4FF → #9FC6FF"; position:absolute; left:14px; top:50%; transform:translateY(-50%); font:600 .7rem/1 var(--mono); color:#0B2A5C}
+.ci-stack{gap:14px; justify-items:center; padding:clamp(14px,2vw,22px); border-radius:22px; background:linear-gradient(150deg,#D1E4FF,#9FC6FF)}
+.ci-stack > .ci-shot{max-height:340px; width:auto}
+.ci-two{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; width:100%} .ci-two .ci-shot{width:100%}
+/* 06 implementação */
+.ci-arch{position:relative; display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr); align-items:center; gap:12px; margin-top:14px; padding:clamp(28px,3.5vw,40px) clamp(16px,3vw,32px) clamp(20px,3vw,32px); border-radius:28px;
+  border:1.5px dashed rgba(159,198,255,.45); background:radial-gradient(70% 90% at 50% 50%, rgba(15,87,191,.18), transparent 70%)}
+.ci-arch-tag{position:absolute; top:-13px; left:24px; padding:6px 12px; border-radius:999px; font:600 .64rem/1 var(--mono); letter-spacing:.08em; color:#fff; background:#0F57BF}
+.ci-node{display:grid; gap:6px; justify-items:center; text-align:center; padding:20px 14px; border-radius:18px; background:rgba(10,20,50,.6); border:1px solid rgba(159,198,255,.45); transition:transform .3s ease, box-shadow .3s ease}
+.ci-node:hover{transform:translateY(-4px); box-shadow:0 0 34px rgba(15,87,191,.55)}
+.ci-node svg{width:30px; height:30px; fill:none; stroke:#9FC6FF; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round}
+.ci-node b{font:600 1.05rem/1.2 var(--display)} .ci-node small{font:400 .72rem/1.3 var(--mono); color:var(--muted)}
+.ci-link{display:grid; justify-items:center; gap:8px}
+.ci-link i{position:relative; display:block; width:clamp(50px,6vw,84px); height:2px; background:linear-gradient(90deg,rgba(159,198,255,.15),#9FC6FF); overflow:visible}
+.ci-link i::after{content:""; position:absolute; top:-3px; left:0; width:8px; height:8px; border-radius:50%; background:#fff; box-shadow:0 0 10px #9FC6FF, 0 0 18px #0F57BF; animation:ciPacket 1.8s ease-in-out infinite}
+@keyframes ciPacket{0%{left:0; opacity:0} 15%,85%{opacity:1} 100%{left:calc(100% - 8px); opacity:0}}
+.ci-link span{font:400 .6rem/1 var(--mono); letter-spacing:.06em; color:var(--dim); white-space:nowrap}
+.ci-tech{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:12px; margin-top:10px}
+.ci-tech article{display:grid; gap:8px; align-content:start; padding:18px 16px; border-radius:18px; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.09); border-top:3px solid #0F57BF; transition:transform .3s ease, border-color .3s ease}
+.ci-tech article:hover{transform:translateY(-4px); border-color:rgba(159,198,255,.45); border-top-color:#9FC6FF}
+.ci-tech b{font:600 1.1rem/1.1 var(--display)} .ci-tech span{font:500 .62rem/1 var(--mono); letter-spacing:.12em; text-transform:uppercase; color:#9FC6FF}
+.ci-tech p{color:var(--muted); font-size:.86rem; line-height:1.55}
+/* 07 equipe e 08 encerramento */
+.ci-team{grid-template-columns:repeat(7,minmax(0,1fr)) !important}
+.ci .mate.me{border-color:rgba(159,198,255,.6); background:rgba(15,87,191,.14); box-shadow:0 0 30px rgba(15,87,191,.3)}
+.ci .mate.me .av{background:linear-gradient(135deg,#0F57BF,#9FC6FF)}
+.ci-final-logo .fl-tile img{width:62%}
+.ci-gh{background-image:linear-gradient(rgba(20,16,36,.92),rgba(20,16,36,.92)), linear-gradient(120deg,#0F57BF,#9FC6FF,#2BB3BF) !important}
+.ci-gh:hover{box-shadow:0 0 30px rgba(15,87,191,.6) !important}
+/* visualizador: telas web longas rolam dentro do modal */
+.plb.scroll{place-items:start center; overflow-y:auto; overscroll-behavior:contain}
+.plb.scroll .plb-back{position:fixed}
+.plb.scroll .plb-close{position:fixed; z-index:2}
+.plb.scroll .plb-fig img{width:min(94vw,1240px); max-width:none; max-height:none; padding:0; border-radius:10px; background:#fff}
+/* no celular a tela web abre maior que a viewport, para dar para ler; arrasta para os lados e para baixo */
+@media (max-width:700px){ .plb.scroll{place-items:start; overflow:auto; padding:56px 12px 24px} .plb.scroll .plb-fig{justify-items:start} .plb.scroll .plb-fig img{width:200vw} }
+@media (max-width:1100px){
+  .ci-tech{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ci-flow{grid-template-columns:repeat(2,minmax(0,1fr))} .ci-step:nth-child(2)::after{display:none}
+}
+@media (max-width:860px){
+  .card.feature.rev .thumb{order:0} .card.feature.rev .info{padding:4px 22px 24px}
+  .ci-head{grid-template-columns:minmax(0,1fr)} .ci-logo{width:96px}
+  .ci-facts{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+  .ci-facts div:nth-child(3){padding-left:0; border-left:0}
+  .ci-prob, .ci-game, .ci-row.big, .ci-row.big.flip, .ci-row.pair{grid-template-columns:minmax(0,1fr)}
+  .ci-row.big.flip > .ci-cap{order:0}
+  .ci-flow{grid-template-columns:minmax(0,1fr); gap:28px}
+  .ci-step:not(:last-child)::after{display:block !important; right:auto; left:50%; top:auto; bottom:-21px; margin-left:-6px; transform:rotate(135deg)}
+  .ci-zoom{position:relative; right:auto; top:auto; width:78%; margin:-10% 0 0 auto}
+  .ci-arch{grid-template-columns:minmax(0,1fr); justify-items:stretch; padding-top:36px}
+  .ci-link{grid-template-columns:auto auto; justify-content:center; align-items:center}
+  .ci-link i{width:2px; height:34px; background:linear-gradient(180deg,rgba(159,198,255,.15),#9FC6FF)}
+  .ci-link i::after{animation:none; display:none}
+  .ci-tech{grid-template-columns:minmax(0,1fr)}
+  .ci-team{grid-template-columns:repeat(3,minmax(0,1fr)) !important}
+  .ci-sw{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ci-stack > .ci-shot{max-height:none; width:100%}
+  .ci-two{grid-template-columns:minmax(0,1fr)}
+  .ci-links{display:grid} .ci-btn{justify-content:center}
+}
 @media (prefers-reduced-motion: reduce){*{animation:none!important; transition:none!important}}
 
 /* celular: nada pode passar da largura da tela (evita a página "pender" para o lado no iPhone) */
@@ -1415,6 +1586,23 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
           <h3>CINOVA: gestão predial conectada</h3>
           <p>App em React Native integrado a uma API Node.js com Prisma e PostgreSQL, para organizar ordens de serviço entre moradores, técnicos e síndicos.</p>
           <div class="tags"><span>React Native</span><span>Node.js</span><span>PostgreSQL</span></div>
+          <span class="case-cta">Ver estudo de caso <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      <a class="card feature rev glass ci-card" href="#cintegre" aria-label="Abrir estudo de caso do CIntegre+">
+        <div class="win"><div class="dots"><i></i><i></i><i></i></div><span class="chip">Web · Impacto social</span></div>
+        <div class="thumb cover slider" data-interval="4200" style="aspect-ratio:4/3">
+          <img class="slide is-on" src="ci/card-1.jpg" width="1200" height="900" alt="Capa do CIntegre+: logo em destaque e duas janelas de navegador com o painel da ONG e os detalhes de uma ação, em fundo azul-claro">
+          <img class="slide" src="ci/card-2.jpg" width="1200" height="900" loading="lazy" alt="Capa do CIntegre+: logo branca em fundo azul, monitor com o painel da ONG e janela com o formulário de criação de ação">
+          <div class="slide-dots" aria-hidden="true"></div>
+          <button class="sl-arrow sl-prev" type="button" aria-label="Imagem anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button class="sl-arrow sl-next" type="button" aria-label="Próxima imagem"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+        <div class="info">
+          <span class="mono">Plataforma web · Full Stack</span>
+          <h3>CIntegre+</h3>
+          <p>Plataforma gamificada que conecta escolas públicas e ONGs do Recife para incentivar a participação em atividades educativas e sociais. Projeto com interfaces em Figma e implementação web.</p>
+          <div class="tags"><span>UX/UI</span><span>Desenvolvimento Web</span><span>Gamificação</span><span>Impacto Social</span></div>
           <span class="case-cta">Ver estudo de caso <span aria-hidden="true">→</span></span>
         </div>
       </a>
@@ -2692,6 +2880,244 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
         <a class="gh-btn" href="https://github.com/brunoramossilva/sgmp-mobile" target="_blank" rel="noopener"><svg class="gh" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg><span><b>Ver aplicativo mobile</b><small>sgmp-mobile · React Native</small></span><i aria-hidden="true">↗</i></a>
         <a class="gh-btn" href="https://github.com/brunoramossilva/sgmp-api" target="_blank" rel="noopener"><svg class="gh" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg><span><b>Explorar API e back-end</b><small>sgmp-api · Node.js + Prisma</small></span><i aria-hidden="true">↗</i></a>
       </div>
+      <div class="ctas"><a class="btn quiet" href="#projetos">← Voltar aos projetos</a><a class="btn quiet" href="#cintegre">Próximo: CIntegre+ →</a></div>
+    </section>
+  </main>
+
+  <!-- ===== Estudo de caso: CIntegre+ (abre em #cintegre) ===== -->
+  <main id="case-cintegre" class="case ci" hidden>
+    <div class="case-top"><a class="back-link" href="#projetos"><span aria-hidden="true">←</span> Voltar aos projetos</a></div>
+
+    <figure class="case-banner ci-banner">
+      <img src="ci/capa-wide.jpg" width="2172" height="724" alt="Capa do CIntegre+: logo à esquerda e três janelas de navegador em perspectiva sobre fundo azul, com o painel da ONG, os detalhes de uma ação e o formulário de criação de ação">
+    </figure>
+
+    <header class="ci-head">
+      <div class="ci-logo"><img src="ci/logo.png" width="477" height="492" alt="Logo do CIntegre+: coração em tons de azul e turquesa com um sinal de mais, acima do nome Cintegre+"></div>
+      <div class="case-title">
+        <h1 class="chrome soft"><span>CIntegre+</span></h1>
+        <p class="case-sub">Design e desenvolvimento para aproximar escolas e iniciativas sociais.</p>
+        <ul class="tags" aria-label="Tags do projeto"><li><span>UX/UI</span></li><li><span>Desenvolvimento Web</span></li><li><span>Gamificação</span></li><li><span>Impacto Social</span></li></ul>
+      </div>
+      <div class="ci-introbox">
+        <p class="ci-intro">Desenvolvido na disciplina de Desenvolvimento de Software da UFPE, em conjunto com a Prefeitura do Recife, o CIntegre+ propõe uma forma mais lúdica de conectar escolas públicas às atividades de ONGs. O projeto combina interfaces web, recursos de gamificação e uma implementação com front-end, back-end e banco de dados.</p>
+        <div class="ci-links">
+          <a class="ci-btn pri" href="https://www.figma.com/design/MoHXQ7wf7ksDh9dS548OZp/Cintegre-?node-id=2207-188&amp;p=f&amp;t=0LU7fmhBZ8WbGzon-0" target="_blank" rel="noopener noreferrer">Ver no Figma <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a>
+          <a class="ci-btn sec" href="https://github.com/Felipeds-L/CIntegre" target="_blank" rel="noopener noreferrer">Explorar código no GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a>
+        </div>
+        <dl class="facts ci-facts">
+          <div><dt>Contexto</dt><dd>Desenvolvimento de Software · UFPE</dd></div>
+          <div><dt>Parceria</dt><dd>Prefeitura do Recife</dd></div>
+          <div><dt>Plataforma</dt><dd>Web, pensada para desktop</dd></div>
+          <div><dt>Camadas</dt><dd>Front-end, back-end e banco de dados</dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <!-- 01 -->
+    <section class="ci-sec" aria-labelledby="ci-problema">
+      <span class="cs-num">01 / Problema e proposta</span>
+      <div class="ci-prob">
+        <div class="ci-prob-text">
+          <h2 id="ci-problema">Fazer a ajuda chegar até a escola.</h2>
+          <p>ONGs propõem atividades, mas nem sempre é simples para uma escola da rede pública descobrir essas oportunidades, entender o que cada uma pede e se organizar para participar. O CIntegre+ reúne essas ações em um só lugar e usa elementos de jogo para tornar a participação mais leve.</p>
+          <ul class="ci-goals" aria-label="Objetivos da solução">
+            <li><span class="ci-gi" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></span><span><b>Facilitar a descoberta de atividades</b><small>Pedidos das ONGs listados em cards, com tema, data e resumo.</small></span></li>
+            <li><span class="ci-gi" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></span><span><b>Organizar informações sobre ações e participação</b><small>Cada ação tem descrição, cronograma, local, vagas e dados da ONG.</small></span></li>
+            <li><span class="ci-gi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h11v8H8l-4 3z"/><path d="M15 10h5v8l-3-2h-5v-2"/></svg></span><span><b>Apoiar a comunicação entre escolas e ONGs</b><small>Contatos da ONG visíveis e uma etapa de validação da participação.</small></span></li>
+            <li><span class="ci-gi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M9 20h6"/></svg></span><span><b>Incentivar o engajamento com gamificação</b><small>Pontos para as escolas e um ranking das que mais contribuem.</small></span></li>
+          </ul>
+          <p class="rb-note">Estes são os objetivos da solução. O projeto não mediu efeitos sobre a participação das escolas.</p>
+        </div>
+        <div class="ci-panel">
+          <button class="bw crop" type="button" data-full="ci/t/inicial.jpg" data-cap="Página inicial" data-scroll aria-label="Ampliar tela: Página inicial"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">cintegre · página inicial</span></span><span class="bw-scr"><img src="ci/t/inicial.jpg" width="1440" height="2210" loading="lazy" decoding="async" alt="Página inicial do CIntegre+ com a chamada Juntos, construindo pontes entre educação e solidariedade, botões Sou Escola e Sou ONG, tabela Escolas Mais Contribuintes e carrossel de atividades recentes das ONGs"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button>
+          <p class="ci-panel-cap">Página inicial: a escolha entre <b>Sou Escola</b> e <b>Sou ONG</b> já separa os dois públicos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 -->
+    <section class="ci-sec" aria-labelledby="ci-fluxos">
+      <span class="cs-num">02 / Dois públicos e seus fluxos</span>
+      <h2 id="ci-fluxos">Um caminho para cada lado da parceria.</h2>
+      <p class="jr-intro">Os fluxos seguem a navegação do protótipo. As etiquetas mostram o que está no Figma e o que foi confirmado no código do repositório.</p>
+      <div class="ci-tabs" role="tablist" aria-label="Escolha o público">
+        <button class="ci-tab" type="button" role="tab" id="ci-tab-esc" aria-controls="ci-flow-esc" aria-selected="true">Escolas</button>
+        <button class="ci-tab" type="button" role="tab" id="ci-tab-ong" aria-controls="ci-flow-ong" aria-selected="false" tabindex="-1">ONGs</button>
+      </div>
+      <ol class="ci-flow" id="ci-flow-esc" role="tabpanel" aria-labelledby="ci-tab-esc" data-lb>
+        <li class="ci-step"><span class="ci-n">01</span><button class="bw crop" type="button" data-full="ci/t/lista.jpg" data-cap="Pedidos disponíveis" data-scroll aria-label="Ampliar tela: Pedidos disponíveis"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">cintegre · pedidos disponíveis</span></span><span class="bw-scr"><img src="ci/t/lista.jpg" width="1440" height="1788" loading="lazy" decoding="async" alt="Lista Pedidos de Ajuda com cards de ações em duas colunas"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button><h3>Explorar pedidos</h3><p>Em <b>Pedidos Disponíveis</b>, a escola vê as ações abertas das ONGs em cards.</p><div class="ci-st"><span class="fig">Protótipo</span><span class="cod">Código</span></div></li>
+        <li class="ci-step"><span class="ci-n">02</span><button class="bw crop" type="button" data-full="ci/t/acao.jpg" data-cap="Detalhes da ação" data-scroll aria-label="Ampliar tela: Detalhes da ação"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">cintegre · detalhes da ação</span></span><span class="bw-scr"><img src="ci/t/acao.jpg" width="1440" height="1548" loading="lazy" decoding="async" alt="Página de uma ação com foto de capa, descrição, cronograma, detalhes, dados da ONG e botões de participar e compartilhar"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button><h3>Consultar detalhes</h3><p>A página da ação reúne descrição, cronograma, local, vagas e contatos da ONG.</p><div class="ci-st"><span class="fig">Protótipo</span><span class="cod">Código</span></div></li>
+        <li class="ci-step"><span class="ci-n">03</span><figure class="ci-mini"><img src="ci/comp/acoes.png" width="412" height="138" loading="lazy" decoding="async" alt="Botões Participar da Atividade e Compartilhar Atividade"></figure><h3>Participar</h3><p><b>Participar da Atividade</b> registra a escola na ação pela API.</p><div class="ci-st"><span class="fig">Protótipo</span><span class="cod">Código</span></div></li>
+        <li class="ci-step"><span class="ci-n">04</span><button class="bw crop" type="button" data-full="ci/t/ranking.jpg" data-cap="Ranking" data-scroll aria-label="Ampliar tela: Ranking"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">cintegre · ranking</span></span><span class="bw-scr"><img src="ci/t/ranking.jpg" width="1440" height="1345" loading="lazy" decoding="async" alt="Tela de ranking com pódio de pontos e lista de posições"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button><h3>Acompanhar pontos e ranking</h3><p>A pontuação aparece no cabeçalho e no ranking. A aba <b>Meus Pedidos</b> existe apenas no protótipo.</p><div class="ci-st"><span class="fig">Protótipo</span><span class="cod">Código</span><span class="no">Só no protótipo</span></div></li>
+      </ol>
+      <ol class="ci-flow" id="ci-flow-ong" role="tabpanel" aria-labelledby="ci-tab-ong" hidden data-lb>
+        <li class="ci-step"><span class="ci-n">01</span><button class="bw crop" type="button" data-full="ci/t/home-ong.jpg" data-cap="Painel da ONG" data-scroll aria-label="Ampliar tela: Painel da ONG"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">cintegre · painel da ong</span></span><span class="bw-scr"><img src="ci/t/home-ong.jpg" width="1440" height="1297" loading="lazy" decoding="async" alt="Painel da ONG com saudação Bem-Vinda, botão Criar uma nova ação e cards de pedidos"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button><h3>Acessar o painel</h3><p>A ONG chega a um painel com seus pedidos e o atalho <b>Criar uma nova ação</b>.</p><div class="ci-st"><span class="fig">Protótipo</span><span class="cod">Código</span></div></li>
+        <li class="ci-step"><span class="ci-n">02</span><button class="bw crop" type="button" data-full="ci/t/criacao.jpg" data-cap="Criação de ação" data-scroll aria-label="Ampliar tela: Criação de ação"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">cintegre · criação de ação</span></span><span class="bw-scr"><img src="ci/t/criacao.jpg" width="1440" height="1322" loading="lazy" decoding="async" alt="Formulário Crie sua próxima ação com título, descrição, área de atuação, tags, tipo de ação, localização, datas, voluntários e fotos"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button><h3>Criar uma ação</h3><p>O formulário cobre título, descrição, área, tags, tipo, local, datas, vagas e fotos.</p><div class="ci-st"><span class="fig">Protótipo</span><span class="cod">Código</span></div></li>
+        <li class="ci-step"><span class="ci-n">03</span><button class="bw crop" type="button" data-full="ci/t/home-ong.jpg" data-cap="Pedidos da ONG" data-scroll aria-label="Ampliar tela: Pedidos da ONG"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">cintegre · pedidos da ong</span></span><span class="bw-scr"><img src="ci/t/home-ong.jpg" width="1440" height="1297" loading="lazy" decoding="async" alt="Painel da ONG com a lista Todos os Pedidos e Pedidos Finalizados"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button><h3>Acompanhar solicitações</h3><p>No painel, os pedidos se dividem entre <b>Todos os Pedidos</b> e <b>Pedidos Finalizados</b>. No código, a ONG fecha a atividade ao concluí-la.</p><div class="ci-st"><span class="fig">Protótipo</span><span class="cod">Código</span></div></li>
+        <li class="ci-step"><span class="ci-n">04</span><button class="bw crop" type="button" data-full="ci/t/validacao.jpg" data-cap="Validação e avaliação" data-scroll aria-label="Ampliar tela: Validação e avaliação"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">cintegre · validação e avaliação</span></span><span class="bw-scr"><img src="ci/t/validacao.jpg" width="1440" height="1316" loading="lazy" decoding="async" alt="Tela de validação da participação da escola com avatar, botões de comentário e de relatar problema, avaliação por estrelas e botões Finalizar ação e Continuar"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button><h3>Validar e avaliar</h3><p>A ONG valida a participação da escola, avalia com estrelas e pode comentar ou relatar um problema.</p><div class="ci-st"><span class="fig">Protótipo</span><span class="no">Componente sem integração</span></div></li>
+      </ol>
+      <p class="rb-note">Na validação, o componente de avaliação com estrelas foi criado no código, mas ainda não está ligado a nenhuma página nem à API.</p>
+    </section>
+
+    <!-- 03 -->
+    <section class="ci-sec" aria-labelledby="ci-telas">
+      <span class="cs-num">03 / Interfaces em destaque</span>
+      <h2 id="ci-telas">As telas principais, de perto.</h2>
+      <p class="jr-intro">Clique em qualquer tela para ver a página inteira. Nomes, datas, imagens e números são conteúdo ilustrativo do protótipo, não dados reais de uso.</p>
+      <div class="ci-gal" data-lb>
+        <div class="ci-row big">
+          <figure class="ci-fig"><button class="bw" type="button" data-full="ci/t/home-escola.jpg" data-cap="Painel da escola" data-scroll aria-label="Ampliar tela: Painel da escola"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">cintegre · painel da escola</span></span><span class="bw-scr"><img src="ci/t/home-escola.jpg" width="1440" height="1265" loading="lazy" decoding="async" alt="Painel da escola com saudação Boas Vindas, Nome da Escola, chamada Veja os últimos pedidos de ONGs e quatro cards de pedidos"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button></figure>
+          <div class="ci-cap"><span class="cr-idx">01</span><h3>Painel da escola</h3><p>Uma saudação com o nome da escola e os pedidos mais recentes das ONGs logo abaixo. No cabeçalho, a pontuação fica sempre à vista.</p></div>
+        </div>
+        <div class="ci-row pair">
+          <figure class="ci-fig"><button class="bw crop" type="button" data-full="ci/t/lista.jpg" data-cap="Pedidos disponíveis" data-scroll aria-label="Ampliar tela: Pedidos disponíveis"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">cintegre · pedidos disponíveis</span></span><span class="bw-scr"><img src="ci/t/lista.jpg" width="1440" height="1788" loading="lazy" decoding="async" alt="Lista Pedidos de Ajuda com dez cards de ações"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button><figcaption class="ci-cap"><span class="cr-idx">02</span><h3>Listagem de pedidos</h3><p>Cards com imagem, ONG, data, tag de tema e um botão <b>Apoiar!</b> direto.</p></figcaption></figure>
+          <figure class="ci-fig"><button class="bw crop" type="button" data-full="ci/t/acao.jpg" data-cap="Detalhes da ação" data-scroll aria-label="Ampliar tela: Detalhes da ação"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">cintegre · detalhes da ação</span></span><span class="bw-scr"><img src="ci/t/acao.jpg" width="1440" height="1548" loading="lazy" decoding="async" alt="Página de detalhes de uma ação"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button><figcaption class="ci-cap"><span class="cr-idx">03</span><h3>Detalhes de uma ação</h3><p>Conteúdo à esquerda e decisão à direita: detalhes, dados da ONG e o botão de participar.</p></figcaption></figure>
+        </div>
+        <div class="ci-row big flip">
+          <figure class="ci-fig ci-has-zoom"><button class="bw" type="button" data-full="ci/t/home-ong.jpg" data-cap="Painel da ONG" data-scroll aria-label="Ampliar tela: Painel da ONG"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">cintegre · painel da ong</span></span><span class="bw-scr"><img src="ci/t/home-ong.jpg" width="1440" height="1297" loading="lazy" decoding="async" alt="Painel da ONG com saudação Bem-Vinda, Nome da ONG e botão Criar uma nova ação"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button><span class="ci-zoom" aria-hidden="true"><span class="ci-zoom-tag">Detalhe</span><img src="ci/comp/btn-criar.png" width="484" height="80" alt=""></span></figure>
+          <div class="ci-cap"><span class="cr-idx">04</span><h3>Painel da ONG</h3><p>A mesma estrutura do painel da escola, com uma ação principal em destaque: <b>Criar uma nova ação</b>.</p></div>
+        </div>
+        <div class="ci-row pair">
+          <figure class="ci-fig"><button class="bw" type="button" data-full="ci/t/criacao.jpg" data-cap="Criação de ação" data-scroll aria-label="Ampliar tela: Criação de ação"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">cintegre · criação de ação</span></span><span class="bw-scr"><img src="ci/t/criacao.jpg" width="1440" height="1322" loading="lazy" decoding="async" alt="Formulário de criação de ação em duas colunas"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button><figcaption class="ci-cap"><span class="cr-idx">05</span><h3>Criação de uma ação</h3><p>Formulário em duas colunas, com tags removíveis e envio de até quatro fotos.</p></figcaption></figure>
+          <figure class="ci-fig"><button class="bw" type="button" data-full="ci/t/validacao.jpg" data-cap="Validação e avaliação" data-scroll aria-label="Ampliar tela: Validação e avaliação"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">cintegre · validação e avaliação</span></span><span class="bw-scr"><img src="ci/t/validacao.jpg" width="1440" height="1316" loading="lazy" decoding="async" alt="Tela de validação e avaliação da participação"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button><figcaption class="ci-cap"><span class="cr-idx">06</span><h3>Validação e avaliação</h3><p>A ONG confirma a participação, avalia de uma a cinco estrelas e decide se finaliza ou continua a ação.</p></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 -->
+    <section class="ci-sec" aria-labelledby="ci-game">
+      <span class="cs-num">04 / Gamificação</span>
+      <div class="ci-game">
+        <div class="ci-game-text">
+          <h2 id="ci-game">Participar também é subir no ranking.</h2>
+          <p>Os recursos de jogo foram pensados para incentivar a participação das escolas e deixar a experiência mais lúdica. Nada de medalhas ou conquistas: o projeto usa <b>pontos</b> e <b>ranking</b>.</p>
+          <ul class="ci-elems">
+            <li><b>Pontos no cabeçalho</b><span>A escola vê sua pontuação em todas as páginas.</span><em class="cod">Código</em></li>
+            <li><b>Ranking com pódio</b><span>Escolas ordenadas por pontos, com as três primeiras em destaque.</span><em class="cod">Código</em></li>
+            <li><b>Escolas mais contribuintes</b><span>Um resumo do ranking já na página inicial.</span><em class="cod">Código</em></li>
+            <li><b>Avaliação com estrelas</b><span>Nota da ONG sobre a participação da escola.</span><em class="fig">Protótipo</em></li>
+          </ul>
+          <div class="ci-rule"><span class="tt-kicker">Regra implementada no back-end</span>
+            <p>Quando a ONG fecha uma atividade, cada escola participante recebe <b>100 pontos</b> se a ação for de doação ou <b>200 pontos</b> se for de voluntariado.</p>
+<pre class="code"><code><span class="c">// server/src/activity/activityService.ts</span>
+<span class="k">if</span> (data.status === <span class="s">"closed"</span>) {
+  <span class="k">const</span> points = updatedAction.category === <span class="s">"volunteer"</span> ? <span class="t">200</span> : <span class="t">100</span>;
+  <span class="c">// soma os pontos ao score de cada escola participante</span>
+}</code></pre>
+          </div>
+        </div>
+        <div class="ci-game-vis">
+          <img class="ci-pts" src="ci/comp/pts.png" width="342" height="66" loading="lazy" decoding="async" alt="Cabeçalho com Nome da Escola, avatar e 1000 Pts">
+          <img class="ci-shot" src="ci/comp/podio.png" width="1285" height="615" loading="lazy" decoding="async" alt="Pódio do ranking com 1000, 800 e 600 pontos e lista das posições 4 a 10">
+          <img class="ci-shot" src="ci/comp/rank-home.png" width="1260" height="390" loading="lazy" decoding="async" alt="Tabela Escolas Mais Contribuintes com posição, escola, pontos e atividades">
+          <p class="ci-panel-cap">Recortes reais do protótipo. Nomes e pontuações são ilustrativos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 -->
+    <section class="cs-carousel" aria-labelledby="ci-ds">
+      <span class="cs-num">05 / Identidade visual e componentes</span>
+      <div class="cr-top"><h2 id="ci-ds">Identidade visual e componentes</h2></div>
+      <div class="cr" tabindex="0" aria-label="Use as setas para navegar pela identidade visual e pelos componentes">
+        <button class="cr-arrow cr-prev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="cr-arrow cr-next" type="button" aria-label="Próximo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        <div class="cr-track">
+          <article class="cr-slide is-on" aria-label="1 de 5: Cores">
+            <div class="cr-text"><span class="cr-idx">01 <i>/ 05</i></span><h3>Cores</h3><p>Azul principal nos botões, na navegação e no rodapé. Os azuis claros aparecem nos degradês de boas-vindas. O tom <code>#0F57BF</code> é o mesmo usado nos botões do código.</p></div>
+            <div class="cr-stage ci-sw">
+              <div><i style="--c:#0F57BF"></i><b>#0F57BF</b><small>Azul principal</small></div>
+              <div><i style="--c:#D1E4FF"></i><b>#D1E4FF</b><small>Azul-claro</small></div>
+              <div><i style="--c:#9FC6FF"></i><b>#9FC6FF</b><small>Azul de apoio</small></div>
+              <div><i style="--c:#FFFFFF"></i><b>#FFFFFF</b><small>Branco</small></div>
+              <div><i style="--c:#000000"></i><b>#000000</b><small>Preto</small></div>
+              <span class="ci-grad" aria-hidden="true"></span>
+            </div>
+          </article>
+          <article class="cr-slide" aria-label="2 de 5: Tipografia">
+            <div class="cr-text"><span class="cr-idx">02 <i>/ 05</i></span><h3>Tipografia</h3><p>No Figma, a página <i>Type System</i> define <b>DM Sans</b> em três pesos, cinco tamanhos (14 a 64 px) e três alturas de linha. No código, a fonte carregada pelo <code>next/font</code> é a <b>Afacad</b>.</p></div>
+            <div class="cr-stage ci-stack"><img class="ci-shot" src="ci/comp/tipo.png" width="690" height="707" loading="lazy" decoding="async" alt="Trecho do Type System Foundation no Figma: família DM Sans, pesos Regular, Medium e Bold e tamanhos de 14 a 64 pixels"></div>
+          </article>
+          <article class="cr-slide" aria-label="3 de 5: Botões e tags">
+            <div class="cr-text"><span class="cr-idx">03 <i>/ 05</i></span><h3>Botões e tags</h3><p>Botão cheio para a ação principal, contorno para a secundária e tags em pílula azul para temas e habilidades.</p></div>
+            <div class="cr-stage ci-stack">
+              <img class="ci-shot" src="ci/comp/btn-criar.png" width="484" height="80" loading="lazy" decoding="async" alt="Botão Criar uma nova ação">
+              <img class="ci-shot" src="ci/comp/acoes.png" width="412" height="138" loading="lazy" decoding="async" alt="Botão cheio Participar da Atividade e botão de contorno Compartilhar Atividade">
+              <img class="ci-shot" src="ci/comp/tags.png" width="812" height="110" loading="lazy" decoding="async" alt="Bloco Experiência e Habilidades com as tags TrabalhoEmEquipe, Comunicação e AtividadeFisica">
+            </div>
+          </article>
+          <article class="cr-slide" aria-label="4 de 5: Cards de atividades">
+            <div class="cr-text"><span class="cr-idx">04 <i>/ 05</i></span><h3>Cards de atividades</h3><p>O card resume a ação em imagem, título, ONG, data, tema e botão. Na página da ação, um bloco de detalhes usa ícone e texto em cada linha.</p></div>
+            <div class="cr-stage ci-stack">
+              <img class="ci-shot" src="ci/comp/card.png" width="526" height="236" loading="lazy" decoding="async" alt="Card de ação com imagem, Título da Ação, Nome da ONG, data, descrição curta, tag educacao e botão Apoiar">
+              <img class="ci-shot" src="ci/comp/detalhes.png" width="392" height="226" loading="lazy" decoding="async" alt="Bloco Detalhes da Atividade com data, horário, endereço e número de voluntários">
+            </div>
+          </article>
+          <article class="cr-slide" aria-label="5 de 5: Formulários e navegação">
+            <div class="cr-text"><span class="cr-idx">05 <i>/ 05</i></span><h3>Formulários e navegação</h3><p>Campos com rótulo na borda, seleção com seta e área de upload tracejada. O cabeçalho muda os itens conforme o perfil: <b>Meus Pedidos</b> para escola, <b>Minhas Ações</b> para ONG.</p></div>
+            <div class="cr-stage ci-stack">
+              <img class="ci-shot" src="ci/comp/nav.png" width="1440" height="89" loading="lazy" decoding="async" alt="Cabeçalho com logo, links Pedidos Disponíveis, Meus Pedidos e Ranking, nome da escola e pontos">
+              <div class="ci-two"><img class="ci-shot" src="ci/comp/campos.png" width="400" height="380" loading="lazy" decoding="async" alt="Campos Título e Descrição e seleção Área de Atuação"><img class="ci-shot" src="ci/comp/upload.png" width="390" height="340" loading="lazy" decoding="async" alt="Área de upload Anexe suas fotos com botão Anexar e duas miniaturas"></div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="cr-dots" role="tablist" aria-label="Slides de identidade e componentes">
+        <button type="button" data-go="0"><span>Cores</span></button><button type="button" data-go="1"><span>Tipografia</span></button><button type="button" data-go="2"><span>Botões e tags</span></button><button type="button" data-go="3"><span>Cards</span></button><button type="button" data-go="4"><span>Formulários</span></button>
+      </div>
+      <p class="rb-note">Componentes recortados das telas do protótipo. O projeto não tem uma biblioteca de componentes documentada.</p>
+    </section>
+
+    <!-- 06 -->
+    <section class="ci-sec" aria-labelledby="ci-impl">
+      <span class="cs-num">06 / Do Figma ao código</span>
+      <h2 id="ci-impl">Do protótipo à implementação</h2>
+      <p class="jr-intro">As telas do Figma viraram uma aplicação web com API e banco de dados. Esta é a estrutura, conforme o repositório.</p>
+      <div class="ci-arch" role="img" aria-label="Fluxo: a interface web em Next.js chama a API em Express, que usa o Prisma para ler e gravar no PostgreSQL. Tudo sobe junto com Docker Compose.">
+        <span class="ci-arch-tag">Docker Compose · db · server · client</span>
+        <div class="ci-node"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8"/></svg><b>Interface web</b><small>Next.js · React</small></div>
+        <div class="ci-link"><i></i><span>HTTP · JSON · JWT</span></div>
+        <div class="ci-node"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6M13.5 4l-3 16"/></svg><b>API</b><small>Express</small></div>
+        <div class="ci-link"><i></i><span>Prisma Client</span></div>
+        <div class="ci-node"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v13c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8v-13M4.5 12c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8"/></svg><b>Camada de dados</b><small>Prisma · PostgreSQL</small></div>
+      </div>
+      <div class="ci-tech">
+        <article><b>Next.js</b><span>Front-end</span><p>Páginas e navegação: início, pedidos, detalhes da ação, criação de ação, ranking e perfil. As chamadas à API ficam em <i>server actions</i>.</p></article>
+        <article><b>Express</b><span>Back-end</span><p>API organizada por recurso (rotas, controller e service): usuários, escolas, ONGs, endereços, atividades e participações, com login por JWT.</p></article>
+        <article><b>Prisma</b><span>Dados</span><p>Modela <i>User</i>, <i>School</i>, <i>Ong</i>, <i>Address</i>, <i>Activity</i> e <i>SchoolActivity</i>, com migrações versionadas.</p></article>
+        <article><b>PostgreSQL</b><span>Banco</span><p>Banco relacional definido no schema do Prisma e executado em container.</p></article>
+        <article><b>Docker</b><span>Ambiente</span><p>O <i>docker-compose</i> sobe banco, servidor e cliente em uma rede compartilhada.</p></article>
+      </div>
+      <p class="rb-note">O repositório também tem registros de decisões de arquitetura (ADRs), testes com Jest e um workflow de CI que faz o build do client e do server. Não há endereço público da plataforma; o GitHub contém o código, não uma demonstração online.</p>
+    </section>
+
+    <!-- 07 -->
+    <section class="ci-sec cn-team" aria-labelledby="ci-equipe">
+      <span class="cs-num">07 / Equipe</span>
+      <h2 id="ci-equipe">Um projeto feito a muitas mãos.</h2>
+      <div class="team ci-team">
+        <div class="mate"><span class="av">LT</span><b>Lucas Torres</b></div>
+        <div class="mate"><span class="av">IT</span><b>Isabelle Tenório</b></div>
+        <div class="mate"><span class="av">ER</span><b>Eduarda Rodrigues</b></div>
+        <div class="mate"><span class="av">DM</span><b>Daniel Mendonça</b></div>
+        <div class="mate me"><span class="av">AG</span><b>Ágata Giovanna</b></div>
+        <div class="mate"><span class="av">FM</span><b>Felipe Milk</b></div>
+        <div class="mate"><span class="av">MH</span><b>Matheus Henrique</b></div>
+      </div>
+      <p class="rb-note">Equipe listada no README do repositório. No histórico de commits, as contribuições de Ágata incluem a tela de cadastro, a home da escola, a home da ONG e a página de configurações.</p>
+    </section>
+
+    <!-- 08 -->
+    <section class="cs-final glass">
+      <div class="final-logo ci-final-logo" aria-hidden="true"><span class="fl-ring"></span><span class="fl-tile"><img src="ci/logo.png" width="477" height="492" alt=""></span><svg class="spark fs1" viewBox="0 0 100 100" aria-hidden="true"><use href="#star4"/></svg><svg class="spark fs2" viewBox="0 0 100 100" aria-hidden="true"><use href="#star4"/></svg></div>
+      <span class="cs-num">08 / Encerramento</span>
+      <h2 class="chrome"><span>Do protótipo</span> <span>ao código,</span> <span>em equipe.</span></h2>
+      <p>O CIntegre+ juntou, em um projeto acadêmico ligado a uma demanda da Prefeitura do Recife, o desenho das interfaces e a construção de uma aplicação com API e banco de dados. Pontos e ranking só funcionam com regras e dados por trás, e foi isso que o projeto buscou ligar: o que a escola vê na tela e o que o sistema registra.</p>
+      <div class="gh-btns">
+        <a class="gh-btn ci-gh" href="https://www.figma.com/design/MoHXQ7wf7ksDh9dS548OZp/Cintegre-?node-id=2207-188&amp;p=f&amp;t=0LU7fmhBZ8WbGzon-0" target="_blank" rel="noopener noreferrer"><svg class="gh" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 2h3.5v6.5H8.5a3.25 3.25 0 0 1 0-6.5zM12 2h3.5a3.25 3.25 0 0 1 0 6.5H12zM8.5 8.5H12V15H8.5a3.25 3.25 0 0 1 0-6.5zM15.5 8.5a3.25 3.25 0 1 1 0 6.5 3.25 3.25 0 0 1 0-6.5zM8.5 15H12v3.25A3.25 3.25 0 1 1 8.5 15z"/></svg><span><b>Ver protótipo no Figma</b><small>Telas de escola e ONG</small></span><i aria-hidden="true">↗</i><span class="sr-only"> (abre em nova aba)</span></a>
+        <a class="gh-btn ci-gh" href="https://github.com/Felipeds-L/CIntegre" target="_blank" rel="noopener noreferrer"><svg class="gh" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg><span><b>Explorar implementação no GitHub</b><small>Next.js · Express · Prisma</small></span><i aria-hidden="true">↗</i><span class="sr-only"> (abre em nova aba)</span></a>
+      </div>
       <div class="ctas"><a class="btn quiet" href="#projetos">← Voltar aos projetos</a><a class="btn quiet" href="#aprende-plus">Próximo: Aprende+ →</a></div>
     </section>
   </main>
@@ -2755,7 +3181,7 @@ document.getElementById('copy').addEventListener('click', function(){
 var FIGMA_URL = 'https://www.figma.com/design/ispd7fMVEUdLTqyocDwiTz/aprende-?node-id=1-2&p=f&t=32l1nICiw6KGFsgR-0'; // cole aqui o link do protótipo no Figma
 (function(){
   var home = document.getElementById('home'), baseTitle = document.title;
-  var cases = { 'aprende-plus': [document.getElementById('case-aprende'), 'Aprende+ · Ágata'], 'regulariza-br': [document.getElementById('case-regulariza'), 'Regulariza BR · Ágata'], 'cinova': [document.getElementById('case-cinova'), 'CINOVA · Ágata'] };
+  var cases = { 'aprende-plus': [document.getElementById('case-aprende'), 'Aprende+ · Ágata'], 'regulariza-br': [document.getElementById('case-regulariza'), 'Regulariza BR · Ágata'], 'cinova': [document.getElementById('case-cinova'), 'CINOVA · Ágata'], 'cintegre': [document.getElementById('case-cintegre'), 'CIntegre+ · Ágata'] };
   var fb = document.getElementById('figma-btn');
   if(FIGMA_URL){ fb.href = FIGMA_URL; } else { fb.setAttribute('aria-disabled','true'); fb.removeAttribute('href'); fb.textContent = 'Protótipo no Figma · em breve'; }
   function route(){
@@ -2878,7 +3304,7 @@ document.querySelectorAll('.cr').forEach(function(root){
     t.addEventListener('keydown', function(e){ if(e.key==='ArrowRight'){ e.preventDefault(); go((cur+1)%4); tabs[cur].focus(); } if(e.key==='ArrowLeft'){ e.preventDefault(); go((cur+3)%4); tabs[cur].focus(); } }); });
   var lb = document.getElementById('plb'), img = document.getElementById('plb-img'), cap = document.getElementById('plb-cap'), opener = null;
   document.body.appendChild(lb);
-  function open(el){ opener = el; img.src = el.dataset.full; img.alt = (el.querySelector('img') || {}).alt || ''; cap.textContent = el.dataset.cap || ''; lb.hidden = false; document.body.style.overflow = 'hidden'; lb.querySelector('.plb-close').focus(); }
+  function open(el){ opener = el; lb.classList.toggle('scroll', el.hasAttribute('data-scroll')); lb.scrollTop = 0; img.src = el.dataset.full; img.alt = (el.querySelector('img') || {}).alt || ''; cap.textContent = el.dataset.cap || ''; lb.hidden = false; document.body.style.overflow = 'hidden'; lb.querySelector('.plb-close').focus(); }
   function close(){ lb.hidden = true; document.body.style.overflow = ''; if(opener) opener.focus(); }
   document.querySelectorAll('[data-full]').forEach(function(el){ el.addEventListener('click', function(){ open(el); }); });
   lb.querySelectorAll('[data-close]').forEach(function(el){ el.addEventListener('click', close); });
@@ -3016,6 +3442,22 @@ document.querySelectorAll('.cr').forEach(function(root){
     nodes.forEach(function(m, j){ m.classList.toggle('is-on', j === i); m.setAttribute('aria-selected', j === i ? 'true' : 'false'); });
     panels.forEach(function(p, j){ p.classList.toggle('is-on', j === i); });
   }); });
+})();
+
+// CIntegre+: abas Escolas/ONGs (clique, toque e setas do teclado)
+(function(){
+  var tabs = [].slice.call(document.querySelectorAll('.ci-tab')); if(!tabs.length) return;
+  function go(i, focus){
+    tabs.forEach(function(t, k){ var on = k === i; t.setAttribute('aria-selected', on ? 'true' : 'false'); t.tabIndex = on ? 0 : -1; document.getElementById(t.getAttribute('aria-controls')).hidden = !on; });
+    if(focus) tabs[i].focus();
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ go(i); });
+    t.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowRight'){ e.preventDefault(); go((i + 1) % tabs.length, true); }
+      if(e.key === 'ArrowLeft'){ e.preventDefault(); go((i + tabs.length - 1) % tabs.length, true); }
+    });
+  });
 })();
 
 // molduras de iPhone: --u = 1% da largura do aparelho, em px (o Safari às vezes erra a unidade cqw em painéis escondidos)
