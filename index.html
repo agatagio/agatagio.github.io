@@ -1281,9 +1281,9 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
 .ci-head{display:grid; grid-template-columns:auto minmax(0,1fr); gap:clamp(18px,3vw,40px) clamp(20px,4vw,48px); align-items:center; padding-block:clamp(28px,4vw,48px) 0}
 .ci-head .case-title{padding:0}
 .ci-logo{position:relative; width:clamp(110px,12vw,168px); display:grid; place-items:center}
-.ci-logo img{position:relative; width:100%; height:auto; filter:drop-shadow(0 0 10px rgba(79,151,255,.75)) drop-shadow(0 0 28px rgba(15,87,191,.6)); transition:transform .45s ease, filter .45s ease}
-.ci-logo:hover img{transform:scale(1.05) rotate(-2deg); filter:drop-shadow(0 0 14px rgba(159,198,255,.95)) drop-shadow(0 0 40px rgba(15,87,191,.85))}
-.ci-logo-glow{position:absolute; inset:-30%; border-radius:50%; background:radial-gradient(circle, rgba(15,87,191,.55), rgba(79,151,255,.18) 45%, transparent 70%); animation:ciGlow 3.6s ease-in-out infinite; pointer-events:none}
+.ci-logo img{position:relative; width:100%; height:auto; filter:drop-shadow(0 0 8px rgba(225,238,255,.38)) drop-shadow(0 0 22px rgba(209,228,255,.22)); transition:transform .45s ease, filter .45s ease}
+.ci-logo:hover img{transform:scale(1.05) rotate(-2deg); filter:drop-shadow(0 0 10px rgba(235,244,255,.55)) drop-shadow(0 0 28px rgba(209,228,255,.3))}
+.ci-logo-glow{position:absolute; inset:-30%; border-radius:50%; background:radial-gradient(circle, rgba(209,228,255,.16), rgba(209,228,255,.05) 45%, transparent 70%); animation:ciGlow 3.6s ease-in-out infinite; pointer-events:none}
 @keyframes ciGlow{50%{transform:scale(1.12); opacity:.7}}
 .ci-introbox{grid-column:1 / -1; display:grid; gap:20px}
 .ci-intro{font-size:clamp(1.02rem,1.3vw,1.14rem); line-height:1.75; color:#CFCBE0; max-width:70ch}
