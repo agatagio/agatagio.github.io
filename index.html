@@ -1280,9 +1280,11 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
 .ci-banner{margin-top:8px} .ci-banner img{aspect-ratio:2172/724 !important}
 .ci-head{display:grid; grid-template-columns:auto minmax(0,1fr); gap:clamp(18px,3vw,40px) clamp(20px,4vw,48px); align-items:center; padding-block:clamp(28px,4vw,48px) 0}
 .ci-head .case-title{padding:0}
-.ci-logo{width:clamp(96px,11vw,150px); aspect-ratio:1; border-radius:28%; background:#fff; display:grid; place-items:center;
-  box-shadow:0 20px 50px rgba(15,87,191,.4), 0 0 0 1px rgba(159,198,255,.6), 0 0 0 8px rgba(159,198,255,.08)}
-.ci-logo img{width:74%; height:auto}
+.ci-logo{position:relative; width:clamp(110px,12vw,168px); display:grid; place-items:center}
+.ci-logo img{position:relative; width:100%; height:auto; filter:drop-shadow(0 0 10px rgba(79,151,255,.75)) drop-shadow(0 0 28px rgba(15,87,191,.6)); transition:transform .45s ease, filter .45s ease}
+.ci-logo:hover img{transform:scale(1.05) rotate(-2deg); filter:drop-shadow(0 0 14px rgba(159,198,255,.95)) drop-shadow(0 0 40px rgba(15,87,191,.85))}
+.ci-logo-glow{position:absolute; inset:-30%; border-radius:50%; background:radial-gradient(circle, rgba(15,87,191,.55), rgba(79,151,255,.18) 45%, transparent 70%); animation:ciGlow 3.6s ease-in-out infinite; pointer-events:none}
+@keyframes ciGlow{50%{transform:scale(1.12); opacity:.7}}
 .ci-introbox{grid-column:1 / -1; display:grid; gap:20px}
 .ci-intro{font-size:clamp(1.02rem,1.3vw,1.14rem); line-height:1.75; color:#CFCBE0; max-width:70ch}
 .ci-links{display:flex; flex-wrap:wrap; gap:12px}
@@ -1422,7 +1424,7 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
 }
 @media (max-width:860px){
   .card.feature.rev .thumb{order:0} .card.feature.rev .info{padding:4px 22px 24px}
-  .ci-head{grid-template-columns:minmax(0,1fr)} .ci-logo{width:96px}
+  .ci-head{grid-template-columns:minmax(0,1fr)} .ci-logo{width:110px; margin:8px 0 0 6px}
   .ci-facts{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
   .ci-facts div:nth-child(3){padding-left:0; border-left:0}
   .ci-prob, .ci-game, .ci-row.big, .ci-row.big.flip, .ci-row.pair{grid-template-columns:minmax(0,1fr)}
@@ -2893,7 +2895,7 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
     </figure>
 
     <header class="ci-head">
-      <div class="ci-logo"><img src="ci/logo.png" width="477" height="492" alt="Logo do CIntegre+: coração em tons de azul e turquesa com um sinal de mais, acima do nome Cintegre+"></div>
+      <div class="ci-logo"><span class="ci-logo-glow" aria-hidden="true"></span><img src="ci/logo-t.png" width="432" height="443" alt="Logo do CIntegre+: coração em tons de azul e turquesa com um sinal de mais, acima do nome Cintegre+"></div>
       <div class="case-title">
         <h1 class="chrome soft"><span>CIntegre+</span></h1>
         <p class="case-sub">Design e desenvolvimento para aproximar escolas e iniciativas sociais.</p>
@@ -2902,7 +2904,7 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
       <div class="ci-introbox">
         <p class="ci-intro">Desenvolvido na disciplina de Desenvolvimento de Software da UFPE, em conjunto com a Prefeitura do Recife, o CIntegre+ propõe uma forma mais lúdica de conectar escolas públicas às atividades de ONGs. O projeto combina interfaces web, recursos de gamificação e uma implementação com front-end, back-end e banco de dados.</p>
         <div class="ci-links">
-          <a class="ci-btn pri" href="https://www.figma.com/design/MoHXQ7wf7ksDh9dS548OZp/Cintegre-?node-id=2207-188&amp;p=f&amp;t=0LU7fmhBZ8WbGzon-0" target="_blank" rel="noopener noreferrer">Ver no Figma <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a>
+          <a class="ci-btn pri" href="https://www.figma.com/design/MoHXQ7wf7ksDh9dS548OZp/Cintegre-?node-id=2011-358&amp;p=f&amp;t=VVWQyemmG2aPNdY5-0" target="_blank" rel="noopener noreferrer">Ver no Figma <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a>
           <a class="ci-btn sec" href="https://github.com/Felipeds-L/CIntegre" target="_blank" rel="noopener noreferrer">Explorar código no GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a>
         </div>
         <dl class="facts ci-facts">
@@ -3115,7 +3117,7 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
       <h2 class="chrome"><span>Do protótipo</span> <span>ao código,</span> <span>em equipe.</span></h2>
       <p>O CIntegre+ juntou, em um projeto acadêmico ligado a uma demanda da Prefeitura do Recife, o desenho das interfaces e a construção de uma aplicação com API e banco de dados. Pontos e ranking só funcionam com regras e dados por trás, e foi isso que o projeto buscou ligar: o que a escola vê na tela e o que o sistema registra.</p>
       <div class="gh-btns">
-        <a class="gh-btn ci-gh" href="https://www.figma.com/design/MoHXQ7wf7ksDh9dS548OZp/Cintegre-?node-id=2207-188&amp;p=f&amp;t=0LU7fmhBZ8WbGzon-0" target="_blank" rel="noopener noreferrer"><svg class="gh" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 2h3.5v6.5H8.5a3.25 3.25 0 0 1 0-6.5zM12 2h3.5a3.25 3.25 0 0 1 0 6.5H12zM8.5 8.5H12V15H8.5a3.25 3.25 0 0 1 0-6.5zM15.5 8.5a3.25 3.25 0 1 1 0 6.5 3.25 3.25 0 0 1 0-6.5zM8.5 15H12v3.25A3.25 3.25 0 1 1 8.5 15z"/></svg><span><b>Ver protótipo no Figma</b><small>Telas de escola e ONG</small></span><i aria-hidden="true">↗</i><span class="sr-only"> (abre em nova aba)</span></a>
+        <a class="gh-btn ci-gh" href="https://www.figma.com/design/MoHXQ7wf7ksDh9dS548OZp/Cintegre-?node-id=2011-358&amp;p=f&amp;t=VVWQyemmG2aPNdY5-0" target="_blank" rel="noopener noreferrer"><svg class="gh" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 2h3.5v6.5H8.5a3.25 3.25 0 0 1 0-6.5zM12 2h3.5a3.25 3.25 0 0 1 0 6.5H12zM8.5 8.5H12V15H8.5a3.25 3.25 0 0 1 0-6.5zM15.5 8.5a3.25 3.25 0 1 1 0 6.5 3.25 3.25 0 0 1 0-6.5zM8.5 15H12v3.25A3.25 3.25 0 1 1 8.5 15z"/></svg><span><b>Ver protótipo no Figma</b><small>Telas de escola e ONG</small></span><i aria-hidden="true">↗</i><span class="sr-only"> (abre em nova aba)</span></a>
         <a class="gh-btn ci-gh" href="https://github.com/Felipeds-L/CIntegre" target="_blank" rel="noopener noreferrer"><svg class="gh" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg><span><b>Explorar implementação no GitHub</b><small>Next.js · Express · Prisma</small></span><i aria-hidden="true">↗</i><span class="sr-only"> (abre em nova aba)</span></a>
       </div>
       <div class="ctas"><a class="btn quiet" href="#projetos">← Voltar aos projetos</a><a class="btn quiet" href="#aprende-plus">Próximo: Aprende+ →</a></div>
@@ -3361,11 +3363,11 @@ document.querySelectorAll('.cr').forEach(function(root){
     o.connect(g).connect(ctx.destination); o2.connect(g2).connect(ctx.destination); o.start(now); o2.start(now); o.stop(now + dur + 0.02); o2.stop(now + dur + 0.02);
   }
   var groups = [
-    ['.btn, .case-cta, #figma-btn', 660, 0.12],
+    ['.btn, .case-cta, #figma-btn, .ci-btn', 660, 0.12],
     ['.card, .ax-card, .sk, .ch-card', 440, 0.16],
     ['.cr-arrow, .sl-arrow, .lb-btn', 880, 0.09],
-    ['.pc-tab, .jr-step, .cr-dots button, .cr-group, .index a:not([href="#sobre"]), .back-link', 740, 0.08],
-    ['.pr, .evo-final, .pv-phone, .aud-stage .phone, .symbol-wrap, .me-orbit, .tt-feats li, .hub-node, .arch-node, .gh-btn, .kpi', 520, 0.14]
+    ['.pc-tab, .jr-step, .cr-dots button, .cr-group, .index a:not([href="#sobre"]), .back-link, .ci-tab', 740, 0.08],
+    ['.pr, .evo-final, .pv-phone, .aud-stage .phone, .symbol-wrap, .me-orbit, .tt-feats li, .hub-node, .arch-node, .gh-btn, .kpi, .bw, .ci-goals li, .ci-node, .ci-tech article, .ci-elems li, .ci-sw div', 520, 0.14]
   ];
   groups.forEach(function(gp){ document.querySelectorAll(gp[0]).forEach(function(el){ el.addEventListener('mouseenter', function(){ tone(gp[1], gp[2]); }); }); });
   function sparkle(){
@@ -3378,7 +3380,10 @@ document.querySelectorAll('.cr').forEach(function(root){
       o.connect(g).connect(ctx.destination); o.start(t); o.stop(t + 0.4);
     });
   }
-  document.querySelectorAll('#scroll-hint, .index a[href="#sobre"]').forEach(function(el){ el.addEventListener('mouseenter', sparkle); });
+  document.querySelectorAll('#scroll-hint, .index a[href="#sobre"], .ci-logo, .ci-pts').forEach(function(el){ el.addEventListener('mouseenter', sparkle); });
+  // CIntegre+: ampliar uma tela faz um brilho; trocar de público faz o "swoosh"
+  document.querySelectorAll('.bw').forEach(function(el){ el.addEventListener('click', function(){ last = 0; sparkle(); }); });
+  document.querySelectorAll('.ci-tab').forEach(function(el){ el.addEventListener('click', function(){ if(el.getAttribute('aria-selected') !== 'true') setTimeout(swoosh, 0); }); });
   function swoosh(){
     if(!on || !unlocked || !ctx) return; var now = ctx.currentTime, o = ctx.createOscillator(), g = ctx.createGain();
     o.type = 'triangle'; o.frequency.setValueAtTime(320, now); o.frequency.exponentialRampToValueAtTime(880, now + .32);
