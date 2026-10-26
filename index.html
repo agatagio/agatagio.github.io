@@ -1463,6 +1463,11 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
 .mt-hero::after{content:""; position:absolute; inset:0; z-index:-1; opacity:.5; pointer-events:none;
   background-image:radial-gradient(rgba(205,237,228,.16) 1px, transparent 1.4px); background-size:22px 22px; -webkit-mask-image:linear-gradient(110deg,#000,transparent 65%); mask-image:linear-gradient(110deg,#000,transparent 65%)}
 .mt-hero-copy{display:grid; gap:18px; justify-items:start}
+.mt-eyes{display:flex; flex-wrap:wrap; gap:8px}
+.mt-wip{display:inline-flex; align-items:center; gap:8px; align-self:flex-start; justify-self:start; font:500 .7rem/1 var(--mono); letter-spacing:.12em; text-transform:uppercase; color:#FFE2A8; padding:8px 12px; border-radius:999px; background:rgba(242,169,59,.12); box-shadow:inset 0 0 0 1px rgba(242,169,59,.5)}
+.mt-wip i{width:7px; height:7px; border-radius:50%; background:#F2A93B; box-shadow:0 0 0 0 rgba(242,169,59,.6); animation:mtWip 2s ease-out infinite}
+@keyframes mtWip{70%{box-shadow:0 0 0 7px rgba(242,169,59,0)} 100%{box-shadow:0 0 0 0 rgba(242,169,59,0)}}
+.mt-card .mt-wip{margin-bottom:2px}
 .mt-eyebrow{display:inline-flex; align-items:center; gap:10px; font:500 .74rem/1 var(--mono); letter-spacing:.14em; text-transform:uppercase; color:#CDEDE4; padding:9px 14px; border-radius:999px; background:rgba(128,206,185,.1); box-shadow:inset 0 0 0 1px rgba(128,206,185,.35)}
 .mt-eyebrow i{width:8px; height:8px; border-radius:50%; background:var(--mt-r); box-shadow:0 0 10px var(--mt-r)}
 .mt-title{display:flex; align-items:center; gap:.18em; font:900 clamp(3rem,8.2vw,6.6rem)/.95 "Nunito",var(--display); letter-spacing:-.025em; color:#fff; margin:0}
@@ -1835,13 +1840,15 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
       <a class="card feature glass mt-card" href="#monitube" aria-label="Abrir estudo de caso do MoniTube">
         <div class="win"><div class="dots"><i></i><i></i><i></i></div><span class="chip">Mobile · Saúde pública</span></div>
         <div class="thumb cover slider" data-interval="4400" style="aspect-ratio:4/3">
-          <img class="slide is-on" src="mt/card-1.jpg" width="1200" height="900" loading="lazy" alt="Capa do MoniTube: logo e três celulares com as telas Início, Seu tratamento e Benefícios, em fundo verde-azulado escuro">
+          <img class="slide is-on" src="mt/card-0.jpg" width="1200" height="900" alt="Capa do MoniTube: logo, chamada Acompanhamento inteligente do tratamento e três celulares com as telas Confirme sua dose, Início e Teleconsulta, em fundo claro com detalhes em verde-azulado e vermelho">
+          <img class="slide" src="mt/card-1.jpg" width="1200" height="900" loading="lazy" alt="Capa do MoniTube: logo e três celulares com as telas Início, Seu tratamento e Benefícios, em fundo verde-azulado escuro">
           <img class="slide" src="mt/card-2.jpg" width="1200" height="900" loading="lazy" alt="Comparação entre o wireframe em cinza e a tela final Confirme sua dose do MoniTube, com uma seta vermelha entre os dois celulares">
           <div class="slide-dots" aria-hidden="true"></div>
           <button class="sl-arrow sl-prev" type="button" aria-label="Imagem anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
           <button class="sl-arrow sl-next" type="button" aria-label="Próxima imagem"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
         </div>
         <div class="info">
+          <span class="mt-wip"><i aria-hidden="true"></i>Em andamento</span>
           <span class="mono">App mobile · UX/UI Design</span>
           <h3>MoniTube: cuidar é continuar</h3>
           <p>Aplicativo para acompanhar o tratamento da tuberculose, com lembretes, registro das doses e um sistema de pontos que pode virar benefício social. Do wireframe ao protótipo de alta fidelidade no Figma.</p>
@@ -3371,7 +3378,7 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
 
     <header class="mt-hero">
       <div class="mt-hero-copy">
-        <span class="mt-eyebrow"><i aria-hidden="true"></i>Estudo de caso · UX/UI Design</span>
+        <div class="mt-eyes"><span class="mt-eyebrow"><i aria-hidden="true"></i>Estudo de caso · UX/UI Design</span><span class="mt-wip"><i aria-hidden="true"></i>Em andamento</span></div>
         <h1 class="mt-title"><img class="mt-sym" src="mt/logo-s.svg" width="64" height="64" alt=""><span>Moni</span><span class="t">Tube</span></h1>
         <p class="mt-claim">Tecnologia que acompanha, cuidado que transforma.</p>
         <p class="mt-lede">Aplicativo mobile para acompanhar o tratamento da tuberculose: lembretes, registro das doses, progresso e um sistema de pontos que pode virar benefício social.</p>
@@ -3393,9 +3400,9 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
     <div class="mt-about">
       <dl class="facts mt-facts">
         <div><dt>Área</dt><dd>Saúde pública · tuberculose</dd></div>
-        <div><dt>Plataforma</dt><dd>Aplicativo mobile</dd></div>
+        <div><dt>Plataforma</dt><dd>Aplicativo mobile · protótipo no Figma</dd></div>
         <div><dt>Foco inicial</dt><dd>Recife, Pernambuco</dd></div>
-        <div><dt>Entregas</dt><dd>Wireframes, design system e protótipo de alta fidelidade</dd></div>
+        <div><dt>Status</dt><dd>Em andamento</dd></div>
       </dl>
       <p class="mt-status"><i aria-hidden="true"></i><span>O MoniTube é uma <b>proposta de solução</b>. As telas deste estudo vêm do protótipo no Figma, e as parcerias para os benefícios são previstas, ainda não formalizadas.</span></p>
     </div>
