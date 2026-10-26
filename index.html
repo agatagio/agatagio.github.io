@@ -14,7 +14,7 @@
 <body>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;900&family=Geist:wght@400;500&family=Sora:wght@300;400;600&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;900&family=Geist:wght@400;500&family=Sora:wght@300;400;600&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Nunito:wght@800;900&family=Figtree:wght@400;600&display=swap">
 <style>
 /* Layout: estética Y2K / "digital optimism" — fundo quase preto com brilhos roxos, tipografia cromada, gradientes holográficos,
    cartões de vidro (glassmorphism), bolhas iridescentes, estrelas de 4 pontas, esfera wireframe. Tema escuro único, de propósito. */
@@ -1443,6 +1443,230 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
   .ci-two{grid-template-columns:minmax(0,1fr)}
   .ci-links{display:grid} .ci-btn{justify-content:center}
 }
+
+/* ===== MoniTube ===== */
+.mt{--mt-t:#38A3A5; --mt-t7:#237577; --mt-m:#80CEB9; --mt-r:#EA1938; --mt-ink:#05100B}
+.mt .cs-num{color:var(--mt-m)}
+.mt .pv-phone{opacity:1; transform:none}
+/* moldura do aparelho em volta da tela (a regra geral usa -calc(), que o navegador ignora) */
+.mt .iphone::after{inset:calc(var(--u, 1cqw) * -3.4)}
+.mt .iphone.own-sb .scr{aspect-ratio:430/932 !important; border-radius:calc(var(--u, 1cqw) * 12.5) !important}
+.mt .iphone .scr img{height:100% !important; object-fit:cover; object-position:top center}
+.mt button.pv-phone:focus-visible, .mt-tab:focus-visible, .mt-pair:focus-visible, .mt-btn:focus-visible, .mt-comp:focus-visible, .mt-rail-btn:focus-visible{outline:3px solid var(--mt-m); outline-offset:4px}
+.mt-card .tags span{border-color:rgba(128,206,185,.45)}
+.mt-card .chip{color:#CDEDE4}
+/* hero */
+.mt-hero{position:relative; display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); gap:clamp(24px,4vw,56px); align-items:center; margin-top:8px;
+  padding:clamp(28px,5vw,64px); border-radius:32px; overflow:hidden; isolation:isolate;
+  background:radial-gradient(700px 420px at 85% 15%, rgba(128,206,185,.28), transparent 60%), radial-gradient(600px 460px at 0% 100%, rgba(56,163,165,.35), transparent 62%), linear-gradient(150deg,#05100B 0%,#0B2B2A 48%,#175456 100%);
+  box-shadow:inset 0 0 0 1px rgba(128,206,185,.22), 0 40px 90px -30px rgba(0,0,0,.7)}
+.mt-hero::after{content:""; position:absolute; inset:0; z-index:-1; opacity:.5; pointer-events:none;
+  background-image:radial-gradient(rgba(205,237,228,.16) 1px, transparent 1.4px); background-size:22px 22px; -webkit-mask-image:linear-gradient(110deg,#000,transparent 65%); mask-image:linear-gradient(110deg,#000,transparent 65%)}
+.mt-hero-copy{display:grid; gap:18px; justify-items:start}
+.mt-eyebrow{display:inline-flex; align-items:center; gap:10px; font:500 .74rem/1 var(--mono); letter-spacing:.14em; text-transform:uppercase; color:#CDEDE4; padding:9px 14px; border-radius:999px; background:rgba(128,206,185,.1); box-shadow:inset 0 0 0 1px rgba(128,206,185,.35)}
+.mt-eyebrow i{width:8px; height:8px; border-radius:50%; background:var(--mt-r); box-shadow:0 0 10px var(--mt-r)}
+.mt-title{display:flex; align-items:center; gap:.18em; font:900 clamp(3rem,8.2vw,6.6rem)/.95 "Nunito",var(--display); letter-spacing:-.025em; color:#fff; margin:0}
+.mt-title .t{color:var(--mt-m); margin-left:-.18em}
+.mt-sym{width:.82em; height:auto; flex:none; filter:drop-shadow(0 6px 18px rgba(234,25,56,.35)); transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.mt-title:hover .mt-sym{transform:rotate(-8deg) scale(1.08)}
+.mt-claim{font:800 clamp(1.25rem,2.3vw,1.75rem)/1.25 "Nunito",var(--body); color:#F2FBF8; max-width:24ch}
+.mt-lede{font:400 clamp(1rem,1.3vw,1.1rem)/1.7 "Figtree",var(--body); color:#B9D9D1; max-width:52ch}
+.mt-hero .tags{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:8px}
+.mt-hero .tags span{display:inline-block; font-size:.72rem; padding:8px 12px; border-color:rgba(128,206,185,.4); color:#E4F5F0}
+.mt-links{display:flex; flex-wrap:wrap; gap:12px; margin-top:6px}
+.mt-btn{display:inline-flex; align-items:center; gap:10px; padding:15px 22px; border-radius:999px; font:600 .96rem/1 var(--body); text-decoration:none; border:0; cursor:pointer;
+  transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease}
+.mt-btn.pri{background:var(--mt-t7); color:#fff; box-shadow:0 10px 30px rgba(35,117,119,.55), inset 0 0 0 1px rgba(255,255,255,.22)}
+.mt-btn.pri:hover{transform:translateY(-2px); background:#2B8789; box-shadow:0 14px 40px rgba(56,163,165,.6), inset 0 0 0 1px rgba(255,255,255,.4)}
+.mt-btn.sec{color:#DDF3EC; background:rgba(128,206,185,.08); box-shadow:inset 0 0 0 1px rgba(128,206,185,.45)}
+.mt-btn.sec:hover{transform:translateY(-2px); color:#fff; background:rgba(128,206,185,.18)}
+.mt-hero-stage{position:relative; min-height:clamp(420px,44vw,560px); display:grid; place-items:center}
+.mt-orb{position:absolute; width:78%; aspect-ratio:1; border-radius:50%; background:radial-gradient(circle, rgba(128,206,185,.38), rgba(56,163,165,.1) 55%, transparent 70%); filter:blur(6px)}
+.mt-ring{position:absolute; width:92%; aspect-ratio:1; border-radius:50%; border:1px solid rgba(128,206,185,.22); transform:rotate(-16deg) scaleY(.5)}
+.mt-hp{position:absolute !important; left:50%; top:50%; width:clamp(190px,19vw,250px)}
+.mt-hp.front{z-index:2; transform:translate(-78%, -48%) rotate(-4deg); animation:mtFloat 8s ease-in-out infinite}
+.mt-hp.back{z-index:1; transform:translate(-14%, -54%) rotate(8deg) scale(.9); opacity:.92}
+.mt-hp:hover{filter:brightness(1.04)}
+@keyframes mtFloat{0%,100%{transform:translate(-78%, -48%) rotate(-4deg)} 50%{transform:translate(-78%, -52%) rotate(-3deg)}}
+.mt-chip{position:absolute; z-index:3; display:inline-flex; align-items:center; gap:9px; padding:10px 14px 10px 10px; border-radius:16px; font:600 .82rem/1.1 "Figtree",var(--body); color:var(--mt-ink);
+  background:rgba(255,255,255,.94); box-shadow:0 18px 40px -12px rgba(0,0,0,.55); animation:mtChip 7s ease-in-out infinite}
+.mt-chip i{display:grid; place-items:center; width:28px; height:28px; border-radius:9px; font:800 .78rem/1 "Nunito",var(--body); font-style:normal}
+.mt-chip i.ok{background:#DDF3EC} .mt-chip i.ok::before{content:""; width:10px; height:6px; border:2.5px solid #2C7A65; border-top:0; border-right:0; transform:translateY(-2px) rotate(-45deg)}
+.mt-chip i.pt{background:var(--mt-r); color:#fff}
+.mt-chip.c1{left:2%; top:16%} .mt-chip.c2{right:0; bottom:14%; animation-delay:-3.5s}
+@keyframes mtChip{50%{transform:translateY(-8px)}}
+.mt-about{display:grid; gap:18px; padding-block:clamp(24px,3vw,36px) 0}
+.mt-facts{grid-template-columns:repeat(4,minmax(0,1fr)) !important; margin-top:0 !important}
+.mt-facts dt{color:var(--mt-m) !important}
+.mt-status{display:flex; gap:12px; align-items:flex-start; max-width:80ch; padding:14px 16px; border-radius:14px; font-size:.92rem; line-height:1.6; color:#CFE7E1; background:rgba(128,206,185,.07); border:1px solid rgba(128,206,185,.22)}
+.mt-status i{flex:none; width:8px; height:8px; margin-top:.55em; border-radius:50%; background:var(--mt-m)}
+/* seções */
+.mt-sec{display:grid; gap:16px; padding-block:clamp(56px,8vw,96px) 0}
+.mt-sec h2{font:600 clamp(1.9rem,4.2vw,3.2rem)/1.1 var(--display); letter-spacing:-.03em; color:#F4F2FB; max-width:22ch}
+.mt-sub{font:600 clamp(1.15rem,2vw,1.45rem)/1.2 var(--display); color:#F4F2FB; margin-top:clamp(36px,5vw,56px)}
+.mt-k{font:500 .7rem/1 var(--mono); letter-spacing:.16em; text-transform:uppercase; color:var(--mt-m)}
+.mt-ci{display:grid; place-items:center; width:46px; height:46px; border-radius:14px; flex:none}
+.mt-ci svg{width:24px; height:24px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round}
+.mt-ci.t{color:#9FE0E1; background:rgba(56,163,165,.16); box-shadow:inset 0 0 0 1px rgba(56,163,165,.45)}
+.mt-ci.m{color:#B8E8DA; background:rgba(128,206,185,.14); box-shadow:inset 0 0 0 1px rgba(128,206,185,.45)}
+.mt-ci.r{color:#FF9DAE; background:rgba(234,25,56,.12); box-shadow:inset 0 0 0 1px rgba(234,25,56,.42)}
+.mt-ch, .mt-pillars{list-style:none; margin:clamp(12px,2vw,24px) 0 0; padding:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px}
+.mt-ch li, .mt-pillar{position:relative; display:grid; gap:10px; align-content:start; padding:24px; border-radius:20px; background:linear-gradient(160deg, rgba(255,255,255,.05), rgba(255,255,255,.015)); border:1px solid rgba(255,255,255,.1);
+  transition:transform .3s ease, border-color .3s ease, background .3s ease}
+.mt-ch li:hover, .mt-pillar:hover{transform:translateY(-3px); border-color:rgba(128,206,185,.4); background:linear-gradient(160deg, rgba(128,206,185,.09), rgba(255,255,255,.015))}
+.mt-ch h3, .mt-pillar h3{font:600 1.12rem/1.3 var(--display); color:#F4F2FB; margin-top:4px}
+.mt-ch p, .mt-pillar p{color:var(--muted); font-size:.95rem; line-height:1.6}
+.mt-ans{display:grid; gap:4px; margin-top:6px; padding-top:14px; border-top:1px dashed rgba(128,206,185,.3); color:#DDF3EC; font-size:.92rem; line-height:1.45}
+.mt-ans b{font:500 .66rem/1 var(--mono); letter-spacing:.14em; text-transform:uppercase; color:var(--mt-m)}
+.mt-pn{position:absolute; top:22px; right:22px; font:500 .75rem/1 var(--mono); color:rgba(205,237,228,.45)}
+.mt-pillars{counter-reset:p}
+.mt-pillar:not(:last-child)::after{content:""; position:absolute; top:46px; right:-17px; width:18px; height:2px; background:linear-gradient(90deg, rgba(128,206,185,.7), rgba(128,206,185,.1)); z-index:1}
+/* funcionalidades */
+.mt-fx{display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:clamp(20px,4vw,56px); align-items:center; margin-top:clamp(8px,2vw,20px)}
+.mt-tabs{list-style:none; margin:0; padding:0; display:grid; gap:8px}
+.mt-tab{width:100%; display:grid; grid-template-columns:auto auto minmax(0,1fr); align-items:center; gap:14px; padding:14px 16px; border-radius:16px; border:1px solid rgba(255,255,255,.09); background:rgba(255,255,255,.03);
+  color:#CFCBE0; font:500 1rem/1.3 var(--body); text-align:left; cursor:pointer; transition:background .25s ease, border-color .25s ease, color .25s ease, transform .25s ease}
+.mt-tab:hover{background:rgba(128,206,185,.07); color:#fff; transform:translateX(3px)}
+.mt-tab[aria-selected="true"]{color:#fff; background:linear-gradient(100deg, rgba(56,163,165,.28), rgba(128,206,185,.06)); border-color:rgba(128,206,185,.55); box-shadow:inset 3px 0 0 var(--mt-m)}
+.mt-ti{display:grid; place-items:center; width:36px; height:36px; border-radius:11px; background:rgba(128,206,185,.1); color:#B8E8DA}
+.mt-ti svg{width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round}
+.mt-tab[aria-selected="true"] .mt-ti{background:var(--mt-t7); color:#fff}
+.mt-tn{font:500 .72rem/1 var(--mono); color:rgba(205,237,228,.5)}
+.mt-fx-stage{position:relative; display:grid; grid-template-columns:auto minmax(0,1fr); gap:clamp(18px,3vw,36px); align-items:center; padding:clamp(20px,3vw,36px); border-radius:28px;
+  background:radial-gradient(420px 320px at 30% 40%, rgba(128,206,185,.22), transparent 70%), linear-gradient(160deg, rgba(23,84,86,.55), rgba(5,16,11,.6)); border:1px solid rgba(128,206,185,.2)}
+.mt-fx-phones{position:relative; width:clamp(190px,17vw,236px)}
+.mt-fx-ph{width:100% !important; transition:opacity .45s ease, transform .55s cubic-bezier(.2,.7,.2,1) !important}
+.mt-fx-ph:not(.is-on){position:absolute !important; inset:0 auto auto 0; opacity:0 !important; transform:translateY(18px) scale(.97) !important; pointer-events:none; visibility:hidden}
+.mt-fx-cap{display:grid; gap:10px}
+.mt-fx-cap h3{font:800 clamp(1.3rem,2.2vw,1.7rem)/1.2 "Nunito",var(--display); color:#fff}
+.mt-fx-cap p{color:#CFE7E1; line-height:1.7; font-size:1rem}
+.mt-fx-cap p b{color:#fff; font-weight:600}
+.mt-fx-cap.swap{animation:mtIn .5s cubic-bezier(.2,.7,.2,1)}
+@keyframes mtIn{from{opacity:0; transform:translateY(10px)}}
+/* comparador */
+.mt-cmp{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:clamp(24px,5vw,64px); align-items:center; margin-top:clamp(12px,2vw,24px); padding:clamp(20px,3vw,40px); border-radius:28px;
+  background:linear-gradient(160deg, rgba(255,255,255,.045), rgba(255,255,255,.01)); border:1px solid rgba(255,255,255,.1)}
+.mt-cmp-side{display:grid; gap:16px; align-content:start}
+.mt-pairs{display:flex; flex-wrap:wrap; gap:8px}
+.mt-pair{padding:10px 14px; border-radius:999px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.03); color:#CFCBE0; font:500 .86rem/1 var(--body); cursor:pointer; transition:background .25s ease, color .25s ease, border-color .25s ease}
+.mt-pair:hover{color:#fff; border-color:rgba(128,206,185,.5)}
+.mt-pair[aria-pressed="true"]{background:var(--mt-t7); border-color:var(--mt-t7); color:#fff}
+.mt-cmp-note{display:grid; gap:8px; padding:18px 20px; border-radius:18px; background:rgba(128,206,185,.07); border:1px solid rgba(128,206,185,.22); min-height:132px; align-content:start}
+.mt-cmp-note h3{font:800 1.2rem/1.2 "Nunito",var(--display); color:#fff}
+.mt-cmp-note p{color:#CFE7E1; line-height:1.65; font-size:.97rem} .mt-cmp-note b{color:#fff; font-weight:600}
+.mt-cmp-note.swap{animation:mtIn .45s cubic-bezier(.2,.7,.2,1)}
+.mt-cmp-view{display:grid; justify-items:center; gap:12px}
+.mt-cmp-labels{display:flex; justify-content:space-between; width:100%; font:500 .66rem/1 var(--mono); letter-spacing:.12em; text-transform:uppercase}
+.mt-cmp-labels span:first-child{color:#B7B3C9} .mt-cmp-labels span:last-child{color:var(--mt-m)}
+.mt-cmp-ph{width:clamp(230px,24vw,300px) !important; cursor:ew-resize}
+.mt-cmp-ph .scr img{position:absolute; inset:0; user-select:none; -webkit-user-drag:none; pointer-events:none}
+.mt-cmp-ph .scr img.hi{clip-path:inset(0 0 0 var(--x))}
+.mt-cmp-bar{position:absolute; top:0; bottom:0; left:var(--x); width:2px; margin-left:-1px; background:#fff; box-shadow:0 0 0 1px rgba(5,16,11,.25), 0 0 16px rgba(128,206,185,.8); pointer-events:none}
+.mt-cmp-bar i{position:absolute; top:50%; left:50%; width:40px; height:40px; margin:-20px 0 0 -20px; border-radius:50%; display:grid; place-items:center; background:var(--mt-t7); box-shadow:0 0 0 3px #fff, 0 8px 22px rgba(0,0,0,.4)}
+.mt-cmp-bar svg{width:20px; height:20px; fill:none; stroke:#fff; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round}
+.mt-cmp-range{position:absolute; inset:0; z-index:3; width:100%; height:100%; margin:0; opacity:0; cursor:ew-resize; touch-action:pan-y}
+.mt-cmp-range:focus-visible + *{outline:none}
+.mt-cmp-ph:has(.mt-cmp-range:focus-visible){outline:3px solid var(--mt-m); outline-offset:8px; border-radius:calc(var(--u, 1cqw) * 15.9)}
+.mt-cmp-hint{font:400 .74rem/1 var(--mono); color:var(--muted)}
+/* revisão */
+.mt-fixes{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; counter-reset:f}
+.mt-fix{position:relative; display:grid; gap:8px; align-content:start; padding:20px 20px 20px 58px; border-radius:18px; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.09); counter-increment:f; transition:border-color .3s ease, background .3s ease}
+.mt-fix:hover{border-color:rgba(128,206,185,.4); background:rgba(128,206,185,.05)}
+.mt-fix::before{content:counter(f, decimal-leading-zero); position:absolute; left:18px; top:20px; width:28px; height:28px; border-radius:9px; display:grid; place-items:center; font:500 .7rem/1 var(--mono); color:var(--mt-ink); background:var(--mt-m)}
+.mt-fix b{font:600 1rem/1.3 var(--display); color:#F4F2FB}
+.mt-fix p{color:var(--muted); font-size:.92rem; line-height:1.6}
+/* design system */
+.mt-ds{display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr) minmax(0,.95fr); gap:14px}
+.mt-ds-card{display:grid; gap:16px; align-content:start; padding:22px; border-radius:20px; background:rgba(255,255,255,.035); border:1px solid rgba(255,255,255,.1)}
+.mt-logos{display:grid; grid-template-columns:1fr; gap:10px}
+.mt-lt{display:grid; place-items:center; padding:16px; border-radius:16px; background:#fff} .mt-lt img{width:min(120px,60%); height:auto}
+.mt-ln{display:grid; place-items:center} .mt-ln img{width:100%; max-width:220px; height:auto; border-radius:14px}
+.mt-values{display:flex; flex-wrap:wrap; gap:6px} .mt-values span{font:500 .72rem/1 var(--mono); padding:8px 10px; border-radius:999px; color:#DDF3EC; background:rgba(128,206,185,.1); border:1px solid rgba(128,206,185,.3)}
+.mt-sw{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:10px}
+.mt-sw div{display:grid; gap:4px; align-content:start; transition:transform .3s ease}
+.mt-sw div:hover{transform:translateY(-4px)}
+.mt-sw i{display:block; aspect-ratio:1/1.3; border-radius:14px; background:var(--c); box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+.mt-sw i.dk{box-shadow:inset 0 0 0 1px rgba(255,255,255,.3)}
+.mt-sw b{font:600 .82rem/1.25 var(--body); color:#F4F2FB; margin-top:6px} .mt-sw code{font:400 .72rem/1 var(--mono); color:#CFCBE0} .mt-sw small{font-size:.74rem; color:var(--muted)}
+.mt-ds-note{font-size:.84rem; line-height:1.6; color:var(--muted)} .mt-ds-note code{font:500 .8rem var(--mono); color:#DDF3EC}
+.mt-tp{display:grid; grid-template-columns:auto minmax(0,1fr); gap:14px; align-items:center}
+.mt-tp .aa{display:grid; place-items:center; width:62px; height:62px; border-radius:16px; background:#fff; color:var(--mt-ink); font-size:1.8rem}
+.mt-tp b{display:block; color:#F4F2FB; font:600 1rem/1.2 var(--display)} .mt-tp small{display:block; color:var(--muted); font-size:.8rem; margin-top:3px}
+.mt-tp em{display:block; font-style:normal; color:#DDF3EC; margin-top:6px; font-size:.95rem}
+.nu{font-family:"Nunito",var(--body); font-weight:800} .fi{font-family:"Figtree",var(--body); font-weight:400}
+.mt-comps{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:14px}
+.mt-comp{display:grid; gap:10px; padding:14px; border-radius:18px; border:1px solid rgba(255,255,255,.1); background:rgba(255,255,255,.035); cursor:zoom-in; text-align:left; color:inherit; font:inherit;
+  transition:transform .3s ease, border-color .3s ease}
+.mt-comp:hover{transform:translateY(-3px); border-color:rgba(128,206,185,.45)}
+.mt-comp img{display:block; width:100%; height:auto; border-radius:12px; background:#fff}
+.mt-comp span{font:500 .74rem/1.3 var(--mono); color:#CFCBE0}
+.mt-comp.w2{grid-column:1 / -1}
+.mt-comp.w2 img{max-width:720px}
+/* galeria */
+.mt-rail-wrap{position:relative; margin-top:clamp(10px,2vw,20px); border-radius:28px; overflow:hidden;
+  background:radial-gradient(600px 300px at 20% 0%, rgba(128,206,185,.25), transparent 70%), linear-gradient(160deg,#0B2B2A,#05100B 70%); border:1px solid rgba(128,206,185,.2)}
+.mt-rail{list-style:none; margin:0; padding:clamp(28px,4vw,48px) clamp(20px,4vw,48px) clamp(40px,5vw,56px); display:flex; gap:clamp(18px,2.4vw,30px); overflow-x:auto; scroll-snap-type:x mandatory; scroll-padding-inline:clamp(20px,4vw,48px);
+  scrollbar-width:thin; scrollbar-color:rgba(128,206,185,.5) transparent; overscroll-behavior-x:contain}
+.mt-ri{flex:none; width:clamp(170px,16vw,210px); display:grid; gap:14px; scroll-snap-align:start}
+.mt-ri:nth-child(odd) .pv-phone{transform:rotate(-2.2deg)} .mt-ri:nth-child(even) .pv-phone{transform:translateY(18px) rotate(2.2deg)}
+.mt-ri .pv-phone{width:100% !important; transition:transform .45s cubic-bezier(.2,.7,.2,1) !important}
+.mt-ri .pv-phone:hover{transform:translateY(-6px) rotate(0) !important}
+.mt-rn{font:500 .7rem/1 var(--mono); letter-spacing:.08em; color:#B8E8DA; white-space:nowrap}
+.mt-rail-nav{position:absolute; right:16px; top:14px; display:flex; gap:8px; z-index:2}
+.mt-rail-btn{width:40px; height:40px; border-radius:50%; display:grid; place-items:center; border:1px solid rgba(128,206,185,.4); background:rgba(5,16,11,.7); color:#fff; cursor:pointer; transition:background .25s ease}
+.mt-rail-btn:hover{background:var(--mt-t7)} .mt-rail-btn svg{width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round}
+.mt-rv-on .mt-ri{opacity:0; translate:0 40px; transition:opacity .7s ease, translate .8s cubic-bezier(.2,.7,.2,1); transition-delay:calc(var(--i) * 70ms)}
+.mt-rv-on .mt-rv.in .mt-ri{opacity:1; translate:0 0}
+.mt-prof{display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:clamp(20px,4vw,48px); align-items:center; margin-top:clamp(20px,3vw,32px); padding:clamp(20px,3vw,32px); border-radius:24px;
+  background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.1)}
+.mt-prof-text{display:grid; gap:12px}
+.mt-prof-text h3{font:600 clamp(1.2rem,2vw,1.5rem)/1.2 var(--display); color:#F4F2FB}
+.mt-prof-text p{color:var(--muted); line-height:1.65; font-size:.96rem}
+.mt-prof-ph{display:flex; gap:5%; justify-content:center; align-items:flex-start}
+.mt-prof-ph .pv-phone{width:28% !important}
+.mt-prof-ph .pv-phone:nth-child(2){margin-top:4%}
+/* encerramento */
+.mt-final .fl-ring{background:conic-gradient(from var(--ang), #EA1938, #38A3A5, #80CEB9, #EA1938)}
+.mt-final .fl-tile{box-shadow:0 0 0 1px rgba(255,255,255,.6), 0 30px 60px -20px rgba(0,0,0,.6), 0 0 60px rgba(56,163,165,.4)}
+.mt-final-logo .fl-tile img{width:58%}
+.mt-gh{grid-template-columns:minmax(0,1fr) !important; max-width:420px !important}
+.mt-gh .gh-btn{border-color:rgba(128,206,185,.4)}
+/* entrada das seções */
+.mt-rv-on .mt-rv{opacity:0; transform:translateY(30px); transition:opacity .8s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.mt-rv-on .mt-rv.in{opacity:1; transform:none}
+@media (max-width:980px){
+  .mt-hero{grid-template-columns:minmax(0,1fr)}
+  .mt-hero-stage{min-height:440px}
+  .mt-fx{grid-template-columns:minmax(0,1fr)}
+  .mt-tabs{display:flex; overflow-x:auto; gap:8px; padding-bottom:6px; scroll-snap-type:x mandatory; scrollbar-width:none}
+  .mt-tabs::-webkit-scrollbar{display:none}
+  .mt-tabs li{flex:none; scroll-snap-align:start}
+  .mt-tab{grid-template-columns:auto auto; padding:10px 14px 10px 10px; white-space:nowrap} .mt-tab .mt-tn{display:none}
+  .mt-tab:hover{transform:none}
+  .mt-ds{grid-template-columns:minmax(0,1fr) minmax(0,1fr)} .mt-ds .mt-ds-card:nth-child(2){grid-column:1 / -1; order:-1}
+  .mt-prof{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:760px){
+  .mt-hero{padding:24px 20px 8px; border-radius:24px}
+  .mt-hero-stage{min-height:380px}
+  .mt-hp{width:170px}
+  .mt-chip{font-size:.74rem} .mt-chip.c1{left:0; top:8%} .mt-chip.c2{right:0; bottom:10%}
+  .mt-facts{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+  .mt-facts div:nth-child(3){padding-left:0; border-left:0}
+  .mt-ch, .mt-pillars, .mt-fixes{grid-template-columns:minmax(0,1fr)}
+  .mt-pillar:not(:last-child)::after{top:auto; bottom:-15px; right:auto; left:46px; width:2px; height:14px; background:linear-gradient(180deg, rgba(128,206,185,.7), rgba(128,206,185,.1))}
+  .mt-fx-stage{grid-template-columns:minmax(0,1fr); justify-items:center; text-align:left}
+  .mt-fx-phones{width:min(62vw,230px)}
+  .mt-cmp{grid-template-columns:minmax(0,1fr)}
+  .mt-cmp-view{order:-1}
+  .mt-cmp-ph{width:min(70vw,280px) !important}
+  .mt-pairs{flex-wrap:nowrap; overflow-x:auto; padding-bottom:4px; scrollbar-width:none} .mt-pair{flex:none}
+  .mt-ds{grid-template-columns:minmax(0,1fr)}
+  .mt-sw{grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px 10px} .mt-sw i{aspect-ratio:1.6/1}
+  .mt-comps{grid-template-columns:minmax(0,1fr)}
+  .mt-prof-ph .pv-phone{width:30% !important}
+  .mt-rail-nav{display:none}
+}
 @media (prefers-reduced-motion: reduce){*{animation:none!important; transition:none!important}}
 
 /* celular: nada pode passar da largura da tela (evita a página "pender" para o lado no iPhone) */
@@ -1605,6 +1829,23 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
           <h3>CIntegre+</h3>
           <p>Plataforma gamificada que conecta escolas públicas e ONGs do Recife para incentivar a participação em atividades educativas e sociais. Projeto com interfaces em Figma e implementação web.</p>
           <div class="tags"><span>UX/UI</span><span>Desenvolvimento Web</span><span>Gamificação</span><span>Impacto Social</span></div>
+          <span class="case-cta">Ver estudo de caso <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      <a class="card feature glass mt-card" href="#monitube" aria-label="Abrir estudo de caso do MoniTube">
+        <div class="win"><div class="dots"><i></i><i></i><i></i></div><span class="chip">Mobile · Saúde pública</span></div>
+        <div class="thumb cover slider" data-interval="4400" style="aspect-ratio:4/3">
+          <img class="slide is-on" src="mt/card-1.jpg" width="1200" height="900" loading="lazy" alt="Capa do MoniTube: logo e três celulares com as telas Início, Seu tratamento e Benefícios, em fundo verde-azulado escuro">
+          <img class="slide" src="mt/card-2.jpg" width="1200" height="900" loading="lazy" alt="Comparação entre o wireframe em cinza e a tela final Confirme sua dose do MoniTube, com uma seta vermelha entre os dois celulares">
+          <div class="slide-dots" aria-hidden="true"></div>
+          <button class="sl-arrow sl-prev" type="button" aria-label="Imagem anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button class="sl-arrow sl-next" type="button" aria-label="Próxima imagem"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+        <div class="info">
+          <span class="mono">App mobile · UX/UI Design</span>
+          <h3>MoniTube: cuidar é continuar</h3>
+          <p>Aplicativo para acompanhar o tratamento da tuberculose, com lembretes, registro das doses e um sistema de pontos que pode virar benefício social. Do wireframe ao protótipo de alta fidelidade no Figma.</p>
+          <div class="tags"><span>UX/UI</span><span>Saúde pública</span><span>Gamificação</span><span>Design System</span></div>
           <span class="case-cta">Ver estudo de caso <span aria-hidden="true">→</span></span>
         </div>
       </a>
@@ -3120,6 +3361,216 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
         <a class="gh-btn ci-gh" href="https://www.figma.com/design/MoHXQ7wf7ksDh9dS548OZp/Cintegre-?node-id=2011-358&amp;p=f&amp;t=VVWQyemmG2aPNdY5-0" target="_blank" rel="noopener noreferrer"><svg class="gh" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 2h3.5v6.5H8.5a3.25 3.25 0 0 1 0-6.5zM12 2h3.5a3.25 3.25 0 0 1 0 6.5H12zM8.5 8.5H12V15H8.5a3.25 3.25 0 0 1 0-6.5zM15.5 8.5a3.25 3.25 0 1 1 0 6.5 3.25 3.25 0 0 1 0-6.5zM8.5 15H12v3.25A3.25 3.25 0 1 1 8.5 15z"/></svg><span><b>Ver protótipo no Figma</b><small>Telas de escola e ONG</small></span><i aria-hidden="true">↗</i><span class="sr-only"> (abre em nova aba)</span></a>
         <a class="gh-btn ci-gh" href="https://github.com/Felipeds-L/CIntegre" target="_blank" rel="noopener noreferrer"><svg class="gh" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg><span><b>Explorar implementação no GitHub</b><small>Next.js · Express · Prisma</small></span><i aria-hidden="true">↗</i><span class="sr-only"> (abre em nova aba)</span></a>
       </div>
+      <div class="ctas"><a class="btn quiet" href="#projetos">← Voltar aos projetos</a><a class="btn quiet" href="#monitube">Próximo: MoniTube →</a></div>
+    </section>
+  </main>
+
+  <!-- ===== Estudo de caso: MoniTube (abre em #monitube) ===== -->
+  <main id="case-monitube" class="case mt" hidden>
+    <div class="case-top"><a class="back-link" href="#projetos"><span aria-hidden="true">←</span> Voltar aos projetos</a></div>
+
+    <header class="mt-hero">
+      <div class="mt-hero-copy">
+        <span class="mt-eyebrow"><i aria-hidden="true"></i>Estudo de caso · UX/UI Design</span>
+        <h1 class="mt-title"><img class="mt-sym" src="mt/logo-s.svg" width="64" height="64" alt=""><span>Moni</span><span class="t">Tube</span></h1>
+        <p class="mt-claim">Tecnologia que acompanha, cuidado que transforma.</p>
+        <p class="mt-lede">Aplicativo mobile para acompanhar o tratamento da tuberculose: lembretes, registro das doses, progresso e um sistema de pontos que pode virar benefício social.</p>
+        <ul class="tags" aria-label="Tags do projeto"><li><span>UX/UI Design</span></li><li><span>Saúde pública</span></li><li><span>Mobile</span></li><li><span>Gamificação</span></li></ul>
+        <div class="mt-links">
+          <a class="mt-btn pri" href="https://www.figma.com/design/o4zDWfDnlC1BqJHu9BN6DC/Projeto-IS?node-id=0-1&amp;p=f&amp;t=O67yGiQavOHoHTNO-0" target="_blank" rel="noopener noreferrer">Ver protótipo no Figma <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a>
+          <button class="mt-btn sec" type="button" data-jump="mt-processo">Do wireframe à tela final <span aria-hidden="true">↓</span></button>
+        </div>
+      </div>
+      <div class="mt-hero-stage" data-lb>
+        <span class="mt-orb" aria-hidden="true"></span><span class="mt-ring" aria-hidden="true"></span>
+        <button class="pv-phone iphone own-sb mt-hp back" type="button" data-name="Seu tratamento"><span class="scr"><img src="mt/t/04-tratamento.jpg" width="860" height="1864" loading="lazy" decoding="async" alt="Seu tratamento: anel de progresso de 6% com 11 de 180 doses, semana com as doses marcadas, botão Registrar dose de agora, próximas doses e próxima consulta"></span></button>
+        <button class="pv-phone iphone own-sb mt-hp front" type="button" data-name="Início"><span class="scr"><img src="mt/t/03-inicio.jpg" width="860" height="1864" loading="lazy" decoding="async" alt="Início: saudação Olá, Maria!, card de progresso com 12 de 180 doses registradas, próxima dose às 20:00, saldo de 120 pontos, botão Registrar dose e doses recentes"></span></button>
+        <span class="mt-chip c1" aria-hidden="true"><i class="ok"></i>Dose registrada</span>
+        <span class="mt-chip c2" aria-hidden="true"><i class="pt">+10</i>pontos após a validação</span>
+      </div>
+    </header>
+
+    <div class="mt-about">
+      <dl class="facts mt-facts">
+        <div><dt>Área</dt><dd>Saúde pública · tuberculose</dd></div>
+        <div><dt>Plataforma</dt><dd>Aplicativo mobile</dd></div>
+        <div><dt>Foco inicial</dt><dd>Recife, Pernambuco</dd></div>
+        <div><dt>Entregas</dt><dd>Wireframes, design system e protótipo de alta fidelidade</dd></div>
+      </dl>
+      <p class="mt-status"><i aria-hidden="true"></i><span>O MoniTube é uma <b>proposta de solução</b>. As telas deste estudo vêm do protótipo no Figma, e as parcerias para os benefícios são previstas, ainda não formalizadas.</span></p>
+    </div>
+
+    <!-- 01 -->
+    <section class="mt-sec mt-rv" aria-labelledby="mt-desafio">
+      <span class="cs-num">01 / O desafio</span>
+      <h2 id="mt-desafio">Um tratamento que pede constância.</h2>
+      <p class="jr-intro">O tratamento da tuberculose exige continuidade e disciplina. Mas dificuldades financeiras, o esquecimento dos medicamentos e a falta de acompanhamento podem comprometer a adesão. O MoniTube propõe apoiar o paciente nesse processo, unindo acompanhamento digital e incentivos sociais.</p>
+      <ol class="mt-ch">
+        <li><span class="mt-ci r" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 10v3l2 2M5 4 2.5 6.5M19 4l2.5 2.5"/></svg></span><h3>Esquecimento</h3><p>Doses perdidas no meio da rotina.</p><span class="mt-ans"><b>No app</b>lembretes nos horários prescritos</span></li>
+        <li><span class="mt-ci r" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="9" cy="7" rx="6" ry="3"/><path d="M3 7v4c0 1.7 2.7 3 6 3s6-1.3 6-3V7"/><path d="M9 14v3c0 1.7 2.7 3 6 3s6-1.3 6-3v-4c0-1.7-2.7-3-6-3"/></svg></span><h3>Dificuldades financeiras</h3><p>Custos do dia a dia que pesam na continuidade.</p><span class="mt-ans"><b>No app</b>pontos que podem virar benefícios</span></li>
+        <li><span class="mt-ci r" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><h3>Falta de acompanhamento</h3><p>Pouca visibilidade do próprio progresso.</p><span class="mt-ans"><b>No app</b>progresso visível e teleconsulta com a equipe</span></li>
+      </ol>
+    </section>
+
+    <!-- 02 -->
+    <section class="mt-sec mt-rv" aria-labelledby="mt-solucao">
+      <span class="cs-num">02 / A solução</span>
+      <h2 id="mt-solucao">Três pilares que se alimentam.</h2>
+      <p class="jr-intro">Cada dose registrada alimenta o progresso, gera pontos e aproxima o paciente de um benefício, num ciclo pensado para incentivar a continuidade do cuidado.</p>
+      <ol class="mt-pillars">
+        <li class="mt-pillar"><span class="mt-ci t" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="8.5" width="18" height="7" rx="3.5" transform="rotate(-45 12 12)"/><path d="m9.5 9.5 5 5"/></svg></span><span class="mt-pn">01</span><h3>Acompanhamento</h3><p>Organização dos medicamentos, registro das doses e visualização do progresso.</p></li>
+        <li class="mt-pillar"><span class="mt-ci m" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3.5 2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></svg></span><span class="mt-pn">02</span><h3>Motivação</h3><p>Sistema de pontos que reconhece a adesão e incentiva a continuidade do tratamento.</p></li>
+        <li class="mt-pillar"><span class="mt-ci r" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="8" width="17" height="4" rx="1"/><path d="M5 12v8h14v-8M12 8v12M12 8S10.5 3.5 8 4.5 9 8 12 8zM12 8s1.5-4.5 4-3.5S15 8 12 8z"/></svg></span><span class="mt-pn">03</span><h3>Recompensas</h3><p>Troca de pontos por benefícios sociais, como créditos de transporte, desconto na conta de energia e cestas de alimentos.</p></li>
+      </ol>
+      <p class="rb-note">Os benefícios dependem de parcerias com instituições públicas e privadas, previstas na proposta e ainda não formalizadas.</p>
+    </section>
+
+    <!-- 03 -->
+    <section class="mt-sec mt-rv" aria-labelledby="mt-func">
+      <span class="cs-num">03 / Principais funcionalidades</span>
+      <h2 id="mt-func">Cada funcionalidade, na tela real.</h2>
+      <div class="mt-fx">
+        <ul class="mt-tabs" role="tablist" aria-label="Funcionalidades do MoniTube">
+          <li><button class="mt-tab" type="button" role="tab" id="mt-tab-0" aria-controls="mt-fx-panel" aria-selected="true"><span class="mt-ti" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="8.5" width="18" height="7" rx="3.5" transform="rotate(-45 12 12)"/><path d="m9.5 9.5 5 5"/></svg></span><span class="mt-tn">01</span><span class="mt-tl">Registro de medicamentos</span></button></li>
+          <li><button class="mt-tab" type="button" role="tab" id="mt-tab-1" aria-controls="mt-fx-panel" aria-selected="false" tabindex="-1"><span class="mt-ti" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8h3l2-2.5h6L17 8h3v11H4z"/><circle cx="12" cy="13.5" r="3.5"/></svg></span><span class="mt-tn">02</span><span class="mt-tl">Captura do medicamento</span></button></li>
+          <li><button class="mt-tab" type="button" role="tab" id="mt-tab-2" aria-controls="mt-fx-panel" aria-selected="false" tabindex="-1"><span class="mt-ti" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19h16M7 16v-4M12 16V7M17 16v-7"/></svg></span><span class="mt-tn">03</span><span class="mt-tl">Acompanhamento do tratamento</span></button></li>
+          <li><button class="mt-tab" type="button" role="tab" id="mt-tab-3" aria-controls="mt-fx-panel" aria-selected="false" tabindex="-1"><span class="mt-ti" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></svg></span><span class="mt-tn">04</span><span class="mt-tl">Lembretes</span></button></li>
+          <li><button class="mt-tab" type="button" role="tab" id="mt-tab-4" aria-controls="mt-fx-panel" aria-selected="false" tabindex="-1"><span class="mt-ti" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3.5 2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></svg></span><span class="mt-tn">05</span><span class="mt-tl">Sistema de pontos</span></button></li>
+          <li><button class="mt-tab" type="button" role="tab" id="mt-tab-5" aria-controls="mt-fx-panel" aria-selected="false" tabindex="-1"><span class="mt-ti" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="8" width="17" height="4" rx="1"/><path d="M5 12v8h14v-8M12 8v12M12 8S10.5 3.5 8 4.5 9 8 12 8zM12 8s1.5-4.5 4-3.5S15 8 12 8z"/></svg></span><span class="mt-tn">06</span><span class="mt-tl">Benefícios sociais</span></button></li>
+        </ul>
+        <div class="mt-fx-stage" id="mt-fx-panel" role="tabpanel" aria-labelledby="mt-tab-0">
+          <div class="mt-fx-phones" data-lb>
+            <button class="pv-phone iphone own-sb mt-fx-ph is-on" type="button" data-name="Registrar dose"><span class="scr"><img src="mt/t/06-registrar.jpg" width="860" height="1864" loading="lazy" decoding="async" alt="Registrar dose, etapa 1 de 3: Confirme sua dose, com medicamento, quantidade, horário e status Pendente, e o botão Continuar para a foto"></span></button>
+            <button class="pv-phone iphone own-sb mt-fx-ph" type="button" data-name="Foto do medicamento"><span class="scr"><img src="mt/t/07-foto.jpg" width="860" height="1864" loading="lazy" decoding="async" alt="Foto do medicamento, etapa 2 de 3: área da câmera para posicionar o comprimido, dica de iluminação e botões Tirar foto e Refazer foto"></span></button>
+            <button class="pv-phone iphone own-sb mt-fx-ph" type="button" data-name="Seu tratamento"><span class="scr"><img src="mt/t/04-tratamento.jpg" width="860" height="1864" loading="lazy" decoding="async" alt="Seu tratamento: anel de progresso de 6% com 11 de 180 doses, semana com as doses marcadas, botão Registrar dose de agora, próximas doses e próxima consulta"></span></button>
+            <button class="pv-phone iphone own-sb mt-fx-ph" type="button" data-name="Lembrete de medicamento"><span class="scr"><img src="mt/t/05-lembrete.jpg" width="860" height="1864" loading="lazy" decoding="async" alt="Lembrete de medicamento aberto sobre a tela de tratamento: Está na hora do seu medicamento, com os botões Já tomei — registrar dose, Lembrar em 10 minutos e Não tomei agora"></span></button>
+            <button class="pv-phone iphone own-sb mt-fx-ph" type="button" data-name="Dose registrada"><span class="scr"><img src="mt/t/08-registrada.jpg" width="860" height="1864" loading="lazy" decoding="async" alt="Dose registrada, etapa 3 de 3: resumo do registro com foto enviada e o aviso +10 pontos, somados após a validação, saldo de 120 pontos"></span></button>
+            <button class="pv-phone iphone own-sb mt-fx-ph" type="button" data-name="Benefícios"><span class="scr"><img src="mt/t/09-beneficios.jpg" width="860" height="1864" loading="lazy" decoding="async" alt="Benefícios: saldo de 120 pontos em destaque e cards de vale-transporte, conta de energia e cesta de alimentos, com o custo em pontos e o botão Resgatar"></span></button>
+          </div>
+          <div class="mt-fx-cap" aria-live="polite"><h3>Registro de medicamentos</h3><p>Na etapa 1, o paciente confere o medicamento, a quantidade e o horário antes de registrar. Até lá, a dose aparece como <b>Pendente</b>.</p></div>
+          <div hidden class="mt-fx-data"><template data-h="Registro de medicamentos">Na etapa 1, o paciente confere o medicamento, a quantidade e o horário antes de registrar. Até lá, a dose aparece como <b>Pendente</b>.</template><template data-h="Captura do medicamento">Na etapa 2, a câmera fotografa o comprimido na palma da mão ou na cartela. A foto é uma <b>evidência complementar</b> do registro, com dicas de luz e enquadramento.</template><template data-h="Acompanhamento do tratamento">A aba Tratamento reúne o progresso (no exemplo, 11 de 180 doses), a semana, as próximas doses e a próxima consulta.</template><template data-h="Lembretes">No horário, o lembrete oferece três saídas: <b>Já tomei — registrar dose</b>, <b>Lembrar em 10 minutos</b> e <b>Não tomei agora</b>. Fechar o aviso não registra nada.</template><template data-h="Sistema de pontos">Ao concluir o registro, a tela mostra <b>+10 pontos</b> e o saldo. Os pontos são somados só depois da validação do registro.</template><template data-h="Benefícios sociais">Os pontos podem ser trocados por vale-transporte, desconto na conta de energia ou cesta de alimentos. Cada card mostra o custo e se o benefício já está disponível ou quantos pontos faltam.</template></div>
+        </div>
+      </div>
+      <p class="rb-note">Funcionalidades do protótipo navegável no Figma. Nomes, datas e saldos nas telas são ilustrativos.</p>
+    </section>
+
+    <!-- 04 -->
+    <section class="mt-sec mt-rv" id="mt-processo" aria-labelledby="mt-proc">
+      <span class="cs-num">04 / Processo de design</span>
+      <h2 id="mt-proc">Do wireframe à tela final.</h2>
+      <p class="jr-intro">As telas começaram em baixa fidelidade, em tons de cinza, para resolver a organização das informações, a navegação e os fluxos antes de qualquer decisão visual. Depois, ganharam a identidade do MoniTube e passaram por uma revisão de coerência e linguagem.</p>
+
+      <div class="mt-cmp">
+        <div class="mt-cmp-side">
+          <span class="mt-cmp-k">Escolha uma tela</span>
+          <div class="mt-pairs" role="group" aria-label="Telas para comparar"><button class="mt-pair" type="button" aria-pressed="true" data-w="mt/w/inicio.jpg" data-h="mt/t/03-inicio.jpg" data-n="Início">Início</button><button class="mt-pair" type="button" aria-pressed="false" data-w="mt/w/tratamento.jpg" data-h="mt/t/04-tratamento.jpg" data-n="Tratamento">Tratamento</button><button class="mt-pair" type="button" aria-pressed="false" data-w="mt/w/lembrete.jpg" data-h="mt/t/05-lembrete.jpg" data-n="Lembrete">Lembrete</button><button class="mt-pair" type="button" aria-pressed="false" data-w="mt/w/registrar.jpg" data-h="mt/t/06-registrar.jpg" data-n="Registrar dose">Registrar dose</button><button class="mt-pair" type="button" aria-pressed="false" data-w="mt/w/foto.jpg" data-h="mt/t/07-foto.jpg" data-n="Foto">Foto</button><button class="mt-pair" type="button" aria-pressed="false" data-w="mt/w/registrada.jpg" data-h="mt/t/08-registrada.jpg" data-n="Dose registrada">Dose registrada</button><button class="mt-pair" type="button" aria-pressed="false" data-w="mt/w/beneficios.jpg" data-h="mt/t/09-beneficios.jpg" data-n="Benefícios">Benefícios</button><button class="mt-pair" type="button" aria-pressed="false" data-w="mt/w/consultas.jpg" data-h="mt/t/10-consultas.jpg" data-n="Consultas">Consultas</button></div>
+          <div class="mt-cmp-note" aria-live="polite"><h3>Início</h3><p>“Doses realizadas” virou <b>“doses registradas”</b>, porque o app não confirma clinicamente a tomada. O progresso ganha um card em turquesa e a barra inferior passa a ter 5 abas.</p></div>
+          <div hidden class="mt-cmp-data"><template>“Doses realizadas” virou <b>“doses registradas”</b>, porque o app não confirma clinicamente a tomada. O progresso ganha um card em turquesa e a barra inferior passa a ter 5 abas.</template><template>O progresso vira um anel, com a semana logo abaixo. A linha do tempo foi acertada: 11 doses e a das 08:00 pendente, coerente com o lembrete e com o registro.</template><template>“Registrar dose tomada” e “Não tomei a dose” viraram <b>“Já tomei — registrar dose”</b> e <b>“Não tomei agora”</b>: uma linguagem sem culpa.</template><template>O botão “Registrar dose” virou <b>“Continuar para a foto”</b>, porque ainda faltava uma etapa. O status Pendente ganha cor e ícone.</template><template>A área da câmera fica escura para destacar o enquadramento, e o aviso explica que a foto serve só como evidência complementar.</template><template>Os pontos passam a aparecer <b>“somados após a validação”</b>, e o saldo foi corrigido de 130 para 120 pontos, igual ao das outras telas.</template><template>“Recompensas” virou <b>“Benefícios”</b>. O saldo ganha destaque em vermelho, e cada benefício mostra se está disponível ou quantos pontos faltam.</template><template>No wireframe, a aba Teleconsulta tomava o lugar de Benefícios. Na versão final, <b>as mesmas 5 abas</b> aparecem em todas as telas do paciente.</template></div>
+        </div>
+        <div class="mt-cmp-view">
+          <div class="mt-cmp-labels" aria-hidden="true"><span>Baixa fidelidade</span><span>Alta fidelidade</span></div>
+          <div class="pv-phone iphone own-sb mt-cmp-ph" style="--x:50%">
+            <span class="scr">
+              <img class="lo" src="mt/w/inicio.jpg" width="860" height="1864" loading="lazy" decoding="async" alt="Wireframe em tons de cinza da tela Início">
+              <img class="hi" src="mt/t/03-inicio.jpg" width="860" height="1864" loading="lazy" decoding="async" alt="Tela final Início, com a identidade do MoniTube">
+              <span class="mt-cmp-bar" aria-hidden="true"><i><svg viewBox="0 0 24 24"><path d="M9 6l-5 6 5 6M15 6l5 6-5 6"/></svg></i></span>
+            </span>
+            <input class="mt-cmp-range" type="range" min="0" max="100" value="50" aria-label="Comparar wireframe e tela final: arraste para os lados">
+          </div>
+          <p class="mt-cmp-hint" aria-hidden="true">Arraste para comparar</p>
+        </div>
+      </div>
+
+      <h3 class="mt-sub">O que a revisão corrigiu</h3>
+      <ul class="mt-fixes">
+        <li class="mt-fix"><b>Navegação unificada</b><p>A barra inferior tem as mesmas 5 abas em todas as telas do paciente: Início, Tratamento, Consultas, Benefícios e Perfil.</p></li>
+        <li class="mt-fix"><b>Linha do tempo coerente</b><p>Lembrete, registro, confirmação e Início contam a mesma história. Antes, a dose das 08:00 aparecia registrada e pendente ao mesmo tempo.</p></li>
+        <li class="mt-fix"><b>Nomenclatura</b><p>“MoniTube” com a grafia da marca, “doses registradas” no lugar de “realizadas”, “gov.br” e “profissional de saúde”.</p></li>
+        <li class="mt-fix"><b>Registro em 3 etapas</b><p>Conferir, fotografar e confirmar. Os pontos só são somados depois da validação.</p></li>
+        <li class="mt-fix"><b>Linguagem sem culpa</b><p>Os alertas lembram que ausência de registro não significa dose não tomada.</p></li>
+        <li class="mt-fix"><b>Acessibilidade</b><p>Botões de 56px, contraste AA, rótulos sempre visíveis nos campos e status com cor, ícone e texto.</p></li>
+      </ul>
+      <p class="rb-note">Resumo das notas de revisão registradas no próprio arquivo do Figma.</p>
+
+      <h3 class="mt-sub">Identidade visual e componentes</h3>
+      <div class="mt-ds">
+        <div class="mt-ds-card mt-brand">
+          <span class="mt-k">Logo</span>
+          <div class="mt-logos"><span class="mt-lt"><img src="mt/logo-v.svg" width="153" height="166" loading="lazy" alt="Logo vertical do MoniTube: pulmões vermelhos com uma linha de batimento e um termômetro em verde, acima do nome MoniTube e do slogan Cuidar é continuar"></span><span class="mt-ln"><img src="mt/logo-neg.svg" width="227" height="80" loading="lazy" alt="Versão negativa do logo, em branco sobre verde-azulado"></span></div>
+          <div class="mt-values" aria-label="Atributos da marca"><span>Acolhimento</span><span>Confiança</span><span>Simplicidade</span><span>Incentivo</span></div>
+        </div>
+        <div class="mt-ds-card">
+          <span class="mt-k">Cores</span>
+          <div class="mt-sw">
+            <div style="--c:#38A3A5"><i></i><b>Turquesa</b><code>#38A3A5</code><small>Marca</small></div>
+            <div style="--c:#80CEB9"><i></i><b>Verde-menta</b><code>#80CEB9</code><small>Sucesso</small></div>
+            <div style="--c:#EA1938"><i></i><b>Vermelho</b><code>#EA1938</code><small>Destaques e alertas</small></div>
+            <div style="--c:#05100B"><i class="dk"></i><b>Preto-esverdeado</b><code>#05100B</code><small>Texto</small></div>
+            <div style="--c:#FFFFFF"><i></i><b>Branco</b><code>#FFFFFF</code><small>Fundos</small></div>
+          </div>
+          <p class="mt-ds-note">Texto sobre turquesa usa um tom mais escuro (<code>#237577</code>, contraste de 5,4:1 com o branco) para cumprir o WCAG AA. O turquesa original fica para ícones, gráficos e destaques.</p>
+        </div>
+        <div class="mt-ds-card mt-type">
+          <span class="mt-k">Tipografia</span>
+          <div class="mt-tp"><span class="aa nu">Aa</span><span><b>Nunito</b><small>Títulos · ExtraBold e Bold</small><em class="nu">Cada registro conta no seu cuidado</em></span></div>
+          <div class="mt-tp"><span class="aa fi">Aa</span><span><b>Figtree</b><small>Textos e rótulos · Regular a Bold</small><em class="fi">Cada registro conta no seu cuidado</em></span></div>
+        </div>
+      </div>
+      <div class="mt-comps">
+        <button class="mt-comp" type="button" data-full="mt/comp/botoes.png" data-cap="Botões: primário, secundário, terciário e perigo, nos estados padrão, pressionado e desabilitado"><img src="mt/comp/botoes.png" width="2444" height="708" loading="lazy" alt="Botões Registrar dose nas variantes primária, secundária, terciária e perigo, com estados padrão, pressionado e desabilitado"><span>Botões · 4 variantes, 3 estados</span></button>
+        <button class="mt-comp" type="button" data-full="mt/comp/beneficio.png" data-cap="Card de benefício: disponível e com saldo insuficiente"><img src="mt/comp/beneficio.png" width="1784" height="422" loading="lazy" alt="Dois cards de vale-transporte de 80 pontos: um com o botão Resgatar e outro com Faltam 80 pontos"><span>Card de benefício</span></button>
+        <button class="mt-comp" type="button" data-full="mt/comp/campos.png" data-cap="Campo de texto: padrão, foco, preenchido, erro e desabilitado"><img src="mt/comp/campos.png" width="2384" height="468" loading="lazy" alt="Campo Nome completo nos estados padrão, foco, preenchido, erro e desabilitado"><span>Campo de texto · 5 estados</span></button>
+        <button class="mt-comp" type="button" data-full="mt/comp/dose.png" data-cap="Item de dose: registrada, pendente e agendada"><img src="mt/comp/dose.png" width="2584" height="268" loading="lazy" alt="Três itens de dose de hoje às 08:00, com os status Registrada, Pendente e Agendada"><span>Item de dose</span></button>
+        <button class="mt-comp w2" type="button" data-full="mt/comp/badges.png" data-cap="Badges de status: registrada, pendente, agendada, atenção e neutro"><img src="mt/comp/badges.png" width="1384" height="164" loading="lazy" alt="Badges Registrada, Pendente, Agendada, Atenção e Neutro, cada um com cor, ícone e texto"><span>Badges de status · cor + ícone + texto</span></button>
+      </div>
+    </section>
+
+    <!-- 05 -->
+    <section class="mt-sec mt-rv" aria-labelledby="mt-galeria">
+      <span class="cs-num">05 / Galeria de interfaces</span>
+      <h2 id="mt-galeria">O fluxo do paciente, tela a tela.</h2>
+      <p class="jr-intro">Do login à teleconsulta. Toque em uma tela para ampliar e navegar pelas demais.</p>
+      <div class="mt-rail-wrap">
+        <ol class="mt-rail" data-lb aria-label="Telas do fluxo do paciente">
+          <li class="mt-ri" style="--i:0"><span class="mt-rn">01 · Login</span><button class="pv-phone iphone own-sb" type="button" data-name="Login"><span class="scr"><img src="mt/t/02-login.jpg" width="860" height="1864" loading="lazy" decoding="async" alt="Login do paciente: campos de CPF e senha, botão Entrar e opção Entrar com gov.br"></span></button></li>
+          <li class="mt-ri" style="--i:1"><span class="mt-rn">02 · Início</span><button class="pv-phone iphone own-sb" type="button" data-name="Início"><span class="scr"><img src="mt/t/03-inicio.jpg" width="860" height="1864" loading="lazy" decoding="async" alt="Início: saudação Olá, Maria!, card de progresso com 12 de 180 doses registradas, próxima dose às 20:00, saldo de 120 pontos, botão Registrar dose e doses recentes"></span></button></li>
+          <li class="mt-ri" style="--i:2"><span class="mt-rn">03 · Tratamento</span><button class="pv-phone iphone own-sb" type="button" data-name="Tratamento"><span class="scr"><img src="mt/t/04-tratamento.jpg" width="860" height="1864" loading="lazy" decoding="async" alt="Seu tratamento: anel de progresso de 6% com 11 de 180 doses, semana com as doses marcadas, botão Registrar dose de agora, próximas doses e próxima consulta"></span></button></li>
+          <li class="mt-ri" style="--i:3"><span class="mt-rn">04 · Lembrete</span><button class="pv-phone iphone own-sb" type="button" data-name="Lembrete"><span class="scr"><img src="mt/t/05-lembrete.jpg" width="860" height="1864" loading="lazy" decoding="async" alt="Lembrete de medicamento aberto sobre a tela de tratamento: Está na hora do seu medicamento, com os botões Já tomei — registrar dose, Lembrar em 10 minutos e Não tomei agora"></span></button></li>
+          <li class="mt-ri" style="--i:4"><span class="mt-rn">05 · Registrar · 1/3</span><button class="pv-phone iphone own-sb" type="button" data-name="Registrar · 1/3"><span class="scr"><img src="mt/t/06-registrar.jpg" width="860" height="1864" loading="lazy" decoding="async" alt="Registrar dose, etapa 1 de 3: Confirme sua dose, com medicamento, quantidade, horário e status Pendente, e o botão Continuar para a foto"></span></button></li>
+          <li class="mt-ri" style="--i:5"><span class="mt-rn">06 · Foto · 2/3</span><button class="pv-phone iphone own-sb" type="button" data-name="Foto · 2/3"><span class="scr"><img src="mt/t/07-foto.jpg" width="860" height="1864" loading="lazy" decoding="async" alt="Foto do medicamento, etapa 2 de 3: área da câmera para posicionar o comprimido, dica de iluminação e botões Tirar foto e Refazer foto"></span></button></li>
+          <li class="mt-ri" style="--i:6"><span class="mt-rn">07 · Registrada · 3/3</span><button class="pv-phone iphone own-sb" type="button" data-name="Registrada · 3/3"><span class="scr"><img src="mt/t/08-registrada.jpg" width="860" height="1864" loading="lazy" decoding="async" alt="Dose registrada, etapa 3 de 3: resumo do registro com foto enviada e o aviso +10 pontos, somados após a validação, saldo de 120 pontos"></span></button></li>
+          <li class="mt-ri" style="--i:7"><span class="mt-rn">08 · Benefícios</span><button class="pv-phone iphone own-sb" type="button" data-name="Benefícios"><span class="scr"><img src="mt/t/09-beneficios.jpg" width="860" height="1864" loading="lazy" decoding="async" alt="Benefícios: saldo de 120 pontos em destaque e cards de vale-transporte, conta de energia e cesta de alimentos, com o custo em pontos e o botão Resgatar"></span></button></li>
+          <li class="mt-ri" style="--i:8"><span class="mt-rn">09 · Consultas</span><button class="pv-phone iphone own-sb" type="button" data-name="Consultas"><span class="scr"><img src="mt/t/10-consultas.jpg" width="860" height="1864" loading="lazy" decoding="async" alt="Consultas: próxima teleconsulta agendada para segunda-feira, 05/10, com os botões Entrar na consulta e Reagendar, e orientações para antes da consulta"></span></button></li>
+          <li class="mt-ri" style="--i:9"><span class="mt-rn">10 · Teleconsulta</span><button class="pv-phone iphone own-sb" type="button" data-name="Teleconsulta"><span class="scr"><img src="mt/t/11-teleconsulta.jpg" width="860" height="1864" loading="lazy" decoding="async" alt="Teleconsulta em andamento do lado do paciente: vídeo da profissional Dra. Ana Silva, miniatura do paciente e controles de microfone, câmera e encerrar chamada"></span></button></li>
+        </ol>
+        <div class="mt-rail-nav"><button class="mt-rail-btn" type="button" data-dir="-1" aria-label="Telas anteriores"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button class="mt-rail-btn" type="button" data-dir="1" aria-label="Próximas telas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div>
+      </div>
+
+      <div class="mt-prof" data-lb>
+        <div class="mt-prof-text">
+          <span class="mt-k">Do outro lado</span>
+          <h3>O profissional de saúde</h3>
+          <p>O protótipo também tem um fluxo para quem acompanha o tratamento: a lista de pacientes, um alerta quando alguém fica dias sem registrar dose e a teleconsulta. O alerta lembra que ausência de registro não confirma dose não tomada, e as ações sugeridas começam por uma conversa.</p>
+          <p class="rb-note">Há ainda uma tela de sugestão por IA, apresentada como hipótese para revisão médica, não como diagnóstico.</p>
+        </div>
+        <div class="mt-prof-ph">
+          <button class="pv-phone iphone own-sb" type="button" data-name="Pacientes"><span class="scr"><img src="mt/t/14-pacientes.jpg" width="860" height="1864" loading="lazy" decoding="async" alt="Pacientes, no fluxo do profissional: busca por nome ou código e lista de pacientes com CPF mascarado e botão Informações"></span></button>
+          <button class="pv-phone iphone own-sb" type="button" data-name="Alerta de não adesão"><span class="scr" style="aspect-ratio:430/1029 !important"><img src="mt/t/15-alerta.jpg" width="860" height="2058" loading="lazy" decoding="async" alt="Alerta de não adesão: paciente não registrou dose há 2 dias, aviso de que ausência de registro não confirma dose não tomada, últimos 7 dias e opções de intervenção"></span></button>
+          <button class="pv-phone iphone own-sb" type="button" data-name="Teleconsulta do profissional"><span class="scr"><img src="mt/t/17-tele-prof.jpg" width="860" height="1864" loading="lazy" decoding="async" alt="Teleconsulta em andamento do lado do profissional, com o vídeo da paciente Mariana e a miniatura do profissional"></span></button>
+        </div>
+      </div>
+      <p class="rb-note">Nomes, CPFs, datas e saldos são dados ilustrativos do protótipo.</p>
+    </section>
+
+    <!-- 06 -->
+    <section class="cs-final glass mt-final">
+      <div class="final-logo mt-final-logo" aria-hidden="true"><span class="fl-ring"></span><span class="fl-tile"><img src="mt/logo-v.svg" width="153" height="166" alt=""></span><svg class="spark fs1" viewBox="0 0 100 100" aria-hidden="true"><use href="#star4"/></svg><svg class="spark fs2" viewBox="0 0 100 100" aria-hidden="true"><use href="#star4"/></svg></div>
+      <span class="cs-num">06 / Impacto e propósito</span>
+      <h2 class="chrome"><span>Cuidar</span> <span>é continuar.</span></h2>
+      <p>O MoniTube foi pensado para aproximar tecnologia e saúde pública, tornando o acompanhamento do tratamento da tuberculose mais acessível e incentivando a continuidade do cuidado por meio de uma experiência digital simples e acolhedora.</p>
+      <div class="gh-btns mt-gh">
+        <a class="gh-btn" href="https://www.figma.com/design/o4zDWfDnlC1BqJHu9BN6DC/Projeto-IS?node-id=0-1&amp;p=f&amp;t=O67yGiQavOHoHTNO-0" target="_blank" rel="noopener noreferrer"><svg class="gh" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 2h3.5v6.5H8.5a3.25 3.25 0 0 1 0-6.5zM12 2h3.5a3.25 3.25 0 0 1 0 6.5H12zM8.5 8.5H12V15H8.5a3.25 3.25 0 0 1 0-6.5zM15.5 8.5a3.25 3.25 0 1 1 0 6.5 3.25 3.25 0 0 1 0-6.5zM8.5 15H12v3.25A3.25 3.25 0 1 1 8.5 15z"/></svg><span><b>Ver protótipo no Figma</b><small>Wireframes · design system · alta fidelidade</small></span><i aria-hidden="true">↗</i><span class="sr-only"> (abre em nova aba)</span></a>
+      </div>
       <div class="ctas"><a class="btn quiet" href="#projetos">← Voltar aos projetos</a><a class="btn quiet" href="#aprende-plus">Próximo: Aprende+ →</a></div>
     </section>
   </main>
@@ -3183,7 +3634,7 @@ document.getElementById('copy').addEventListener('click', function(){
 var FIGMA_URL = 'https://www.figma.com/design/ispd7fMVEUdLTqyocDwiTz/aprende-?node-id=1-2&p=f&t=32l1nICiw6KGFsgR-0'; // cole aqui o link do protótipo no Figma
 (function(){
   var home = document.getElementById('home'), baseTitle = document.title;
-  var cases = { 'aprende-plus': [document.getElementById('case-aprende'), 'Aprende+ · Ágata'], 'regulariza-br': [document.getElementById('case-regulariza'), 'Regulariza BR · Ágata'], 'cinova': [document.getElementById('case-cinova'), 'CINOVA · Ágata'], 'cintegre': [document.getElementById('case-cintegre'), 'CIntegre+ · Ágata'] };
+  var cases = { 'aprende-plus': [document.getElementById('case-aprende'), 'Aprende+ · Ágata'], 'regulariza-br': [document.getElementById('case-regulariza'), 'Regulariza BR · Ágata'], 'cinova': [document.getElementById('case-cinova'), 'CINOVA · Ágata'], 'cintegre': [document.getElementById('case-cintegre'), 'CIntegre+ · Ágata'], 'monitube': [document.getElementById('case-monitube'), 'MoniTube · Ágata'] };
   var fb = document.getElementById('figma-btn');
   if(FIGMA_URL){ fb.href = FIGMA_URL; } else { fb.setAttribute('aria-disabled','true'); fb.removeAttribute('href'); fb.textContent = 'Protótipo no Figma · em breve'; }
   function route(){
@@ -3363,11 +3814,11 @@ document.querySelectorAll('.cr').forEach(function(root){
     o.connect(g).connect(ctx.destination); o2.connect(g2).connect(ctx.destination); o.start(now); o2.start(now); o.stop(now + dur + 0.02); o2.stop(now + dur + 0.02);
   }
   var groups = [
-    ['.btn, .case-cta, #figma-btn, .ci-btn', 660, 0.12],
+    ['.btn, .case-cta, #figma-btn, .ci-btn, .mt-btn', 660, 0.12],
     ['.card, .ax-card, .sk, .ch-card', 440, 0.16],
     ['.cr-arrow, .sl-arrow, .lb-btn', 880, 0.09],
-    ['.pc-tab, .jr-step, .cr-dots button, .cr-group, .index a:not([href="#sobre"]), .back-link, .ci-tab', 740, 0.08],
-    ['.pr, .evo-final, .pv-phone, .aud-stage .phone, .symbol-wrap, .me-orbit, .tt-feats li, .hub-node, .arch-node, .gh-btn, .kpi, .bw, .ci-goals li, .ci-node, .ci-tech article, .ci-elems li, .ci-sw div', 520, 0.14]
+    ['.pc-tab, .jr-step, .cr-dots button, .cr-group, .index a:not([href="#sobre"]), .back-link, .ci-tab, .mt-tab, .mt-pair, .mt-rail-btn', 740, 0.08],
+    ['.pr, .evo-final, .pv-phone, .aud-stage .phone, .symbol-wrap, .me-orbit, .tt-feats li, .hub-node, .arch-node, .gh-btn, .kpi, .bw, .ci-goals li, .ci-node, .ci-tech article, .ci-elems li, .ci-sw div, .mt-ch li, .mt-pillar, .mt-fix, .mt-sw div, .mt-comp', 520, 0.14]
   ];
   groups.forEach(function(gp){ document.querySelectorAll(gp[0]).forEach(function(el){ el.addEventListener('mouseenter', function(){ tone(gp[1], gp[2]); }); }); });
   function sparkle(){
@@ -3380,7 +3831,7 @@ document.querySelectorAll('.cr').forEach(function(root){
       o.connect(g).connect(ctx.destination); o.start(t); o.stop(t + 0.4);
     });
   }
-  document.querySelectorAll('#scroll-hint, .index a[href="#sobre"], .ci-logo, .ci-pts').forEach(function(el){ el.addEventListener('mouseenter', sparkle); });
+  document.querySelectorAll('#scroll-hint, .index a[href="#sobre"], .ci-logo, .ci-pts, .mt-title, .mt-chip').forEach(function(el){ el.addEventListener('mouseenter', sparkle); });
   // CIntegre+: ampliar uma tela faz um brilho; trocar de público faz o "swoosh"
   document.querySelectorAll('.bw').forEach(function(el){ el.addEventListener('click', function(){ last = 0; sparkle(); }); });
   document.querySelectorAll('.ci-tab').forEach(function(el){ el.addEventListener('click', function(){ if(el.getAttribute('aria-selected') !== 'true') setTimeout(swoosh, 0); }); });
@@ -3463,6 +3914,65 @@ document.querySelectorAll('.cr').forEach(function(root){
       if(e.key === 'ArrowLeft'){ e.preventDefault(); go((i + tabs.length - 1) % tabs.length, true); }
     });
   });
+})();
+
+// MoniTube: abas de funcionalidades, comparador wireframe × tela final, trilho da galeria e entrada das seções
+(function(){
+  var root = document.getElementById('case-monitube'); if(!root) return;
+  var sfx = function(n){ if(window.__sfx && window.__sfx[n]) window.__sfx[n](); };
+  // pular para o processo
+  root.querySelectorAll('[data-jump]').forEach(function(b){ b.addEventListener('click', function(){ var t = document.getElementById(b.dataset.jump); if(t) t.scrollIntoView({behavior:'smooth', block:'start'}); }); });
+  // funcionalidades
+  var tabs = [].slice.call(root.querySelectorAll('.mt-tab')), phones = [].slice.call(root.querySelectorAll('.mt-fx-ph')),
+      data = [].slice.call(root.querySelectorAll('.mt-fx-data template')), cap = root.querySelector('.mt-fx-cap'), panel = root.querySelector('#mt-fx-panel');
+  function go(i, focus){
+    if(tabs[i].getAttribute('aria-selected') === 'true') return;
+    tabs.forEach(function(t, k){ t.setAttribute('aria-selected', k === i ? 'true' : 'false'); t.tabIndex = k === i ? 0 : -1; });
+    phones.forEach(function(p, k){ p.classList.toggle('is-on', k === i); });
+    panel.setAttribute('aria-labelledby', tabs[i].id);
+    cap.innerHTML = '<h3>' + data[i].dataset.h + '</h3><p>' + data[i].innerHTML + '</p>';
+    cap.classList.remove('swap'); void cap.offsetWidth; cap.classList.add('swap');
+    if(focus){ tabs[i].focus(); tabs[i].scrollIntoView({block:'nearest', inline:'nearest'}); }
+    if(window.__scanPhones) requestAnimationFrame(window.__scanPhones);
+    sfx('swoosh');
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ go(i); });
+    t.addEventListener('keydown', function(e){
+      var n = tabs.length, k = null;
+      if(e.key === 'ArrowDown' || e.key === 'ArrowRight') k = (i + 1) % n;
+      if(e.key === 'ArrowUp' || e.key === 'ArrowLeft') k = (i + n - 1) % n;
+      if(e.key === 'Home') k = 0; if(e.key === 'End') k = n - 1;
+      if(k !== null){ e.preventDefault(); go(k, true); }
+    });
+  });
+  // comparador
+  var ph = root.querySelector('.mt-cmp-ph'), range = root.querySelector('.mt-cmp-range'), lo = ph.querySelector('.lo'), hi = ph.querySelector('.hi'),
+      pairs = [].slice.call(root.querySelectorAll('.mt-pair')), notes = [].slice.call(root.querySelectorAll('.mt-cmp-data template')), note = root.querySelector('.mt-cmp-note');
+  function setX(v){ ph.style.setProperty('--x', v + '%'); }
+  range.addEventListener('input', function(){ setX(range.value); });
+  pairs.forEach(function(b, i){ b.addEventListener('click', function(){
+    if(b.getAttribute('aria-pressed') === 'true') return;
+    pairs.forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+    lo.src = b.dataset.w; hi.src = b.dataset.h;
+    lo.alt = 'Wireframe em tons de cinza da tela ' + b.dataset.n; hi.alt = 'Tela final ' + b.dataset.n + ', com a identidade do MoniTube';
+    note.innerHTML = '<h3>' + b.dataset.n + '</h3><p>' + notes[i].innerHTML + '</p>';
+    note.classList.remove('swap'); void note.offsetWidth; note.classList.add('swap');
+    // pequena demonstração: a barra passa de um lado ao outro e volta ao meio
+    if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+      var t0 = performance.now();
+      (function step(now){ var k = Math.min((now - t0) / 900, 1), v = 50 + 32 * Math.sin(k * Math.PI * 2) * (1 - k); setX(v); range.value = v; if(k < 1) requestAnimationFrame(step); else { setX(50); range.value = 50; } })(t0);
+    }
+    sfx('swoosh');
+  }); });
+  // trilho da galeria
+  var rail = root.querySelector('.mt-rail');
+  root.querySelectorAll('.mt-rail-btn').forEach(function(b){ b.addEventListener('click', function(){ rail.scrollBy({left: rail.clientWidth * .8 * (+b.dataset.dir), behavior:'smooth'}); }); });
+  // entrada das seções
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches || !window.IntersectionObserver) return;
+  document.documentElement.classList.add('mt-rv-on');
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ io.unobserve(e.target); e.target.classList.add('in'); } }); }, { rootMargin:'0px 0px -10% 0px', threshold:.05 });
+  root.querySelectorAll('.mt-rv').forEach(function(s){ io.observe(s); });
 })();
 
 // molduras de iPhone: --u = 1% da largura do aparelho, em px (o Safari às vezes erra a unidade cqw em painéis escondidos)
