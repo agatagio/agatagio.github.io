@@ -1932,6 +1932,108 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
 .rv-star b:nth-of-type(1){left:-20px; top:20px; animation-delay:.25s} .rv-star b:nth-of-type(2){left:-46px; top:8px; animation-delay:.45s; background:#8FD8FF} .rv-star b:nth-of-type(3){left:-70px; top:26px; animation-delay:.65s}
 @keyframes rvFly{0%{transform:translate(-8vw, -10px) scale(.6); opacity:0} 12%{opacity:1} 80%{opacity:1} 100%{transform:translate(min(100vw, 1180px), 70px) scale(1); opacity:0}}
 @keyframes rvDust{0%{opacity:0; transform:scale(.4)} 30%{opacity:1} 100%{opacity:0; transform:translateY(16px) scale(.2)}}
+/* ===== EnvelheSER Digital · extensão e voluntariado ===== */
+.ev{--ev-a:#F5A524; --ev-a2:#FFC766; --ev-n:#1F2A6B; --ev-ink:#FFF1D6}
+.ev .cs-num{color:var(--ev-a2)}
+.ev button:focus-visible, .ev a:focus-visible, .ev-card:focus-visible{outline:3px solid var(--ev-a2); outline-offset:4px}
+.ev-card .tags span{border-color:rgba(255,199,102,.45)}
+.ev-card .chip{color:#FFE3B0}
+.ev-card .case-cta{margin-top:10px}
+.ev-badge{display:inline-flex; align-items:center; gap:8px; justify-self:start; font:500 .7rem/1 var(--mono); letter-spacing:.12em; text-transform:uppercase; color:#FFE3B0; padding:8px 12px; border-radius:999px; background:rgba(245,165,36,.14); box-shadow:inset 0 0 0 1px rgba(255,199,102,.5)}
+.ev-badge i{flex:none; width:7px; height:7px; border-radius:50%; background:var(--ev-a); box-shadow:0 0 10px var(--ev-a)}
+.ev-logo{display:inline-grid; place-items:center; justify-self:start; padding:8px 16px; border-radius:14px; background:#fff; box-shadow:0 12px 34px rgba(0,0,0,.35), 0 0 0 1px rgba(255,199,102,.5)}
+.ev-logo img{display:block; width:clamp(150px,17vw,200px); height:auto}
+.ev-card .ev-logo img{width:150px}
+/* hero */
+.ev-hero{position:relative; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,340px); gap:clamp(28px,5vw,72px); align-items:center; margin-top:8px; padding:clamp(28px,5vw,64px); border-radius:32px; overflow:hidden; isolation:isolate;
+  background:radial-gradient(640px 420px at 88% 6%, rgba(245,165,36,.26), transparent 62%), radial-gradient(520px 420px at 0% 100%, rgba(139,108,255,.24), transparent 64%), linear-gradient(150deg,#0C0A1E 0%,#15143A 58%,#1F2A6B 140%);
+  box-shadow:inset 0 0 0 1px rgba(255,199,102,.22), 0 40px 90px -30px rgba(0,0,0,.7)}
+.ev-hero::after{content:""; position:absolute; inset:0; z-index:-1; opacity:.5; pointer-events:none; background-image:radial-gradient(rgba(255,214,150,.16) 1px, transparent 1.4px); background-size:22px 22px; -webkit-mask-image:linear-gradient(110deg,#000,transparent 65%); mask-image:linear-gradient(110deg,#000,transparent 65%)}
+.ev-copy{display:grid; gap:18px; justify-items:start; min-width:0}
+.ev-eyebrow{display:inline-flex; align-items:center; gap:10px; font:500 .74rem/1.4 var(--mono); letter-spacing:.14em; text-transform:uppercase; color:#FFE9C2; padding:9px 14px; border-radius:999px; background:rgba(245,165,36,.12); box-shadow:inset 0 0 0 1px rgba(255,199,102,.45)}
+.ev-eyebrow i{flex:none; width:8px; height:8px; border-radius:50%; background:var(--ev-a); box-shadow:0 0 10px var(--ev-a)}
+.ev-title{margin:0; font:800 clamp(1.9rem,5.2vw,3.8rem)/1.02 var(--display); letter-spacing:-.03em; color:#fff; overflow-wrap:anywhere}
+.ev-title span{display:block}
+.ev-title em{font-style:normal; color:var(--ev-a)}
+.ev-claim{font:700 clamp(1.1rem,2vw,1.4rem)/1.3 var(--display); color:var(--ev-ink); max-width:26ch}
+.ev-lede{font:300 clamp(1rem,1.3vw,1.08rem)/1.75 var(--body); color:#CFCBE3; max-width:56ch}
+.ev-lede + .ev-lede{margin-top:-6px}
+.ev-lede b{font-weight:600; color:#fff}
+.ev-facts{margin:2px 0 0; width:100%; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); border-top:1px solid rgba(255,255,255,.14)}
+.ev-facts div{display:grid; gap:4px; align-content:start; padding:14px 14px 4px 0}
+.ev-facts dt{font:400 .66rem/1.4 var(--mono); letter-spacing:.16em; text-transform:uppercase; color:var(--ev-a2)}
+.ev-facts dd{margin:0; font-size:.95rem; color:var(--fg)}
+.ev-links{display:flex; flex-wrap:wrap; gap:12px; margin-top:6px}
+.ev-btn{display:inline-flex; align-items:center; gap:10px; padding:15px 22px; border-radius:999px; font:600 .96rem/1 var(--body); text-decoration:none; border:0; cursor:pointer; transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease}
+.ev-btn.pri{background:var(--ev-a); color:#1A1030; box-shadow:0 10px 30px rgba(245,165,36,.4), inset 0 0 0 1px rgba(255,255,255,.3)}
+.ev-btn.pri:hover{transform:translateY(-2px); background:var(--ev-a2); box-shadow:0 14px 40px rgba(245,165,36,.55), inset 0 0 0 1px rgba(255,255,255,.5)}
+.ev-btn.sec{color:#FFE9C2; background:rgba(245,165,36,.1); box-shadow:inset 0 0 0 1px rgba(255,199,102,.45)}
+.ev-btn.sec:hover{transform:translateY(-2px); color:#fff; background:rgba(245,165,36,.2)}
+/* vídeo vertical */
+.ev-stage{display:grid; gap:12px; justify-items:center; min-width:0}
+.ev-video{position:relative; width:min(100%,340px); aspect-ratio:9/16; border-radius:26px; overflow:hidden; background:#0C0A1E; box-shadow:0 40px 90px -30px rgba(0,0,0,.85), 0 0 0 1px rgba(255,199,102,.4), 0 0 70px -10px rgba(245,165,36,.3)}
+.ev-video video{display:block; width:100%; height:100%; object-fit:contain; background:#0C0A1E}
+.ev-play{display:none; position:absolute; inset:0; width:100%; flex-direction:column; align-items:center; justify-content:center; gap:14px; border:0; padding:0; cursor:pointer; color:#fff; font:500 .74rem/1 var(--mono); letter-spacing:.14em; text-transform:uppercase; background:linear-gradient(180deg, rgba(12,10,30,.05) 30%, rgba(12,10,30,.55) 100%); transition:opacity .3s ease}
+.ev-js .ev-play{display:flex}
+.ev-js .ev-play[hidden]{display:none}
+.ev-play-ico{display:grid; place-items:center; width:76px; height:76px; border-radius:50%; background:var(--ev-a); color:#1A1030; box-shadow:0 12px 36px rgba(245,165,36,.55), 0 0 0 8px rgba(245,165,36,.22); transition:transform .25s ease}
+.ev-play-ico svg{width:30px; height:30px; margin-left:4px; fill:currentColor}
+.ev-play:hover .ev-play-ico{transform:scale(1.08)}
+.ev-play small{font:400 .7rem/1 var(--mono); letter-spacing:.1em; color:#FFE9C2}
+.ev-cap{margin:0; text-align:center; font:400 .74rem/1.4 var(--mono); color:#C9C4DE; max-width:34ch}
+/* seções */
+.ev-sec{display:grid; gap:16px; padding-block:clamp(56px,8vw,96px) 0}
+.ev-sec h2{font:600 clamp(1.9rem,4.2vw,3.2rem)/1.1 var(--display); letter-spacing:-.03em; color:#F4F2FB; max-width:22ch}
+.ev-sub{color:#B9B5D2; max-width:62ch; font-size:1.02rem}
+/* galeria */
+.ev-gal{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:clamp(8px,1.6vw,18px)}
+.ev-ph{position:relative; display:block; padding:0; border:0; border-radius:20px; overflow:hidden; cursor:zoom-in; background:#0C0A1E; box-shadow:inset 0 0 0 1px rgba(255,255,255,.12); isolation:isolate; transition:transform .3s ease, box-shadow .3s ease}
+.ev-ph:hover{transform:translateY(-3px); box-shadow:inset 0 0 0 1px rgba(255,199,102,.6), 0 22px 60px -20px rgba(245,165,36,.4)}
+.ev-ph img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.ev-ph:hover img{transform:scale(1.035)}
+.ev-ph::after{content:""; position:absolute; inset:auto 0 0 0; height:46%; z-index:1; pointer-events:none; background:linear-gradient(180deg, transparent, rgba(8,6,20,.78))}
+.ev-ph-cap{position:absolute; left:14px; right:54px; bottom:12px; z-index:2; text-align:left; font:500 .68rem/1.4 var(--mono); letter-spacing:.1em; text-transform:uppercase; color:#FFF1D6}
+.ev-ph-zoom{position:absolute; right:12px; bottom:10px; z-index:2; display:grid; place-items:center; width:32px; height:32px; border-radius:50%; color:#fff; background:rgba(12,10,30,.55); box-shadow:inset 0 0 0 1px rgba(255,255,255,.3)}
+.ev-ph-zoom svg{width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round}
+.ph-sala{grid-column:1; grid-row:1 / span 2; min-height:340px} .ph-sala img{object-position:50% 62%}
+.ph-grupo{grid-column:2 / span 2; grid-row:1; aspect-ratio:1179/631} .ph-grupo img{object-position:50% 40%}
+.ph-dupla{grid-column:2; grid-row:2; aspect-ratio:1.38} .ph-dupla img{object-position:56% 36%}
+.ph-apoio{grid-column:3; grid-row:2; aspect-ratio:1.38} .ph-apoio img{object-position:50% 24%}
+/* contribuições */
+.ev-two{display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); gap:clamp(22px,3.4vw,48px); align-items:start; margin-top:clamp(8px,1.6vw,18px)}
+.ev-text{display:grid; gap:12px}
+.ev-text h3{font:600 1.2rem/1.3 var(--display); color:#F4F2FB; margin-top:10px}
+.ev-text h3:first-child{margin-top:0}
+.ev-text p{color:#CFCBE3; font-size:1.02rem; line-height:1.75; max-width:60ch}
+.ev-boxes{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px}
+.ev-box{display:grid; gap:8px; align-content:start; padding:22px; border-radius:20px; background:linear-gradient(160deg, rgba(255,255,255,.05), rgba(255,255,255,.015)); border:1px solid rgba(255,255,255,.1); transition:transform .3s ease, border-color .3s ease, background .3s ease}
+.ev-box:hover{transform:translateY(-3px); border-color:rgba(255,199,102,.55); background:linear-gradient(160deg, rgba(245,165,36,.13), rgba(255,255,255,.015))}
+.ev-box h3{font:600 1.02rem/1.3 var(--display); color:#F4F2FB}
+.ev-box h3::before{content:""; display:block; width:26px; height:3px; border-radius:3px; margin-bottom:12px; background:var(--ev-a)}
+.ev-box p{color:var(--muted); font-size:.92rem; line-height:1.6}
+/* encerramento */
+.ev-end{margin-block:clamp(48px,7vw,88px) 24px; padding:clamp(28px,5vw,56px); display:grid; gap:18px; justify-items:start}
+.ev-end h2{font-size:clamp(1.8rem,5vw,3.3rem)}
+.ev-end p{color:#CFCBE3; max-width:62ch; font-size:1.04rem}
+.ev-rv-on .ev-rv{opacity:0; transform:translateY(30px); transition:opacity .8s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.ev-rv-on .ev-rv.in{opacity:1; transform:none}
+@media (max-width:860px){
+  .ev-hero{grid-template-columns:minmax(0,1fr)}
+  .ev-two{grid-template-columns:minmax(0,1fr)}
+  .ev-gal{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ph-grupo{grid-column:1 / -1; grid-row:auto; order:1}
+  .ph-dupla{grid-column:1 / -1; grid-row:auto; order:2; aspect-ratio:1179/625} .ph-dupla img{object-position:50% 40%}
+  .ph-sala{grid-column:1; grid-row:auto; order:3; min-height:0; aspect-ratio:3/4}
+  .ph-apoio{grid-column:2; grid-row:auto; order:4; aspect-ratio:3/4} .ph-apoio img{object-position:50% 28%}
+}
+@media (max-width:520px){
+  .ev-hero{padding:24px 20px; border-radius:24px}
+  .ev-facts{grid-template-columns:minmax(0,1fr)}
+  .ev-boxes{grid-template-columns:minmax(0,1fr)}
+  .ev-ph-cap{font-size:.62rem; letter-spacing:.06em; left:10px; right:46px}
+  .ev-btn{padding:14px 18px; font-size:.9rem}
+}
+@media (prefers-reduced-motion:reduce){ .ev-ph, .ev-ph img, .ev-box, .ev-btn{transition:none} .ev-rv-on .ev-rv{opacity:1; transform:none} }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -1976,9 +2078,10 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
     <aside class="index" aria-label="Seções">
       <span class="idx-head"><i></i>Navegação</span>
       <a href="#projetos"><span class="n">01</span><span class="t">Projetos</span></a>
-      <a href="#processo"><span class="n">02</span><span class="t">Processo</span></a>
-      <a href="#sobre"><span class="n">03</span><span class="t">Sobre</span></a>
-      <a href="#contato"><span class="n">04</span><span class="t">Contato</span></a>
+      <a href="#extensao"><span class="n">02</span><span class="t">Extensão</span></a>
+      <a href="#processo"><span class="n">03</span><span class="t">Processo</span></a>
+      <a href="#sobre"><span class="n">04</span><span class="t">Sobre</span></a>
+      <a href="#contato"><span class="n">05</span><span class="t">Contato</span></a>
     </aside>
   </header>
 
@@ -2096,6 +2199,35 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
           <p>Plataforma de gestão logística que centraliza pedidos, automatiza a distribuição entre transportadoras e facilita o acompanhamento das entregas. Solução projetada e prototipada no desafio da SEAL, do CIn-UFPE.</p>
           <div class="tags"><span>UX/UI</span><span>Engenharia de Software</span><span>Logística</span><span>Design System</span></div>
           <span class="case-cta">Ver estudo de caso <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <div class="sep" aria-hidden="true"><canvas class="sep-wave"></canvas></div>
+  <section id="extensao">
+    <div class="sec-head">
+      <h2 class="chrome"><span>Extensão e voluntariado</span></h2>
+      <span class="mono">Atuação além do desenvolvimento e do UX/UI</span>
+    </div>
+    <div class="projects">
+      <a class="card feature glass ev-card" href="#envelheser-digital" aria-label="Abrir a apresentação da minha participação como voluntária no EnvelheSER Digital">
+        <div class="win"><div class="dots"><i></i><i></i><i></i></div><span class="chip">Extensão · UFPE</span></div>
+        <div class="thumb cover slider" data-interval="4200" style="aspect-ratio:4/3">
+          <img class="slide is-on" src="ev/card-1.jpg" width="1200" height="900" alt="Sala de aula do EnvelheSER Digital, com computadores sobre a bancada e outras pessoas conversando em pé">
+          <img class="slide" src="ev/card-2.jpg" width="1200" height="900" loading="lazy" alt="Selfie minha com uma participante do projeto, as duas sorrindo, em sala de aula">
+          <img class="slide" src="ev/card-3.jpg" width="1200" height="900" loading="lazy" alt="Selfie minha com duas participantes do projeto, todas sorrindo">
+          <div class="slide-dots" aria-hidden="true"></div>
+          <button class="sl-arrow sl-prev" type="button" aria-label="Imagem anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button class="sl-arrow sl-next" type="button" aria-label="Próxima imagem"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+        <div class="info">
+          <span class="ev-badge"><i aria-hidden="true"></i>Voluntária · Projeto de extensão</span>
+          <span class="mono">Letramento digital · Pessoas idosas · UFPE</span>
+          <h3>EnvelheSER Digital: tecnologia com acolhimento</h3>
+          <p>Projeto de extensão da UFPE voltado ao letramento digital de pessoas idosas. Participo como voluntária, no meu segundo período, apoiando as turmas de computador e de celular e contribuindo com materiais de divulgação e conteúdo audiovisual.</p>
+          <div class="tags"><span>Voluntariado</span><span>Acessibilidade</span><span>Inclusão digital</span><span>Comunicação</span></div>
+          <span class="case-cta">Conhecer a experiência <span aria-hidden="true">→</span></span>
         </div>
       </a>
     </div>
@@ -4165,6 +4297,77 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
     </section>
   </main>
 
+  <!-- ===== Extensão e voluntariado: EnvelheSER Digital (abre em #envelheser-digital) ===== -->
+  <main id="case-envelheser" class="case ev" hidden>
+    <div class="case-top"><a class="back-link" href="#extensao"><span aria-hidden="true">←</span> Voltar ao portfólio</a></div>
+
+    <header class="ev-hero">
+      <div class="ev-copy">
+        <span class="ev-logo"><img src="ev/logo.jpg" width="412" height="145" alt="Logotipo do projeto EnvelheSER Digital"></span>
+        <span class="ev-eyebrow"><i aria-hidden="true"></i>Voluntariado · Projeto de extensão · UFPE</span>
+        <h1 class="ev-title"><span>Envelhe<em>SER</em></span><span>Digital</span></h1>
+        <p class="ev-claim">Tecnologia que acolhe, no ritmo de cada pessoa.</p>
+        <p class="ev-lede">O EnvelheSER Digital é um projeto de extensão da UFPE voltado ao letramento digital de pessoas idosas. Participo como <b>voluntária</b>, e este é o meu segundo período no projeto.</p>
+        <p class="ev-lede">Já atuei nas turmas de computador e de celular, apoiando as atividades práticas, e também contribuo com materiais de divulgação e conteúdo audiovisual. É uma experiência que une tecnologia, comunicação, acessibilidade e inclusão digital.</p>
+        <dl class="ev-facts">
+          <div><dt>Atuação</dt><dd>Voluntária</dd></div>
+          <div><dt>Participação</dt><dd>Segundo período no projeto</dd></div>
+          <div><dt>Turmas</dt><dd>Computador e celular</dd></div>
+          <div><dt>Frentes</dt><dd>Apoio nas aulas, divulgação e audiovisual</dd></div>
+        </dl>
+        <div class="ev-links">
+          <button class="ev-btn pri" type="button" id="ev-go">Assistir ao vídeo <span aria-hidden="true">▶</span></button>
+          <button class="ev-btn sec" type="button" data-ev-jump="ev-registros">Ver as fotos <span aria-hidden="true">↓</span></button>
+        </div>
+      </div>
+      <div class="ev-stage">
+        <div class="ev-video" id="ev-video">
+          <video id="ev-v" controls preload="none" playsinline width="720" height="1280" poster="ev/poster.jpg" aria-label="Vídeo sobre a minha experiência como voluntária no EnvelheSER Digital, com 1 minuto e 27 segundos"><source src="ev/reels.mp4" type="video/mp4">Seu navegador não reproduz este vídeo. <a href="ev/reels.mp4">Baixe o arquivo.</a></video>
+          <button class="ev-play" type="button" id="ev-play" aria-label="Reproduzir o vídeo"><span class="ev-play-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg></span><span>Assistir ao vídeo</span><small>1:27</small></button>
+        </div>
+        <p class="ev-cap">Vídeo sobre a minha experiência no projeto · 1:27 · com áudio</p>
+      </div>
+    </header>
+
+    <section class="ev-sec ev-rv" id="ev-registros" aria-labelledby="ev-g-t">
+      <span class="cs-num">01 / Registros</span>
+      <h2 id="ev-g-t">Alguns momentos do projeto.</h2>
+      <p class="ev-sub">Registros das aulas e de momentos com participantes do projeto. Toque ou clique em uma foto para ampliar.</p>
+      <div class="ev-gal">
+        <button class="ev-ph ph-sala" type="button" data-full="ev/sala.jpg" data-cap="Em sala, durante uma atividade prática" aria-label="Ampliar foto: em sala, durante uma atividade prática"><img src="ev/sala.jpg" width="900" height="1600" loading="lazy" alt="Sala de aula com computadores sobre a bancada e quatro pessoas em pé conversando, uma delas mostrando algo no celular"><span class="ev-ph-cap">Em sala, durante uma atividade prática</span><span class="ev-ph-zoom" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg></span></button>
+        <button class="ev-ph ph-grupo" type="button" data-full="ev/grupo.jpg" data-cap="Com participantes do projeto" aria-label="Ampliar foto: com participantes do projeto"><img src="ev/grupo.jpg" width="1179" height="631" loading="lazy" alt="Selfie minha com duas participantes do projeto, uma de cada lado, todas sorrindo"><span class="ev-ph-cap">Com participantes do projeto</span><span class="ev-ph-zoom" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg></span></button>
+        <button class="ev-ph ph-dupla" type="button" data-full="ev/dupla.jpg" data-cap="Um momento com uma participante" aria-label="Ampliar foto: um momento com uma participante"><img src="ev/dupla.jpg" width="1179" height="625" loading="lazy" alt="Selfie minha com uma participante do projeto, de óculos, as duas sorrindo"><span class="ev-ph-cap">Um momento com uma participante</span><span class="ev-ph-zoom" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg></span></button>
+        <button class="ev-ph ph-apoio" type="button" data-full="ev/apoio.jpg" data-cap="Apoio durante uma atividade prática" aria-label="Ampliar foto: apoio durante uma atividade prática"><img src="ev/apoio.jpg" width="372" height="380" loading="lazy" alt="Uma voluntária ao lado de um participante idoso, que segura um aparelho nas mãos, durante uma atividade em sala"><span class="ev-ph-cap">Apoio durante uma atividade prática</span><span class="ev-ph-zoom" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg></span></button>
+      </div>
+    </section>
+
+    <section class="ev-sec ev-rv" aria-labelledby="ev-c-t">
+      <span class="cs-num">02 / Contribuições e aprendizados</span>
+      <h2 id="ev-c-t">O que faço e o que levo.</h2>
+      <div class="ev-two">
+        <div class="ev-text">
+          <h3>O que faço</h3>
+          <p>Nas turmas, auxilio os participantes nas atividades práticas, esclareço dúvidas e respeito o ritmo de aprendizagem de cada pessoa. Já atuei nas turmas de computador e de celular. Também contribuo com a criação de materiais de divulgação e de conteúdo audiovisual do projeto.</p>
+          <h3>O que levo</h3>
+          <p>A experiência me ajuda a compreender diferentes necessidades, adaptar explicações e perceber dificuldades de uso da tecnologia. É um aprendizado que também influencia o meu olhar para interfaces e para a acessibilidade.</p>
+        </div>
+        <ul class="ev-boxes" aria-label="Conexões da experiência">
+          <li class="ev-box"><h3>Tecnologia</h3><p>Computador e celular, aprendidos na prática e com apoio.</p></li>
+          <li class="ev-box"><h3>Comunicação</h3><p>Explicações adaptadas a cada pessoa, além de materiais de divulgação e conteúdo audiovisual.</p></li>
+          <li class="ev-box"><h3>Acessibilidade</h3><p>Perceber onde o uso da tecnologia trava e do que cada pessoa precisa para seguir.</p></li>
+          <li class="ev-box"><h3>Inclusão digital</h3><p>Letramento digital de pessoas idosas, no ritmo de cada uma.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="ev-end glass ev-rv" aria-labelledby="ev-e-t">
+      <span class="cs-num">Encerramento</span>
+      <h2 class="chrome" id="ev-e-t"><span>Parte da minha</span> <span>trajetória.</span></h2>
+      <p>Aprender e ensinar tecnologia com pessoas idosas me lembra por que design e código precisam ser pensados para quem usa. Essa experiência como voluntária faz parte da minha trajetória, ao lado dos projetos de desenvolvimento e UX/UI.</p>
+      <div class="ctas"><a class="btn quiet" href="#extensao">← Voltar ao portfólio</a><a class="btn quiet" href="#projetos">Ver os projetos</a><a class="btn quiet" href="#contato">Falar comigo</a></div>
+    </section>
+  </main>
+
   <footer>
     <span>© 2026 Ágata · UX/UI Designer</span>
     <a href="#" id="to-top" style="text-decoration:none">Voltar ao topo ↑</a>
@@ -4224,7 +4427,7 @@ document.getElementById('copy').addEventListener('click', function(){
 var FIGMA_URL = 'https://www.figma.com/design/ispd7fMVEUdLTqyocDwiTz/aprende-?node-id=1-2&p=f&t=32l1nICiw6KGFsgR-0'; // cole aqui o link do protótipo no Figma
 (function(){
   var home = document.getElementById('home'), baseTitle = document.title;
-  var cases = { 'aprende-plus': [document.getElementById('case-aprende'), 'Aprende+ · Ágata'], 'regulariza-br': [document.getElementById('case-regulariza'), 'Regulariza BR · Ágata'], 'cinova': [document.getElementById('case-cinova'), 'CINOVA · Ágata'], 'cintegre': [document.getElementById('case-cintegre'), 'CIntegre+ · Ágata'], 'monitube': [document.getElementById('case-monitube'), 'MoniTube · Ágata'], 'sealog': [document.getElementById('case-sealog'), 'SEALog · Ágata'] };
+  var cases = { 'aprende-plus': [document.getElementById('case-aprende'), 'Aprende+ · Ágata'], 'regulariza-br': [document.getElementById('case-regulariza'), 'Regulariza BR · Ágata'], 'cinova': [document.getElementById('case-cinova'), 'CINOVA · Ágata'], 'cintegre': [document.getElementById('case-cintegre'), 'CIntegre+ · Ágata'], 'monitube': [document.getElementById('case-monitube'), 'MoniTube · Ágata'], 'sealog': [document.getElementById('case-sealog'), 'SEALog · Ágata'], 'envelheser-digital': [document.getElementById('case-envelheser'), 'EnvelheSER Digital · Ágata'] };
   var fb = document.getElementById('figma-btn');
   if(FIGMA_URL){ fb.href = FIGMA_URL; } else { fb.setAttribute('aria-disabled','true'); fb.removeAttribute('href'); fb.textContent = 'Protótipo no Figma · em breve'; }
   function route(){
@@ -4727,6 +4930,29 @@ document.querySelectorAll('.slider').forEach(function(s){
   }
   function loop(){ a += 0.004; draw(); if(!still) requestAnimationFrame(loop); }
   size(); addEventListener('resize', function(){ size(); draw(); }); loop();
+})();
+
+// EnvelheSER Digital: vídeo só toca por clique, fotos e entrada das seções
+(function(){
+  var root = document.getElementById('case-envelheser'); if(!root) return;
+  var calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var v = document.getElementById('ev-v'), btn = document.getElementById('ev-play'), box = document.getElementById('ev-video'), go = document.getElementById('ev-go');
+  if(v && btn){
+    root.classList.add('ev-js');
+    v.controls = false;
+    function start(){ var p = v.play(); if(p && p.catch) p.catch(function(){ v.controls = true; btn.hidden = false; }); }
+    btn.addEventListener('click', start);
+    v.addEventListener('play', function(){ btn.hidden = true; v.controls = true; });
+    v.addEventListener('ended', function(){ btn.hidden = false; v.controls = false; });
+    if(go) go.addEventListener('click', function(){ box.scrollIntoView({behavior: calm ? 'auto' : 'smooth', block:'center'}); start(); });
+    // ao sair da página do projeto, o vídeo para (sem áudio ao fundo)
+    addEventListener('hashchange', function(){ if(location.hash !== '#envelheser-digital' && !v.paused) v.pause(); });
+  }
+  root.querySelectorAll('[data-ev-jump]').forEach(function(b){ b.addEventListener('click', function(){ var t = document.getElementById(b.dataset.evJump); if(t) t.scrollIntoView({behavior: calm ? 'auto' : 'smooth', block:'start'}); }); });
+  if(calm || !window.IntersectionObserver) return;
+  document.documentElement.classList.add('ev-rv-on');
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ io.unobserve(e.target); e.target.classList.add('in'); } }); }, { rootMargin:'0px 0px -10% 0px', threshold:.05 });
+  root.querySelectorAll('.ev-rv').forEach(function(s){ io.observe(s); });
 })();
 </script>
 
