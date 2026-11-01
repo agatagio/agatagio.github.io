@@ -1702,6 +1702,11 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
 .sl-btn.sec{color:#DCE9FF; background:rgba(59,130,246,.1); box-shadow:inset 0 0 0 1px rgba(147,197,253,.45)}
 .sl-btn.sec:hover{transform:translateY(-2px); color:#fff; background:rgba(59,130,246,.22)}
 .sl-hero-stage{position:relative; min-height:clamp(360px,38vw,520px); display:grid; place-items:center; perspective:1400px}
+.sl-hero-video{position:relative; z-index:2; width:100%; aspect-ratio:16/9; border-radius:22px; overflow:hidden; background:#060F1F; box-shadow:0 40px 90px -30px rgba(0,0,0,.85), 0 0 0 1px rgba(147,197,253,.35), 0 0 60px rgba(37,99,235,.35); transform:perspective(1400px) rotateY(-4deg); transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.sl-hero-video:hover, .sl-hero-video:focus-within{transform:perspective(1400px) rotateY(0)}
+.sl-hero-video video{display:block; width:100%; height:100%; object-fit:cover; background:#060F1F}
+.sl-hero-cap{margin:0; text-align:center; font:400 .74rem/1 var(--mono); color:#BFD3F2}
+.sl-hero-stage{align-content:center; gap:14px; min-height:0}
 .sl-orb{position:absolute; width:80%; aspect-ratio:1; border-radius:50%; background:radial-gradient(circle, rgba(59,130,246,.4), rgba(18,49,92,.12) 55%, transparent 70%); filter:blur(6px)}
 .sl-hl{position:absolute; left:2%; top:50%; width:92%; height:auto; transform:translateY(-52%) rotateY(-9deg) rotateX(2deg); animation:slFloat 9s ease-in-out infinite; filter:drop-shadow(0 30px 40px rgba(0,0,0,.45))}
 .sl-hp{position:absolute; right:0; bottom:2%; width:27%; height:auto; transform:rotate(5deg); animation:slFloat2 7.5s ease-in-out infinite; filter:drop-shadow(0 24px 30px rgba(0,0,0,.5))}
@@ -2641,7 +2646,7 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
       </div>
     </section>
 
-    <!-- 08 -->
+    <!-- 07 -->
     <section class="cs-tutor" aria-labelledby="cs-tutor">
       <span class="cs-num">07 / Tutor IA e acessibilidade</span>
       <h2 id="cs-tutor">Tecnologia como apoio à aprendizagem.</h2>
@@ -2703,7 +2708,7 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
       </div>
     </section>
 
-    <!-- 09 -->
+    <!-- 08 -->
     <section class="cs-final glass">
       <div class="final-logo" aria-hidden="true"><span class="fl-ring"></span><span class="fl-tile"><img src="ds/logo.png" width="410" height="500" alt=""></span><svg class="spark fs1" viewBox="0 0 100 100"><use href="#star4"/></svg><svg class="spark fs2" viewBox="0 0 100 100"><use href="#star4"/></svg><svg class="spark fs3" viewBox="0 0 100 100"><use href="#star4"/></svg></div>
       <span class="cs-num">08 / Considerações finais</span>
@@ -3048,7 +3053,7 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
       </div>
     </section>
 
-    <!-- 08 -->
+    <!-- 07 -->
     <section class="cs-tutor" aria-labelledby="rb-a11y">
       <span class="cs-num">08 / Acessibilidade e experiência</span>
       <h2 id="rb-a11y">Informação pública precisa ser compreensível.</h2>
@@ -3064,7 +3069,7 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
       </div>
     </section>
 
-    <!-- 09 -->
+    <!-- 08 -->
     <section class="cs-final glass">
       <div class="final-logo rb-final-logo" aria-hidden="true"><span class="fl-ring"></span><span class="fl-tile"><img src="rb/comp/logo.png" width="562" height="188" alt=""></span><svg class="spark fs1" viewBox="0 0 100 100" aria-hidden="true"><use href="#star4"/></svg><svg class="spark fs2" viewBox="0 0 100 100" aria-hidden="true"><use href="#star4"/></svg></div>
       <span class="cs-num">09 / Considerações finais</span>
@@ -3297,7 +3302,7 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
       </div>
     </section>
 
-    <!-- 08 -->
+    <!-- 07 -->
     <section class="cn-req" aria-labelledby="cn-requisitos">
       <span class="cs-num">08 / Requisitos e decisões técnicas</span>
       <h2 id="cn-requisitos">Projetado para ser confiável e escalável.</h2>
@@ -3311,7 +3316,7 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
       <p class="rb-note">Esses requisitos orientaram as decisões do projeto, mas não houve testes de carga, segurança ou disponibilidade que os comprovem.</p>
     </section>
 
-    <!-- 09 -->
+    <!-- 08 -->
     <section class="cn-time" aria-labelledby="cn-processo">
       <span class="cs-num">09 / Processo de desenvolvimento</span>
       <h2 id="cn-processo">Da organização ao código.</h2>
@@ -3592,7 +3597,7 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
       <p class="rb-note">Equipe listada no README do repositório. No histórico de commits, as contribuições de Ágata incluem a tela de cadastro, a home da escola, a home da ONG e a página de configurações.</p>
     </section>
 
-    <!-- 08 -->
+    <!-- 07 -->
     <section class="cs-final glass">
       <div class="final-logo ci-final-logo" aria-hidden="true"><span class="fl-ring"></span><span class="fl-tile"><img src="ci/logo.png" width="477" height="492" alt=""></span><svg class="spark fs1" viewBox="0 0 100 100" aria-hidden="true"><use href="#star4"/></svg><svg class="spark fs2" viewBox="0 0 100 100" aria-hidden="true"><use href="#star4"/></svg></div>
       <span class="cs-num">08 / Encerramento</span>
@@ -3828,16 +3833,16 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
         <p class="sl-lede">Plataforma de gestão logística que centraliza pedidos, automatiza a distribuição entre transportadoras e facilita o acompanhamento das entregas. Projetada e prototipada em equipe, no desafio prático da SEAL, do CIn-UFPE.</p>
         <ul class="tags" aria-label="Tags do projeto"><li><span>UX/UI Design</span></li><li><span>Engenharia de Software</span></li><li><span>Logística</span></li><li><span>Prototipação</span></li></ul>
         <div class="sl-links">
-          <button class="sl-btn pri" type="button" data-jump="sl-video">Assistir ao vídeo pitch <span aria-hidden="true">↓</span></button>
+          <button class="sl-btn pri" type="button" id="sl-play">Reproduzir o vídeo pitch <span aria-hidden="true">▶</span></button>
           <button class="sl-btn sec" type="button" data-jump="sl-processo">Do wireframe à tela final <span aria-hidden="true">↓</span></button>
         </div>
       </div>
-      <div class="sl-hero-stage" aria-hidden="true">
-        <span class="sl-orb"></span>
-        <img class="sl-hl" src="sl/m/laptop-t02-painel.webp" width="1300" height="840" alt="">
-        <img class="sl-hp" src="sl/m/phone_track.webp" width="560" height="1080" alt="">
-        <span class="sl-chip c1"><i>⚡</i>Atribuição automática</span>
-        <span class="sl-chip c2"><i>✓</i>Status com data, hora e origem</span>
+      <div class="sl-hero-stage">
+        <span class="sl-orb" aria-hidden="true"></span>
+        <div class="sl-hero-video">
+          <video id="sl-hero-video" controls preload="metadata" playsinline poster="sl/pitch-poster.jpg" aria-label="Vídeo pitch da SEALog, com 1 minuto e 45 segundos"><source src="sl/pitch.mp4" type="video/mp4">Seu navegador não reproduz este vídeo. <a href="sl/pitch.mp4">Baixe o arquivo.</a></video>
+        </div>
+        <p class="sl-hero-cap">Vídeo pitch · 1:45 · narração em português. Dados ilustrativos.</p>
       </div>
     </header>
 
@@ -4115,19 +4120,8 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
     </section>
 
     <!-- 07 -->
-    <section class="sl-sec sl-rv" id="sl-video" aria-labelledby="sl-vid">
-      <span class="cs-num">07 / Vídeo pitch</span>
-      <h2 id="sl-vid">A SEALog em 1 minuto e 45.</h2>
-      <p class="jr-intro">O vídeo resume o problema, a mudança de requisitos e a solução proposta, com as telas do protótipo. A narração é em português.</p>
-      <div class="sl-video">
-        <video controls preload="metadata" playsinline poster="sl/pitch-poster.jpg" aria-label="Vídeo pitch da SEALog, com 1 minuto e 45 segundos"><source src="sl/pitch.mp4" type="video/mp4">Seu navegador não reproduz este vídeo. <a href="sl/pitch.mp4">Baixe o arquivo.</a></video>
-      </div>
-      <p class="rb-note">Vídeo produzido pelo grupo para a apresentação do desafio. Os dados mostrados são ilustrativos.</p>
-    </section>
-
-    <!-- 08 -->
     <section class="sl-sec sl-rv" aria-labelledby="sl-eu">
-      <span class="cs-num">08 / Minha contribuição</span>
+      <span class="cs-num">07 / Minha contribuição</span>
       <h2 id="sl-eu">O que eu fiz, dentro de um time.</h2>
       <div class="sl-me">
         <ol class="sl-me-list">
@@ -4142,9 +4136,9 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
       </div>
     </section>
 
-    <!-- 09 -->
+    <!-- 08 -->
     <section class="sl-sec sl-rv" aria-labelledby="sl-apr">
-      <span class="cs-num">09 / Aprendizados</span>
+      <span class="cs-num">08 / Aprendizados</span>
       <h2 id="sl-apr">Entender antes de desenhar.</h2>
       <ol class="sl-grid3">
         <li class="sl-box"><span class="n">01</span><h3>O problema vem antes da tela</h3><p>Mapear o processo atual e as dores mostrou onde a interface realmente precisava ajudar. As telas só ficaram claras depois que o fluxo estava claro.</p></li>
@@ -4575,6 +4569,9 @@ document.querySelectorAll('.cr').forEach(function(root){
   var calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
   // pular para uma seção
   root.querySelectorAll('[data-jump]').forEach(function(b){ b.addEventListener('click', function(){ var t = document.getElementById(b.dataset.jump); if(t) t.scrollIntoView({behavior: calm ? 'auto' : 'smooth', block:'start'}); }); });
+  // vídeo do topo
+  var hv = root.querySelector('#sl-hero-video'), pb = root.querySelector('#sl-play');
+  if(hv && pb) pb.addEventListener('click', function(){ hv.scrollIntoView({behavior: calm ? 'auto' : 'smooth', block:'center'}); hv.play(); });
   // funcionalidades
   var tabs = [].slice.call(root.querySelectorAll('.sl-tab')), panels = [].slice.call(root.querySelectorAll('.sl-panel'));
   function go(i, focus){
