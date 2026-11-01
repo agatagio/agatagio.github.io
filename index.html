@@ -2034,6 +2034,13 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
   .ev-btn{padding:14px 18px; font-size:.9rem}
 }
 @media (prefers-reduced-motion:reduce){ .ev-ph, .ev-ph img, .ev-box, .ev-btn{transition:none} .ev-rv-on .ev-rv{opacity:1; transform:none} }
+/* idioma */
+.lang-toggle{position:fixed; z-index:41; top:calc(env(safe-area-inset-top,0px) + 14px); right:16px; display:inline-flex; gap:2px; padding:3px; border-radius:999px; background:rgba(20,16,36,.75); border:1px solid rgba(201,184,255,.3); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px)}
+.lang-toggle button{border:0; background:transparent; color:#C9C5DC; font:500 .66rem/1 var(--mono); letter-spacing:.12em; padding:8px 11px; border-radius:999px; cursor:pointer; transition:background .25s ease, color .25s ease}
+.lang-toggle button:hover{color:#fff}
+.lang-toggle button[aria-pressed="true"]{background:linear-gradient(135deg,#F3F0FF 0%,#D2C5FF 55%,#B9D8FF 100%); color:#140E30}
+.lang-toggle button:focus-visible{outline:2px solid var(--lilac); outline-offset:2px}
+html[lang="en"] .ci-grad::after{content:"Gradient #D1E4FF 92  #9FC6FF"}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -4372,6 +4379,7 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
     <span>© 2026 Ágata · UX/UI Designer</span>
     <a href="#" id="to-top" style="text-decoration:none">Voltar ao topo ↑</a>
   </footer>
+  <div class="lang-toggle" role="group" aria-label="Idioma / Language"><button type="button" data-lang="pt" lang="pt" aria-pressed="true" title="Português">PT</button><button type="button" data-lang="en" lang="en" aria-pressed="false" title="English">EN</button></div>
   <button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="true" title="Sons ao passar o mouse"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path class="w1" d="M16 9.5a3.5 3.5 0 0 1 0 5"/><path class="w2" d="M18.5 7a7 7 0 0 1 0 10"/><path class="x" d="M16 9l5 6M21 9l-5 6"/></svg><span class="st-label">Som ligado</span></button>
   <button class="scroll-hint" id="scroll-hint" type="button"><img src="agata-2.jpg?v=2" alt="">Conheça mais sobre mim<span class="chev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span></button>
 </div>
@@ -4955,6 +4963,7 @@ document.querySelectorAll('.slider').forEach(function(s){
   root.querySelectorAll('.ev-rv').forEach(function(s){ io.observe(s); });
 })();
 </script>
+<script src="i18n.js?v=2"></script>
 
 </body>
 </html>
