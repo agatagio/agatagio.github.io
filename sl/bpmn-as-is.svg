@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="140.0 60.0 4120.0 1810.0" width="4120.0" height="1810.0" font-family="Inter,Arial,Helvetica,sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#0B1F3A"/></marker></defs>
+<rect x="140.0" y="60.0" width="4120.0" height="1810.0" fill="#ffffff"/>
+<rect x="830.0" y="380.0" width="3410.0" height="1470.0" fill="#F8FAFC" stroke="#0B1F3A" stroke-width="1.6"/><rect x="830.0" y="380.0" width="30" height="1470.0" fill="#E2E8F0" stroke="#0B1F3A" stroke-width="1.6"/>
+<text transform="translate(845.0,1115.0) rotate(-90)" font-size="15" font-weight="700" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A">SEALog — Processo de solicitação e entrega (AS-IS)</text>
+<rect x="860.0" y="1670.0" width="3380.0" height="180.0" fill="none" stroke="#0B1F3A" stroke-width="1.2"/><rect x="860.0" y="1670.0" width="26" height="180.0" fill="#EEF2F7" stroke="#0B1F3A" stroke-width="1.2"/>
+<text transform="translate(873.0,1760.0) rotate(-90)" font-size="13" font-weight="600" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A">Financeiro</text>
+<rect x="860.0" y="1340.0" width="3380.0" height="330.0" fill="none" stroke="#0B1F3A" stroke-width="1.2"/><rect x="860.0" y="1340.0" width="26" height="330.0" fill="#EEF2F7" stroke="#0B1F3A" stroke-width="1.2"/>
+<text transform="translate(873.0,1505.0) rotate(-90)" font-size="13" font-weight="600" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A">Motorista</text>
+<rect x="860.0" y="1100.0" width="3380.0" height="240.0" fill="none" stroke="#0B1F3A" stroke-width="1.2"/><rect x="860.0" y="1100.0" width="26" height="240.0" fill="#EEF2F7" stroke="#0B1F3A" stroke-width="1.2"/>
+<text transform="translate(873.0,1220.0) rotate(-90)" font-size="13" font-weight="600" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A">Coordenador (Operação)</text>
+<rect x="860.0" y="840.0" width="3380.0" height="260.0" fill="none" stroke="#0B1F3A" stroke-width="1.2"/><rect x="860.0" y="840.0" width="26" height="260.0" fill="#EEF2F7" stroke="#0B1F3A" stroke-width="1.2"/>
+<text transform="translate(873.0,970.0) rotate(-90)" font-size="13" font-weight="600" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A">Analista (Operação)</text>
+<rect x="860.0" y="600.0" width="3380.0" height="240.0" fill="none" stroke="#0B1F3A" stroke-width="1.2"/><rect x="860.0" y="600.0" width="26" height="240.0" fill="#EEF2F7" stroke="#0B1F3A" stroke-width="1.2"/>
+<text transform="translate(873.0,720.0) rotate(-90)" font-size="13" font-weight="600" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A">Atendimento</text>
+<rect x="860.0" y="380.0" width="3380.0" height="220.0" fill="none" stroke="#0B1F3A" stroke-width="1.2"/><rect x="860.0" y="380.0" width="26" height="220.0" fill="#EEF2F7" stroke="#0B1F3A" stroke-width="1.2"/>
+<text transform="translate(873.0,490.0) rotate(-90)" font-size="13" font-weight="600" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A">Cliente (loja)</text>
+<polyline points="938.0,520.0 970.0,520.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="1030.0,560.0 1030.0,620.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="1270.0,520.0 1180.0,520.0 1180.0,630.0 1090.0,630.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="1090.0,660.0 1165.0,660.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="1215.0,660.0 1270.0,660.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<text font-size="11" text-anchor="middle" dominant-baseline="middle" fill="#1D4ED8" font-weight="600"><tspan x="1242.5" y="649.0">Não</tspan></text>
+<polyline points="1190.0,685.0 1190.0,740.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<text font-size="11" text-anchor="middle" dominant-baseline="middle" fill="#1D4ED8" font-weight="600"><tspan x="1207.5" y="696.0">Sim</tspan></text>
+<polyline points="1330.0,620.0 1330.0,560.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="1250.0,780.0 1340.0,780.0 1340.0,910.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="1400.0,950.0 1555.0,950.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="1580.0,925.0 1580.0,560.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<text font-size="11" text-anchor="middle" dominant-baseline="middle" fill="#1D4ED8" font-weight="600"><tspan x="1537.0" y="856.3">Cliente</tspan><tspan x="1537.0" y="869.5">leva ao</tspan><tspan x="1537.0" y="882.7">galpão</tspan></text>
+<polyline points="1580.0,975.0 1580.0,1430.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<text font-size="11" text-anchor="middle" dominant-baseline="middle" fill="#1D4ED8" font-weight="600"><tspan x="1537.0" y="1009.9">Coleta pelo</tspan><tspan x="1537.0" y="1023.1">motorista</tspan></text>
+<polyline points="1640.0,520.0 1770.0,520.0 1770.0,925.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="1640.0,1470.0 1770.0,1470.0 1770.0,975.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="1795.0,950.0 1890.0,950.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="1950.0,990.0 1950.0,1222.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="1968.0,1240.0 2090.0,1240.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="2150.0,1200.0 2150.0,990.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="2210.0,950.0 2250.0,950.0 2250.0,1450.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="2400.0,1465.0 2400.0,1410.0 2500.0,1410.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<text font-size="11" text-anchor="middle" dominant-baseline="middle" fill="#1D4ED8" font-weight="600"><tspan x="2449.5" y="1399.5">Entregue</tspan></text>
+<polyline points="2620.0,1410.0 2700.0,1410.0 2700.0,1465.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="3040.0,1615.0 3040.0,1650.0 2250.0,1650.0 2250.0,1530.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<text font-size="11" text-anchor="middle" dominant-baseline="middle" fill="#1D4ED8" font-weight="600"><tspan x="3060.0" y="1630.0">sim</tspan></text>
+<polyline points="2310.0,1490.0 2375.0,1490.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="2400.0,1515.0 2400.0,1570.0 2500.0,1570.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<text font-size="11" text-anchor="middle" dominant-baseline="middle" fill="#1D4ED8" font-weight="600"><tspan x="2449.5" y="1557.0">Imprevisto</tspan></text>
+<polyline points="2620.0,1570.0 2700.0,1570.0 2700.0,1515.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="2725.0,1490.0 2790.0,1490.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="2910.0,1490.0 3015.0,1490.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="3040.0,1465.0 3040.0,990.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="3040.0,1515.0 3040.0,1565.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="3065.0,1590.0 3100.0,1590.0 3100.0,1490.0 3165.0,1490.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<text font-size="11" text-anchor="middle" dominant-baseline="middle" fill="#1D4ED8" font-weight="600"><tspan x="3071.5" y="1580.0">não</tspan></text>
+<polyline points="3215.0,1490.0 3290.0,1490.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<text font-size="11" text-anchor="middle" dominant-baseline="middle" fill="#1D4ED8" font-weight="600"><tspan x="3252.5" y="1479.0">Sim</tspan></text>
+<polyline points="3190.0,1515.0 3190.0,1610.0 3500.0,1610.0 3500.0,968.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<text font-size="11" text-anchor="middle" dominant-baseline="middle" fill="#1D4ED8" font-weight="600"><tspan x="3209.5" y="1540.0">não</tspan></text>
+<polyline points="3350.0,1450.0 3350.0,1310.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="3100.0,950.0 3482.0,950.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="3518.0,950.0 3690.0,950.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="3810.0,950.0 3910.0,950.0 3910.0,1730.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="3970.0,1770.0 4142.0,1770.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="586.0,380.0 586.0,307.0 1030.0,311.0 1030.0,480.0" fill="none" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="2 3"/>
+<polyline points="780.0,950.0 1280.0,950.0" fill="none" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="2 3"/>
+<polyline points="700.0,1040.0 1910.0,1040.0 1910.0,990.0" fill="none" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="2 3"/>
+<polyline points="697.0,1160.0 2110.0,1160.0 2110.0,1200.0" fill="none" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="2 3"/>
+<polyline points="806.0,1398.0 2850.0,1398.0 2850.0,1450.0" fill="none" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="2 3"/>
+<polyline points="666.0,1590.0 2850.0,1590.0 2850.0,1530.0" fill="none" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="2 3"/>
+<polyline points="3350.0,1165.0 3350.0,1230.0" fill="none" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="2 3"/>
+<polyline points="2910.0,950.0 2980.0,950.0" fill="none" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="2 3"/>
+<polyline points="3760.0,1769.0 3850.0,1770.0" fill="none" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="2 3"/>
+<polyline points="1340.0,990.0 1340.0,1025.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="3090.0,990.0 3090.0,1015.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="3750.0,990.0 3750.0,1025.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="4005.0,1723.0 3970.0,1740.0" fill="none" stroke="#0B1F3A" stroke-width="1.5" marker-end="url(#a)"/>
+<circle cx="920.0" cy="520.0" r="18.0" fill="#DCFCE7" stroke="#15803D" stroke-width="2"/>
+<text font-size="11" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="920.0" y="543.3">Cliente precisa</tspan><tspan x="920.0" y="556.5">realizar</tspan><tspan x="920.0" y="569.7">entrega(s)</tspan></text>
+<rect x="970.0" y="480.0" width="120.0" height="80.0" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.8"/>
+<text font-size="12" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="1030.0" y="505.6">Enviar pedido de</tspan><tspan x="1030.0" y="520.0">entrega via</tspan><tspan x="1030.0" y="534.4">WhatsApp</tspan></text>
+<rect x="970.0" y="620.0" width="120.0" height="80.0" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.8"/>
+<text font-size="12" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="1030.0" y="652.8">Conferir dados</tspan><tspan x="1030.0" y="667.2">de cada entrega</tspan></text>
+<polygon points="1190.0,635.0 1215.0,660.0 1190.0,685.0 1165.0,660.0" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<path d="M1181.0 651.0L1199.0 669.0M1199.0 651.0L1181.0 669.0" stroke="#B45309" stroke-width="3"/>
+<text font-size="11" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="1210.0" y="618.0">Dados completos?</tspan></text>
+<rect x="1270.0" y="620.0" width="120.0" height="80.0" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.8"/>
+<text font-size="12" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="1330.0" y="645.6">Solicitar dados</tspan><tspan x="1330.0" y="660.0">faltantes e</tspan><tspan x="1330.0" y="674.4">aguardar retorno</tspan></text>
+<rect x="1270.0" y="480.0" width="120.0" height="80.0" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.8"/>
+<text font-size="12" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="1330.0" y="512.8">Enviar dados</tspan><tspan x="1330.0" y="527.2">complementares</tspan></text>
+<rect x="1130.0" y="740.0" width="120.0" height="80.0" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.8"/>
+<text font-size="12" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="1190.0" y="758.4">Encaminhar</tspan><tspan x="1190.0" y="772.8">pedido no grupo</tspan><tspan x="1190.0" y="787.2">interno de</tspan><tspan x="1190.0" y="801.6">WhatsApp</tspan></text>
+<rect x="1315.0" y="1025.0" width="50.0" height="50.0" rx="4" fill="#F1F5F9" stroke="#475569" stroke-width="1.5"/>
+<text font-size="11" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="1415.0" y="1042.9">Planilha online</tspan><tspan x="1415.0" y="1056.1">do dia</tspan></text>
+<rect x="1280.0" y="910.0" width="120.0" height="80.0" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.8"/>
+<text font-size="12" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="1340.0" y="928.4">Registrar</tspan><tspan x="1340.0" y="942.8">entrega na</tspan><tspan x="1340.0" y="957.2">planilha do dia</tspan><tspan x="1340.0" y="971.6">previsto</tspan></text>
+<polygon points="1580.0,925.0 1605.0,950.0 1580.0,975.0 1555.0,950.0" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<path d="M1571.0 941.0L1589.0 959.0M1589.0 941.0L1571.0 959.0" stroke="#B45309" stroke-width="3"/>
+<text font-size="11" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="1640.0" y="904.9">Modalidade de</tspan><tspan x="1640.0" y="918.1">coleta?</tspan></text>
+<rect x="1520.0" y="480.0" width="120.0" height="80.0" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.8"/>
+<text font-size="12" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="1580.0" y="512.8">Levar volumes ao</tspan><tspan x="1580.0" y="527.2">galpão (até 17h)</tspan></text>
+<rect x="1520.0" y="1430.0" width="120.0" height="80.0" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.8"/>
+<text font-size="12" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="1580.0" y="1448.4">Coletar volumes</tspan><tspan x="1580.0" y="1462.8">no</tspan><tspan x="1580.0" y="1477.2">estabelecimento</tspan><tspan x="1580.0" y="1491.6">(14h–18h)</tspan></text>
+<polygon points="1770.0,925.0 1795.0,950.0 1770.0,975.0 1745.0,950.0" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<path d="M1761.0 941.0L1779.0 959.0M1779.0 941.0L1761.0 959.0" stroke="#B45309" stroke-width="3"/>
+<rect x="1890.0" y="910.0" width="120.0" height="80.0" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.8"/>
+<text font-size="12" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="1950.0" y="928.4">Identificar</tspan><tspan x="1950.0" y="942.8">volumes com</tspan><tspan x="1950.0" y="957.2">etiqueta escrita</tspan><tspan x="1950.0" y="971.6">à mão</tspan></text>
+<circle cx="1950.0" cy="1240.0" r="18.0" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/><circle cx="1950.0" cy="1240.0" r="14.0" fill="none" stroke="#B45309" stroke-width="1.2"/>
+<text font-size="11" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="1950.0" y="1269.9">Dia previsto da</tspan><tspan x="1950.0" y="1283.1">entrega</tspan></text>
+<rect x="2090.0" y="1200.0" width="120.0" height="80.0" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.8"/>
+<text font-size="12" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="2150.0" y="1211.2">Distribuir</tspan><tspan x="2150.0" y="1225.6">pedidos entre</tspan><tspan x="2150.0" y="1240.0">motoristas e</tspan><tspan x="2150.0" y="1254.4">montar rotas</tspan><tspan x="2150.0" y="1268.8">manualmente</tspan></text>
+<rect x="2090.0" y="910.0" width="120.0" height="80.0" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.8"/>
+<text font-size="12" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="2150.0" y="935.6">Enviar roteiro a</tspan><tspan x="2150.0" y="950.0">cada motorista</tspan><tspan x="2150.0" y="964.4">via WhatsApp</tspan></text>
+<rect x="2500.0" y="1370.0" width="120.0" height="80.0" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.8"/>
+<text font-size="12" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="2560.0" y="1395.6">Fotografar</tspan><tspan x="2560.0" y="1410.0">comprovante de</tspan><tspan x="2560.0" y="1424.4">entrega</tspan></text>
+<rect x="2190.0" y="1450.0" width="120.0" height="80.0" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.8"/>
+<text font-size="12" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="2250.0" y="1475.6">Deslocar-se e</tspan><tspan x="2250.0" y="1490.0">tentar realizar</tspan><tspan x="2250.0" y="1504.4">a entrega</tspan></text>
+<polygon points="2400.0,1465.0 2425.0,1490.0 2400.0,1515.0 2375.0,1490.0" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<path d="M2391.0 1481.0L2409.0 1499.0M2409.0 1481.0L2391.0 1499.0" stroke="#B45309" stroke-width="3"/>
+<text font-size="11" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="2460.0" y="1490.0">Resultado?</tspan></text>
+<rect x="2500.0" y="1530.0" width="120.0" height="80.0" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.8"/>
+<text font-size="12" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="2560.0" y="1534.0">Identificar</tspan><tspan x="2560.0" y="1548.4">imprevisto</tspan><tspan x="2560.0" y="1562.8">(atraso,</tspan><tspan x="2560.0" y="1577.2">endereço,</tspan><tspan x="2560.0" y="1591.6">ausência ou</tspan><tspan x="2560.0" y="1606.0">recusa)</tspan></text>
+<polygon points="2700.0,1465.0 2725.0,1490.0 2700.0,1515.0 2675.0,1490.0" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<path d="M2691.0 1481.0L2709.0 1499.0M2709.0 1481.0L2691.0 1499.0" stroke="#B45309" stroke-width="3"/>
+<rect x="2790.0" y="1450.0" width="120.0" height="80.0" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.8"/>
+<text font-size="12" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="2850.0" y="1475.6">Enviar status e</tspan><tspan x="2850.0" y="1490.0">foto no grupo de</tspan><tspan x="2850.0" y="1504.4">WhatsApp</tspan></text>
+<polygon points="3040.0,1465.0 3065.0,1490.0 3040.0,1515.0 3015.0,1490.0" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<polygon points="3040.0,1565.0 3065.0,1590.0 3040.0,1615.0 3015.0,1590.0" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<path d="M3031.0 1581.0L3049.0 1599.0M3049.0 1581.0L3031.0 1599.0" stroke="#B45309" stroke-width="3"/>
+<text font-size="11" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="2960.0" y="1582.9">Há mais entregas</tspan><tspan x="2960.0" y="1596.1">no roteiro?</tspan></text>
+<polygon points="3190.0,1465.0 3215.0,1490.0 3190.0,1515.0 3165.0,1490.0" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<path d="M3181.0 1481.0L3199.0 1499.0M3199.0 1481.0L3181.0 1499.0" stroke="#B45309" stroke-width="3"/>
+<text font-size="11" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="3190.0" y="1434.9">Há volumes não</tspan><tspan x="3190.0" y="1448.1">entregues?</tspan></text>
+<rect x="3290.0" y="1450.0" width="120.0" height="80.0" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.8"/>
+<text font-size="12" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="3350.0" y="1475.6">Devolver volumes</tspan><tspan x="3350.0" y="1490.0">não entregues ao</tspan><tspan x="3350.0" y="1504.4">galpão (17h–18h)</tspan></text>
+<rect x="3290.0" y="1230.0" width="120.0" height="80.0" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.8"/>
+<text font-size="12" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="3350.0" y="1255.6">Avaliar cada</tspan><tspan x="3350.0" y="1270.0">caso e decidir</tspan><tspan x="3350.0" y="1284.4">como proceder</tspan></text>
+<rect x="2980.0" y="910.0" width="120.0" height="80.0" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.8"/>
+<text font-size="12" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="3040.0" y="921.2">Localizar</tspan><tspan x="3040.0" y="935.6">mensagens no</tspan><tspan x="3040.0" y="950.0">grupo e</tspan><tspan x="3040.0" y="964.4">atualizar</tspan><tspan x="3040.0" y="978.8">planilha</tspan></text>
+<rect x="3065.0" y="1015.0" width="50.0" height="50.0" rx="4" fill="#F1F5F9" stroke="#475569" stroke-width="1.5"/>
+<text font-size="11" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="3165.0" y="1032.9">Planilha online</tspan><tspan x="3165.0" y="1046.1">do dia</tspan></text>
+<circle cx="3500.0" cy="950.0" r="18.0" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/><circle cx="3500.0" cy="950.0" r="14.0" fill="none" stroke="#B45309" stroke-width="1.2"/>
+<text font-size="11" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="3500.0" y="901.4">19h — fim da</tspan><tspan x="3500.0" y="914.6">operação</tspan></text>
+<rect x="3690.0" y="910.0" width="120.0" height="80.0" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.8"/>
+<text font-size="12" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="3750.0" y="942.8">Fechar a</tspan><tspan x="3750.0" y="957.2">planilha do dia</tspan></text>
+<rect x="3725.0" y="1025.0" width="50.0" height="50.0" rx="4" fill="#F1F5F9" stroke="#475569" stroke-width="1.5"/>
+<text font-size="11" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="3825.0" y="1042.9">Planilha online</tspan><tspan x="3825.0" y="1056.1">do dia</tspan></text>
+<rect x="3850.0" y="1730.0" width="120.0" height="80.0" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.8"/>
+<text font-size="12" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="3910.0" y="1755.6">Conferir valores</tspan><tspan x="3910.0" y="1770.0">cobrados dos</tspan><tspan x="3910.0" y="1784.4">clientes</tspan></text>
+<rect x="4005.0" y="1685.0" width="50.0" height="50.0" rx="4" fill="#F1F5F9" stroke="#475569" stroke-width="1.5"/>
+<text font-size="11" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="4030.0" y="1746.9">Planilha do dia</tspan><tspan x="4030.0" y="1760.1">(fechada)</tspan></text>
+<circle cx="4160.0" cy="1770.0" r="18.0" fill="#FEE2E2" stroke="#B91C1C" stroke-width="3.5"/>
+<text font-size="11" text-anchor="middle" dominant-baseline="middle" fill="#0B1F3A" font-weight="400"><tspan x="4160.0" y="1793.4">Cobrança</tspan><tspan x="4160.0" y="1806.6">calculada</tspan></text>
+<rect x="440.0" y="380.0" width="292.96006300963677" height="72.0" fill="#FFFBEB" opacity=".7"/><path d="M454.0 380.0H440.0 V452.0 H454.0" fill="none" stroke="#64748B" stroke-width="1.4"/>
+<text x="450.0" y="396.0" font-size="11" fill="#334155" font-weight="700">DOR D1 — Pedidos chegam sem padrão (texto,</text>
+<text x="450.0" y="409.2" font-size="11" fill="#334155" font-weight="400">áudio, planilhas próprias). Cerca de 1 em</text>
+<text x="450.0" y="422.4" font-size="11" fill="#334155" font-weight="400">cada 5 chega incompleto, gerando retrabalho e</text>
+<text x="450.0" y="435.6" font-size="11" fill="#334155" font-weight="400">espera pelo retorno do cliente.</text>
+<rect x="440.0" y="912.0" width="340.0" height="75.0" fill="#FFFBEB" opacity=".7"/><path d="M454.0 912.0H440.0 V987.0 H454.0" fill="none" stroke="#64748B" stroke-width="1.4"/>
+<text x="450.0" y="928.0" font-size="11" fill="#334155" font-weight="700">DOR D2 — Cada analista cuida de um grupo de clientes</text>
+<text x="450.0" y="941.2" font-size="11" fill="#334155" font-weight="400">e registra em planilhas por dia; cópias das planilhas</text>
+<text x="450.0" y="954.4" font-size="11" fill="#334155" font-weight="400">geram divergências. Não há fonte única de dados.</text>
+<rect x="440.0" y="1002.0" width="260.0" height="75.0" fill="#FFFBEB" opacity=".7"/><path d="M454.0 1002.0H440.0 V1077.0 H454.0" fill="none" stroke="#64748B" stroke-width="1.4"/>
+<text x="450.0" y="1018.0" font-size="11" fill="#334155" font-weight="700">DOR D7 — Volumes identificados com</text>
+<text x="450.0" y="1031.2" font-size="11" fill="#334155" font-weight="400">etiquetas escritas à mão.</text>
+<text x="450.0" y="1044.4" font-size="11" fill="#334155" font-weight="400">HIPÓTESE H1: etiquetagem feita pela</text>
+<text x="450.0" y="1057.6" font-size="11" fill="#334155" font-weight="400">Operação.</text>
+<rect x="442.0" y="1120.0" width="255.0" height="80.0" fill="#FFFBEB" opacity=".7"/><path d="M456.0 1120.0H442.0 V1200.0 H456.0" fill="none" stroke="#64748B" stroke-width="1.4"/>
+<text x="452.0" y="1136.0" font-size="11" fill="#334155" font-weight="700">DOR D7 — Rotas montadas manualmente,</text>
+<text x="452.0" y="1149.2" font-size="11" fill="#334155" font-weight="400">com base na experiência da equipe; não</text>
+<text x="452.0" y="1162.4" font-size="11" fill="#334155" font-weight="400">há ferramenta de roteirização.</text>
+<text x="452.0" y="1175.6" font-size="11" fill="#334155" font-weight="400">(Coordenador + Analistas)</text>
+<rect x="366.0" y="1360.0" width="440.0" height="75.0" fill="#FFFBEB" opacity=".7"/><path d="M380.0 1360.0H366.0 V1435.0 H380.0" fill="none" stroke="#64748B" stroke-width="1.4"/>
+<text x="376.0" y="1376.0" font-size="11" fill="#334155" font-weight="700">DORES D3/D4 — ~18 motoristas no mesmo grupo de WhatsApp; mensagens se</text>
+<text x="376.0" y="1389.2" font-size="11" fill="#334155" font-weight="400">perdem. Na prática, muitos enviam status e fotos em lote (almoço ou</text>
+<text x="376.0" y="1402.4" font-size="11" fill="#334155" font-weight="400">fim do dia) ou só avisam quando há problema.</text>
+<rect x="366.0" y="1547.0" width="300.0" height="85.0" fill="#FFFBEB" opacity=".7"/><path d="M380.0 1547.0H366.0 V1632.0 H380.0" fill="none" stroke="#64748B" stroke-width="1.4"/>
+<text x="376.0" y="1563.0" font-size="11" fill="#334155" font-weight="700">DOR D6 — Imprevistos não chegam a tempo à</text>
+<text x="376.0" y="1576.2" font-size="11" fill="#334155" font-weight="400">Operação nem ao cliente. Ex.: buquê de sábado</text>
+<text x="376.0" y="1589.4" font-size="11" fill="#334155" font-weight="400">— aviso às 9h40, visto às 11h, entregue às</text>
+<text x="376.0" y="1602.6" font-size="11" fill="#334155" font-weight="400">14h.</text>
+<rect x="3150.0" y="1122.0" width="320.7869433198381" height="43.0" fill="#FFFBEB" opacity=".7"/><path d="M3164.0 1122.0H3150.0 V1165.0 H3164.0" fill="none" stroke="#64748B" stroke-width="1.4"/>
+<text x="3160.0" y="1138.0" font-size="11" fill="#334155" font-weight="700">DOR D7 — Decisão caso a caso, sem regras</text>
+<text x="3160.0" y="1151.2" font-size="11" fill="#334155" font-weight="400">formalizadas (reagendar, devolver, nova</text>
+<text x="3160.0" y="1164.4" font-size="11" fill="#334155" font-weight="400">tentativa...).</text>
+<rect x="2510.0" y="912.0" width="400.0" height="75.0" fill="#FFFBEB" opacity=".7"/><path d="M2524.0 912.0H2510.0 V987.0 H2524.0" fill="none" stroke="#64748B" stroke-width="1.4"/>
+<text x="2520.0" y="928.0" font-size="11" fill="#334155" font-weight="700">DOR D2 — Analistas procuram as mensagens no grupo e atualizam a</text>
+<text x="2520.0" y="941.2" font-size="11" fill="#334155" font-weight="400">planilha manualmente, de forma assíncrona. Ex.: &quot;ok&quot; marcado na</text>
+<text x="2520.0" y="954.4" font-size="11" fill="#334155" font-weight="400">linha errada; 1 dia para achar a foto.</text>
+<rect x="3420.0" y="1740.0" width="340.0" height="55.0" fill="#FFFBEB" opacity=".7"/><path d="M3434.0 1740.0H3420.0 V1795.0 H3434.0" fill="none" stroke="#64748B" stroke-width="1.4"/>
+<text x="3430.0" y="1756.0" font-size="11" fill="#334155" font-weight="700">DOR D8 — Cobrança calculada sobre registros manuais,</text>
+<text x="3430.0" y="1769.2" font-size="11" fill="#334155" font-weight="400">sujeitos a erro e divergência.</text>
+<rect x="160.0" y="540.0" width="620.0" height="75.0" fill="#FFFBEB" opacity=".7"/><path d="M174.0 540.0H160.0 V615.0 H174.0" fill="none" stroke="#64748B" stroke-width="1.4"/>
+<text x="170.0" y="556.0" font-size="11" fill="#334155" font-weight="700">DOR D5 — A resposta passa por até 5 repasses (Cliente → Atendimento → Analista → Motorista →</text>
+<text x="170.0" y="569.2" font-size="11" fill="#334155" font-weight="400">Analista → Atendimento → Cliente). O ciclo leva de 20 min a mais de 2h; em dias de pico, perguntas</text>
+<text x="170.0" y="582.4" font-size="11" fill="#334155" font-weight="400">ficam sem resposta até o dia seguinte.</text>
+<rect x="280.0" y="660.0" width="420.0" height="70.0" fill="#FFFBEB" opacity=".7"/><path d="M294.0 660.0H280.0 V730.0 H294.0" fill="none" stroke="#64748B" stroke-width="1.4"/>
+<text x="290.0" y="676.0" font-size="11" fill="#334155" font-weight="700">DOR D2 — A planilha costuma estar desatualizada, pois depende das</text>
+<text x="290.0" y="689.2" font-size="11" fill="#334155" font-weight="400">mensagens enviadas pelos motoristas.</text>
+<rect x="373.0" y="770.0" width="360.0" height="60.0" fill="#FFFBEB" opacity=".7"/><path d="M387.0 770.0H373.0 V830.0 H387.0" fill="none" stroke="#64748B" stroke-width="1.4"/>
+<text x="383.0" y="786.0" font-size="11" fill="#334155" font-weight="700">O motorista pode estar dirigindo ou sem sinal; a</text>
+<text x="383.0" y="799.2" font-size="11" fill="#334155" font-weight="400">resposta depende de quando ele vê a mensagem.</text>
+<rect x="1250.0" y="80.0" width="762.6939946018894" height="187.0" fill="#FFFBEB" opacity=".7"/><path d="M1264.0 80.0H1250.0 V267.0 H1264.0" fill="none" stroke="#64748B" stroke-width="1.4"/>
+<text x="1260.0" y="96.0" font-size="11" fill="#334155" font-weight="700">REGRAS DE NEGÓCIO (AS-IS)</text>
+<text x="1260.0" y="109.2" font-size="11" fill="#334155" font-weight="400">RN01 — Prazo padrão: dia útil seguinte à solicitação; o cliente pode agendar uma data específica.</text>
+<text x="1260.0" y="122.4" font-size="11" fill="#334155" font-weight="400">RN02 — Dados obrigatórios por entrega: nome e telefone do destinatário; endereço com número, complemento, ponto de</text>
+<text x="1260.0" y="135.6" font-size="11" fill="#334155" font-weight="400">referência, bairro e cidade; tamanho aproximado do volume; data desejada.</text>
+<text x="1260.0" y="148.8" font-size="11" fill="#334155" font-weight="400">RN03 — O pedido só é encaminhado à Operação com os dados completos.</text>
+<text x="1260.0" y="162.0" font-size="11" fill="#334155" font-weight="400">RN04 — Coleta no estabelecimento entre 14h e 18h; volumes levados pelo cliente ao galpão até 17h.</text>
+<text x="1260.0" y="175.2" font-size="11" fill="#334155" font-weight="400">RN05 — Operação: seg. a sáb., 7h–19h. Atendimento: seg. a sex., 8h–18h; sáb., 8h–12h.</text>
+<text x="1260.0" y="188.4" font-size="11" fill="#334155" font-weight="400">RN06 — Cada analista é responsável por um grupo de clientes.</text>
+<text x="1260.0" y="201.6" font-size="11" fill="#334155" font-weight="400">RN07 — A cada entrega, o motorista deve enviar o status e a foto do comprovante.</text>
+<text x="1260.0" y="214.8" font-size="11" fill="#334155" font-weight="400">RN08 — Os motoristas retornam ao galpão entre 17h e 18h com os volumes não entregues.</text>
+<text x="1260.0" y="228.0" font-size="11" fill="#334155" font-weight="400">RN09 — Às 19h a planilha do dia é considerada fechada.</text>
+<text x="1260.0" y="241.2" font-size="11" fill="#334155" font-weight="400">RN10 — O Financeiro calcula a cobrança dos clientes com base nos registros da planilha.</text>
+<rect x="2020.0" y="100.0" width="640.0" height="140.0" fill="#FFFBEB" opacity=".7"/><path d="M2034.0 100.0H2020.0 V240.0 H2034.0" fill="none" stroke="#64748B" stroke-width="1.4"/>
+<text x="2030.0" y="116.0" font-size="11" fill="#334155" font-weight="700">HIPÓTESES ADOTADAS (não explícitas no desafio)</text>
+<text x="2030.0" y="129.2" font-size="11" fill="#334155" font-weight="400">H1 — A etiquetagem dos volumes é feita pela Operação.</text>
+<text x="2030.0" y="142.4" font-size="11" fill="#334155" font-weight="400">H2 — O roteiro individual é enviado aos motoristas pelos Analistas.</text>
+<text x="2030.0" y="155.6" font-size="11" fill="#334155" font-weight="400">H3 — O fechamento da planilha às 19h é feito pelos Analistas.</text>
+<text x="2030.0" y="168.8" font-size="11" fill="#334155" font-weight="400">H4 — A coleta ocorre antes do dia previsto da entrega (ex.: coleta no dia D, entrega em D+1).</text>
+<text x="2030.0" y="182.0" font-size="11" fill="#334155" font-weight="400">H5 — O consumidor final (destinatário) não fala com a SEALog: ele procura a loja.</text>
+<text x="2030.0" y="195.2" font-size="11" fill="#334155" font-weight="400">H6 — As tratativas decididas pelo Coordenador (reagendar, devolver etc.) não têm fluxo formal e foram</text>
+<text x="2030.0" y="208.4" font-size="11" fill="#334155" font-weight="400">modeladas como uma única atividade.</text>
+</svg>

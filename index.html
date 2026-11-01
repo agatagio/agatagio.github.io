@@ -1672,6 +1672,221 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
   .mt-prof-ph .pv-phone{width:30% !important}
   .mt-rail-nav{display:none}
 }
+/* ===== SEALog ===== */
+.sl{--sl-n:#0B1F3A; --sl-n8:#12315C; --sl-b:#2563EB; --sl-b3:#3B82F6; --sl-l:#BFD8FF; --sl-a:#F59E0B; --sl-ink:#E8F0FF}
+.sl .cs-num{color:var(--sl-l)}
+.sl button:focus-visible, .sl a:focus-visible, .sl-tab:focus-visible, .sl-pair:focus-visible, .sl-comp:focus-visible, .sl-rail-btn:focus-visible, .sl-cmp-range:focus-visible + .sl-cmp-bar{outline:3px solid var(--sl-l); outline-offset:4px}
+.sl-card .tags span{border-color:rgba(147,197,253,.45)}
+.sl-card .chip{color:#DCE9FF}
+.sl-wip{display:inline-flex; align-items:center; gap:8px; align-self:flex-start; justify-self:start; font:500 .7rem/1 var(--mono); letter-spacing:.12em; text-transform:uppercase; color:#CFE3FF; padding:8px 12px; border-radius:999px; background:rgba(59,130,246,.14); box-shadow:inset 0 0 0 1px rgba(147,197,253,.5)}
+.sl-wip i{width:7px; height:7px; border-radius:50%; background:#60A5FA}
+/* hero */
+.sl-hero{position:relative; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:clamp(24px,4vw,56px); align-items:center; margin-top:8px; padding:clamp(28px,5vw,64px); border-radius:32px; overflow:hidden; isolation:isolate;
+  background:radial-gradient(720px 440px at 80% 10%, rgba(59,130,246,.34), transparent 62%), radial-gradient(560px 420px at 0% 100%, rgba(18,49,92,.9), transparent 64%), linear-gradient(150deg,#060F1F 0%,#0B1F3A 52%,#12315C 100%);
+  box-shadow:inset 0 0 0 1px rgba(147,197,253,.22), 0 40px 90px -30px rgba(0,0,0,.7)}
+.sl-hero::after{content:""; position:absolute; inset:0; z-index:-1; opacity:.5; pointer-events:none; background-image:radial-gradient(rgba(191,216,255,.16) 1px, transparent 1.4px); background-size:22px 22px; -webkit-mask-image:linear-gradient(110deg,#000,transparent 65%); mask-image:linear-gradient(110deg,#000,transparent 65%)}
+.sl-hero-copy{display:grid; gap:18px; justify-items:start}
+.sl-eyebrow{display:inline-flex; align-items:center; gap:10px; font:500 .74rem/1.3 var(--mono); letter-spacing:.14em; text-transform:uppercase; color:#DCE9FF; padding:9px 14px; border-radius:999px; background:rgba(59,130,246,.12); box-shadow:inset 0 0 0 1px rgba(147,197,253,.38)}
+.sl-eyebrow i{flex:none; width:8px; height:8px; border-radius:50%; background:var(--sl-a); box-shadow:0 0 10px var(--sl-a)}
+.sl-title{margin:0; line-height:0}
+.sl-title img{display:block; width:clamp(240px,34vw,420px); height:auto; filter:drop-shadow(0 10px 30px rgba(37,99,235,.45)); transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.sl-title:hover img{transform:translateY(-4px) scale(1.02)}
+.sl-claim{font:800 clamp(1.25rem,2.3vw,1.75rem)/1.25 var(--display); color:#F2F7FF; max-width:24ch}
+.sl-lede{font:400 clamp(1rem,1.3vw,1.1rem)/1.7 var(--body); color:#BFD3F2; max-width:54ch}
+.sl-hero .tags{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:8px}
+.sl-hero .tags span{display:inline-block; font-size:.72rem; padding:8px 12px; border-color:rgba(147,197,253,.4); color:#E4EEFF}
+.sl-links{display:flex; flex-wrap:wrap; gap:12px; margin-top:6px}
+.sl-btn{display:inline-flex; align-items:center; gap:10px; padding:15px 22px; border-radius:999px; font:600 .96rem/1 var(--body); text-decoration:none; border:0; cursor:pointer; transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease}
+.sl-btn.pri{background:var(--sl-b); color:#fff; box-shadow:0 10px 30px rgba(37,99,235,.55), inset 0 0 0 1px rgba(255,255,255,.22)}
+.sl-btn.pri:hover{transform:translateY(-2px); background:#3B82F6; box-shadow:0 14px 40px rgba(59,130,246,.6), inset 0 0 0 1px rgba(255,255,255,.4)}
+.sl-btn.sec{color:#DCE9FF; background:rgba(59,130,246,.1); box-shadow:inset 0 0 0 1px rgba(147,197,253,.45)}
+.sl-btn.sec:hover{transform:translateY(-2px); color:#fff; background:rgba(59,130,246,.22)}
+.sl-hero-stage{position:relative; min-height:clamp(360px,38vw,520px); display:grid; place-items:center; perspective:1400px}
+.sl-orb{position:absolute; width:80%; aspect-ratio:1; border-radius:50%; background:radial-gradient(circle, rgba(59,130,246,.4), rgba(18,49,92,.12) 55%, transparent 70%); filter:blur(6px)}
+.sl-hl{position:absolute; left:2%; top:50%; width:92%; height:auto; transform:translateY(-52%) rotateY(-9deg) rotateX(2deg); animation:slFloat 9s ease-in-out infinite; filter:drop-shadow(0 30px 40px rgba(0,0,0,.45))}
+.sl-hp{position:absolute; right:0; bottom:2%; width:27%; height:auto; transform:rotate(5deg); animation:slFloat2 7.5s ease-in-out infinite; filter:drop-shadow(0 24px 30px rgba(0,0,0,.5))}
+@keyframes slFloat{0%,100%{transform:translateY(-52%) rotateY(-9deg) rotateX(2deg)} 50%{transform:translateY(-55%) rotateY(-7deg) rotateX(2deg)}}
+@keyframes slFloat2{0%,100%{transform:rotate(5deg) translateY(0)} 50%{transform:rotate(4deg) translateY(-10px)}}
+.sl-chip{position:absolute; z-index:3; display:inline-flex; align-items:center; gap:9px; padding:10px 14px 10px 10px; border-radius:16px; font:600 .82rem/1.1 var(--body); color:#0B1F3A; background:rgba(255,255,255,.95); box-shadow:0 18px 40px -12px rgba(0,0,0,.55); animation:slChip 7s ease-in-out infinite}
+.sl-chip i{display:grid; place-items:center; width:28px; height:28px; border-radius:9px; background:#DBEAFE; color:#1D4ED8; font:800 .78rem/1 var(--display); font-style:normal}
+.sl-chip.c1{left:0; top:10%} .sl-chip.c2{left:8%; bottom:6%; animation-delay:-3.5s}
+@keyframes slChip{50%{transform:translateY(-8px)}}
+.sl-about{display:grid; gap:18px; padding-block:clamp(24px,3vw,36px) 0}
+.sl-facts{grid-template-columns:repeat(4,minmax(0,1fr)) !important; margin-top:0 !important}
+.sl-facts dt{color:var(--sl-l) !important}
+.sl-status{display:flex; gap:12px; align-items:flex-start; max-width:84ch; padding:14px 16px; border-radius:14px; font-size:.92rem; line-height:1.6; color:#D5E4FA; background:rgba(59,130,246,.08); border:1px solid rgba(147,197,253,.28)}
+.sl-status i{flex:none; width:8px; height:8px; margin-top:.55em; border-radius:50%; background:var(--sl-a)}
+/* seções */
+.sl-sec{display:grid; gap:16px; padding-block:clamp(56px,8vw,96px) 0}
+.sl-sec h2{font:600 clamp(1.9rem,4.2vw,3.2rem)/1.1 var(--display); letter-spacing:-.03em; color:#F4F2FB; max-width:22ch}
+.sl-sub{font:600 clamp(1.15rem,2vw,1.45rem)/1.2 var(--display); color:#F4F2FB; margin-top:clamp(36px,5vw,56px)}
+.sl-k{font:500 .7rem/1 var(--mono); letter-spacing:.16em; text-transform:uppercase; color:var(--sl-l)}
+.sl-ci{display:grid; place-items:center; width:46px; height:46px; border-radius:14px; flex:none; color:#BFD8FF; background:rgba(59,130,246,.16); box-shadow:inset 0 0 0 1px rgba(147,197,253,.4)}
+.sl-ci svg{width:24px; height:24px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round}
+.sl-ci.a{color:#FCD34D; background:rgba(245,158,11,.14); box-shadow:inset 0 0 0 1px rgba(245,158,11,.45)}
+.sl-grid3, .sl-grid5{list-style:none; margin:clamp(12px,2vw,24px) 0 0; padding:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px}
+.sl-grid5{grid-template-columns:repeat(5,minmax(0,1fr)); gap:14px}
+.sl-box{position:relative; display:grid; gap:10px; align-content:start; padding:24px; border-radius:20px; background:linear-gradient(160deg, rgba(255,255,255,.05), rgba(255,255,255,.015)); border:1px solid rgba(255,255,255,.1); transition:transform .3s ease, border-color .3s ease, background .3s ease}
+.sl-box:hover{transform:translateY(-3px); border-color:rgba(147,197,253,.5); background:linear-gradient(160deg, rgba(59,130,246,.12), rgba(255,255,255,.015))}
+.sl-box h3{font:600 1.12rem/1.3 var(--display); color:#F4F2FB; margin-top:4px}
+.sl-box p{color:var(--muted); font-size:.95rem; line-height:1.6}
+.sl-box .ev{display:block; margin-top:4px; padding-top:12px; border-top:1px dashed rgba(147,197,253,.3); color:#DCE9FF; font-size:.88rem; line-height:1.5}
+.sl-box .ev b{display:block; font:500 .66rem/1 var(--mono); letter-spacing:.14em; text-transform:uppercase; color:var(--sl-l); margin-bottom:4px}
+.sl-box .n{position:absolute; top:22px; right:22px; font:500 .75rem/1 var(--mono); color:rgba(191,216,255,.5)}
+.sl-prose{display:grid; gap:14px; max-width:68ch; color:var(--muted); line-height:1.75}
+.sl-prose b{color:#F4F2FB; font-weight:600}
+/* mudança */
+.sl-shift{display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); gap:clamp(20px,4vw,48px); align-items:center; margin-top:clamp(12px,2vw,24px)}
+.sl-shot{display:block; width:100%; height:auto; border-radius:20px; box-shadow:0 30px 70px -28px rgba(0,0,0,.7), inset 0 0 0 1px rgba(147,197,253,.3)}
+.sl-ba{list-style:none; margin:0; padding:0; display:grid; gap:10px}
+.sl-ba li{display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); gap:12px; align-items:center; padding:14px 16px; border-radius:16px; background:rgba(255,255,255,.035); border:1px solid rgba(255,255,255,.09); font-size:.92rem; line-height:1.4}
+.sl-ba .a{color:#B7B3C9} .sl-ba .d{color:#fff; font-weight:600}
+.sl-ba .ar{color:var(--sl-b3); font-weight:800}
+.sl-ba-h{display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); gap:12px; padding:0 16px; font:500 .66rem/1 var(--mono); letter-spacing:.14em; text-transform:uppercase}
+.sl-ba-h span:first-child{color:#B7B3C9} .sl-ba-h span:last-child{color:var(--sl-l)} .sl-ba-h i{visibility:hidden}
+/* funcionalidades */
+.sl-fx{display:grid; grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr); gap:clamp(20px,3vw,40px); align-items:start; margin-top:clamp(8px,2vw,20px)}
+.sl-tabs{list-style:none; margin:0; padding:0; display:grid; gap:8px}
+.sl-tab{width:100%; display:grid; grid-template-columns:auto minmax(0,1fr); align-items:center; gap:14px; padding:14px 16px; border-radius:16px; border:1px solid rgba(255,255,255,.09); background:rgba(255,255,255,.03); color:#CFCBE0; font:500 .98rem/1.3 var(--body); text-align:left; cursor:pointer; transition:background .25s ease, border-color .25s ease, color .25s ease, transform .25s ease}
+.sl-tab:hover{background:rgba(59,130,246,.09); color:#fff; transform:translateX(3px)}
+.sl-tab[aria-selected="true"]{color:#fff; background:linear-gradient(100deg, rgba(37,99,235,.38), rgba(59,130,246,.06)); border-color:rgba(147,197,253,.6); box-shadow:inset 3px 0 0 var(--sl-b3)}
+.sl-tn{font:500 .72rem/1 var(--mono); color:rgba(191,216,255,.6)}
+.sl-stage{position:relative; padding:clamp(16px,2.4vw,28px); border-radius:28px; background:radial-gradient(520px 340px at 30% 30%, rgba(59,130,246,.24), transparent 70%), linear-gradient(160deg, rgba(18,49,92,.7), rgba(6,15,31,.7)); border:1px solid rgba(147,197,253,.22); min-height:300px}
+.sl-panel{display:grid; gap:18px; animation:slIn .5s cubic-bezier(.2,.7,.2,1)}
+.sl-panel[hidden]{display:none}
+@keyframes slIn{from{opacity:0; transform:translateY(12px)}}
+.sl-cap h3{font:800 clamp(1.25rem,2.1vw,1.6rem)/1.2 var(--display); color:#fff}
+.sl-cap p{color:#CFE0F7; line-height:1.7; font-size:1rem; margin-top:8px} .sl-cap p b{color:#fff; font-weight:600}
+.sl-tag{display:inline-block; margin-top:10px; margin-right:6px; font:500 .66rem/1 var(--mono); letter-spacing:.1em; text-transform:uppercase; padding:6px 10px; border-radius:999px; color:#DCE9FF; background:rgba(59,130,246,.14); border:1px solid rgba(147,197,253,.35)}
+.sl-tag.am{color:#FDE7B0; background:rgba(245,158,11,.12); border-color:rgba(245,158,11,.45)}
+.sl-two{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px}
+.sl-phones{display:flex; gap:16px; justify-content:center; align-items:flex-start}
+.sl-phones img, .sl-phone{display:block; width:min(100%,260px); height:auto; filter:drop-shadow(0 22px 28px rgba(0,0,0,.45)); transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.sl-phone-btn{padding:0; border:0; background:none; cursor:zoom-in; border-radius:24px} .sl-phone-btn:hover img{transform:translateY(-6px) rotate(-1deg)}
+.sl-phone-btn:focus-visible{outline:3px solid var(--sl-l); outline-offset:4px}
+.sl .bw{box-shadow:0 18px 44px -18px rgba(0,0,0,.65), 0 0 0 1px rgba(147,197,253,.28)}
+.sl .bw:hover{box-shadow:0 34px 70px -20px rgba(37,99,235,.7), 0 0 0 1px rgba(191,216,255,.85)}
+.sl .bw-bar{background:#E8F0FF; border-bottom-color:#CFE0FF}
+.sl .bw-zoom{background:rgba(37,99,235,.95)}
+/* processo */
+.sl-wf{display:grid; grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) minmax(0,.7fr); gap:14px; align-items:start; margin-top:clamp(12px,2vw,24px)}
+.sl-comp{display:grid; gap:10px; padding:12px; border-radius:18px; border:1px solid rgba(255,255,255,.1); background:rgba(255,255,255,.035); cursor:zoom-in; text-align:left; color:inherit; font:inherit; transition:transform .3s ease, border-color .3s ease}
+.sl-comp:hover{transform:translateY(-3px); border-color:rgba(147,197,253,.55)}
+.sl-comp img{display:block; width:100%; height:auto; border-radius:10px; background:#fff}
+.sl-comp span{font:500 .74rem/1.3 var(--mono); color:#CFCBE0}
+.sl-cmp{display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:clamp(24px,5vw,56px); align-items:center; margin-top:clamp(12px,2vw,24px); padding:clamp(20px,3vw,40px); border-radius:28px; background:linear-gradient(160deg, rgba(255,255,255,.045), rgba(255,255,255,.01)); border:1px solid rgba(255,255,255,.1)}
+.sl-cmp-side{display:grid; gap:14px; align-content:start}
+.sl-changes{list-style:none; margin:0; padding:0; display:grid; gap:10px}
+.sl-changes li{display:grid; gap:4px; padding:14px 16px; border-radius:14px; background:rgba(59,130,246,.07); border:1px solid rgba(147,197,253,.22); font-size:.92rem; line-height:1.5; color:#CFE0F7}
+.sl-changes b{color:#fff; font:600 .98rem/1.3 var(--display)}
+.sl-cmp-view{display:grid; gap:12px}
+.sl-cmp-labels{display:flex; justify-content:space-between; font:500 .66rem/1 var(--mono); letter-spacing:.12em; text-transform:uppercase}
+.sl-cmp-labels span:first-child{color:#B7B3C9} .sl-cmp-labels span:last-child{color:var(--sl-l)}
+.sl-cmp-box{position:relative; border-radius:16px; overflow:hidden; aspect-ratio:1100/912; background:#fff; box-shadow:0 24px 60px -24px rgba(0,0,0,.7), 0 0 0 1px rgba(147,197,253,.3); cursor:ew-resize; --x:50%}
+.sl-cmp-box img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; user-select:none; -webkit-user-drag:none; pointer-events:none}
+.sl-cmp-box img.hi{clip-path:inset(0 0 0 var(--x))}
+.sl-cmp-bar{position:absolute; top:0; bottom:0; left:var(--x); width:2px; margin-left:-1px; background:#fff; box-shadow:0 0 0 1px rgba(11,31,58,.25), 0 0 16px rgba(59,130,246,.9); pointer-events:none}
+.sl-cmp-bar i{position:absolute; top:50%; left:50%; width:40px; height:40px; margin:-20px 0 0 -20px; border-radius:50%; display:grid; place-items:center; background:var(--sl-b); box-shadow:0 0 0 3px #fff, 0 8px 22px rgba(0,0,0,.4)}
+.sl-cmp-bar svg{width:20px; height:20px; fill:none; stroke:#fff; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round}
+.sl-cmp-range{position:absolute; inset:0; z-index:3; width:100%; height:100%; margin:0; opacity:0; cursor:ew-resize; touch-action:pan-y}
+.sl-cmp-hint{font:400 .74rem/1 var(--mono); color:var(--muted)}
+/* trilho de telas */
+.sl-rail-wrap{position:relative; margin-top:clamp(10px,2vw,20px); border-radius:28px; overflow:hidden; background:radial-gradient(600px 300px at 20% 0%, rgba(59,130,246,.25), transparent 70%), linear-gradient(160deg,#12315C,#060F1F 70%); border:1px solid rgba(147,197,253,.22)}
+.sl-rail{list-style:none; margin:0; padding:clamp(28px,4vw,48px) clamp(20px,4vw,48px) clamp(36px,5vw,52px); display:flex; gap:clamp(18px,2.4vw,28px); overflow-x:auto; scroll-snap-type:x mandatory; scroll-padding-inline:clamp(20px,4vw,48px); scrollbar-width:thin; scrollbar-color:rgba(147,197,253,.5) transparent; overscroll-behavior-x:contain}
+.sl-ri{flex:none; width:clamp(280px,32vw,420px); display:grid; gap:12px; scroll-snap-align:start}
+.sl-rn{font:500 .7rem/1 var(--mono); letter-spacing:.08em; color:#BFD8FF; white-space:nowrap}
+.sl-rail-nav{position:absolute; right:16px; top:14px; display:flex; gap:8px; z-index:2}
+.sl-rail-btn{width:40px; height:40px; border-radius:50%; display:grid; place-items:center; border:1px solid rgba(147,197,253,.45); background:rgba(6,15,31,.75); color:#fff; cursor:pointer; transition:background .25s ease}
+.sl-rail-btn:hover{background:var(--sl-b)} .sl-rail-btn svg{width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round}
+/* design system */
+.sl-ds{display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.4fr) minmax(0,.95fr); gap:14px}
+.sl-ds-card{display:grid; gap:16px; align-content:start; padding:22px; border-radius:20px; background:rgba(255,255,255,.035); border:1px solid rgba(255,255,255,.1)}
+.sl-logos{display:grid; gap:10px}
+.sl-lt{display:grid; place-items:center; padding:18px; border-radius:16px; background:#fff} .sl-lt img{width:min(170px,70%); height:auto}
+.sl-ln{display:grid; place-items:center; padding:18px; border-radius:16px; background:linear-gradient(150deg,#0B1F3A,#12315C)} .sl-ln img{width:min(170px,70%); height:auto}
+.sl-values{display:flex; flex-wrap:wrap; gap:6px} .sl-values span{font:500 .72rem/1 var(--mono); padding:8px 10px; border-radius:999px; color:#DCE9FF; background:rgba(59,130,246,.12); border:1px solid rgba(147,197,253,.32)}
+.sl-sw{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px}
+.sl-sw div{display:grid; gap:4px; align-content:start; transition:transform .3s ease} .sl-sw div:hover{transform:translateY(-4px)}
+.sl-sw i{display:block; aspect-ratio:1/1.1; border-radius:14px; background:var(--c); box-shadow:inset 0 0 0 1px rgba(255,255,255,.2)}
+.sl-sw b{font:600 .8rem/1.25 var(--body); color:#F4F2FB; margin-top:6px} .sl-sw code{font:400 .72rem/1 var(--mono); color:#CFCBE0} .sl-sw small{font-size:.72rem; color:var(--muted)}
+.sl-ds-note{font-size:.84rem; line-height:1.6; color:var(--muted)}
+.sl-tp{display:grid; grid-template-columns:auto minmax(0,1fr); gap:14px; align-items:center}
+.sl-tp .aa{display:grid; place-items:center; width:62px; height:62px; border-radius:16px; background:#fff; color:#0B1F3A; font-size:1.8rem}
+.sl-tp b{display:block; color:#F4F2FB; font:600 1rem/1.2 var(--display)} .sl-tp small{display:block; color:var(--muted); font-size:.8rem; margin-top:3px}
+.sl-comps{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:14px; align-items:start}
+.sl-comp.tall{grid-row:span 3}
+.sl-comp.pad img{padding:10px}
+/* engenharia */
+.sl-art{display:grid; gap:14px; margin-top:clamp(12px,2vw,24px)}
+.sl-art-img{position:relative; display:block; padding:0; border:0; border-radius:20px; overflow:hidden; background:#fff; cursor:zoom-in; width:100%; box-shadow:0 24px 60px -24px rgba(0,0,0,.7), 0 0 0 1px rgba(147,197,253,.3); transition:transform .35s ease}
+.sl-art-img:hover{transform:translateY(-4px)}
+.sl-art-img img{display:block; width:100%; height:auto}
+.sl-art-img .bw-zoom{opacity:1; transform:none}
+.sl-art-cap{display:flex; flex-wrap:wrap; gap:10px 18px; align-items:center; justify-content:space-between; color:var(--muted); font-size:.92rem; line-height:1.6}
+.sl-ph{display:grid; gap:10px; align-content:center; justify-items:start; padding:28px; border-radius:20px; min-height:180px; background:repeating-linear-gradient(135deg, rgba(147,197,253,.06) 0 14px, transparent 14px 28px); border:1.5px dashed rgba(147,197,253,.5)}
+.sl-ph b{font:600 1.05rem/1.3 var(--display); color:#F4F2FB}
+.sl-ph p{color:var(--muted); font-size:.92rem; line-height:1.6; max-width:60ch}
+.sl-ph .sl-tag{margin:0}
+.sl-two-ph{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px}
+.sl-rn-list{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px 14px}
+.sl-rn-list li{display:grid; grid-template-columns:auto minmax(0,1fr); gap:12px; align-items:start; padding:12px 14px; border-radius:14px; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.09); font-size:.9rem; line-height:1.5; color:#D7E3F7}
+.sl-rn-list b{font:500 .74rem/1.6 var(--mono); color:var(--sl-l); white-space:nowrap}
+.sl-rn-list li.rev{border-color:rgba(245,158,11,.4)} .sl-rn-list li.rev b{color:#FCD34D}
+.sl-moscow{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px}
+.sl-moscow .sl-box h3{display:flex; align-items:center; gap:10px}
+.sl-moscow ul{margin:0; padding-left:1.1em; color:#D7E3F7; font-size:.93rem; line-height:1.7}
+/* vídeo */
+.sl-video{position:relative; border-radius:28px; overflow:hidden; background:#060F1F; box-shadow:0 40px 90px -30px rgba(0,0,0,.8), 0 0 0 1px rgba(147,197,253,.3); aspect-ratio:16/9}
+.sl-video video{display:block; width:100%; height:100%; object-fit:cover; background:#060F1F}
+/* contribuição */
+.sl-me{display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); gap:clamp(20px,4vw,48px); align-items:start; margin-top:clamp(12px,2vw,24px)}
+.sl-me-list{list-style:none; margin:0; padding:0; display:grid; gap:10px; counter-reset:m}
+.sl-me-list li{position:relative; padding:16px 18px 16px 58px; border-radius:16px; background:rgba(255,255,255,.035); border:1px solid rgba(255,255,255,.09); color:#E4E0F2; line-height:1.5; counter-increment:m; transition:border-color .3s ease, background .3s ease}
+.sl-me-list li:hover{border-color:rgba(147,197,253,.5); background:rgba(59,130,246,.07)}
+.sl-me-list li::before{content:counter(m, decimal-leading-zero); position:absolute; left:16px; top:16px; width:28px; height:28px; border-radius:9px; display:grid; place-items:center; font:500 .7rem/1 var(--mono); color:#0B1F3A; background:var(--sl-l)}
+.sl-team{display:grid; gap:10px; padding:22px; border-radius:20px; background:rgba(59,130,246,.07); border:1px solid rgba(147,197,253,.28)}
+.sl-team b{font:600 1.05rem/1.3 var(--display); color:#F4F2FB} .sl-team p{color:#CFE0F7; font-size:.95rem; line-height:1.65}
+/* final */
+.sl-final .fl-ring{background:conic-gradient(from var(--ang), #2563EB, #BFD8FF, #F59E0B, #2563EB)}
+.sl-final .fl-tile{background:linear-gradient(150deg,#0B1F3A,#12315C); box-shadow:0 0 0 1px rgba(255,255,255,.4), 0 30px 60px -20px rgba(0,0,0,.6), 0 0 60px rgba(59,130,246,.45)}
+.sl-final-logo .fl-tile img{width:74%}
+.sl-final .gh-btn{border-color:rgba(147,197,253,.4)}
+.sl-gh{grid-template-columns:repeat(3,minmax(0,1fr)) !important; max-width:none !important}
+/* entrada das seções */
+.sl-rv-on .sl-rv{opacity:0; transform:translateY(30px); transition:opacity .8s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.sl-rv-on .sl-rv.in{opacity:1; transform:none}
+@media (max-width:1100px){ .sl-grid5{grid-template-columns:repeat(3,minmax(0,1fr))} }
+@media (max-width:980px){
+  .sl-hero{grid-template-columns:minmax(0,1fr)}
+  .sl-hero-stage{min-height:340px}
+  .sl-shift, .sl-me, .sl-cmp{grid-template-columns:minmax(0,1fr)}
+  .sl-fx{grid-template-columns:minmax(0,1fr)}
+  .sl-tabs{display:flex; overflow-x:auto; gap:8px; padding-bottom:6px; scroll-snap-type:x mandatory; scrollbar-width:none}
+  .sl-tabs::-webkit-scrollbar{display:none}
+  .sl-tabs li{flex:none; scroll-snap-align:start}
+  .sl-tab{grid-template-columns:auto; padding:10px 14px; white-space:nowrap} .sl-tab .sl-tn{display:none}
+  .sl-tab:hover{transform:none}
+  .sl-ds{grid-template-columns:minmax(0,1fr) minmax(0,1fr)} .sl-ds .sl-ds-card:nth-child(2){grid-column:1 / -1; order:-1}
+  .sl-wf{grid-template-columns:minmax(0,1fr) minmax(0,1fr)} .sl-wf .sl-comp:first-child{grid-column:1 / -1}
+  .sl-gh{grid-template-columns:minmax(0,1fr) !important}
+}
+@media (max-width:760px){
+  .sl-hero{padding:24px 20px 12px; border-radius:24px}
+  .sl-hero-stage{min-height:300px}
+  .sl-chip{font-size:.72rem} .sl-chip.c1{left:0; top:2%} .sl-chip.c2{left:0; bottom:0}
+  .sl-facts{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+  .sl-facts div:nth-child(3){padding-left:0; border-left:0}
+  .sl-grid3, .sl-grid5, .sl-moscow, .sl-two-ph, .sl-rn-list{grid-template-columns:minmax(0,1fr)}
+  .sl-ba li, .sl-ba-h{grid-template-columns:minmax(0,1fr)} .sl-ba .ar{display:none} .sl-ba-h{display:none}
+  .sl-two{grid-template-columns:minmax(0,1fr)}
+  .sl-wf{grid-template-columns:minmax(0,1fr)}
+  .sl-ds{grid-template-columns:minmax(0,1fr)}
+  .sl-sw{grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px 8px}
+  .sl-comps{grid-template-columns:minmax(0,1fr)}
+  .sl-ri{width:min(82vw,360px)}
+  .sl-rail-nav{display:none}
+  .sl-phones img, .sl-phone{width:min(46%,220px)}
+}
 @media (prefers-reduced-motion: reduce){*{animation:none!important; transition:none!important}}
 
 /* celular: nada pode passar da largura da tela (evita a página "pender" para o lado no iPhone) */
@@ -1853,6 +2068,25 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
           <h3>MoniTube: cuidar é continuar</h3>
           <p>Aplicativo para acompanhar o tratamento da tuberculose, com lembretes, registro das doses e um sistema de pontos que pode virar benefício social. Do wireframe ao protótipo de alta fidelidade no Figma.</p>
           <div class="tags"><span>UX/UI</span><span>Saúde pública</span><span>Gamificação</span><span>Design System</span></div>
+          <span class="case-cta">Ver estudo de caso <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      <a class="card feature glass sl-card" href="#sealog" aria-label="Abrir estudo de caso do SEALog">
+        <div class="win"><div class="dots"><i></i><i></i><i></i></div><span class="chip">Web · Logística</span></div>
+        <div class="thumb cover slider" data-interval="4600" style="aspect-ratio:4/3">
+          <img class="slide is-on" src="sl/card-0.jpg" width="1200" height="900" alt="Capa do SEALog: logo da foca, notebook com o painel de pedidos do dia e celular com a página de acompanhamento da entrega, em fundo azul-marinho">
+          <img class="slide" src="sl/card-1.jpg" width="1200" height="900" loading="lazy" alt="Capa do SEALog: logo em azul-marinho, notebook com o portal da transportadora e celular com a conversa de WhatsApp, em fundo claro">
+          <img class="slide" src="sl/card-2.jpg" width="1200" height="900" loading="lazy" alt="Comparação entre o wireframe em cinza do painel, da proposta com motoristas próprios, e a tela final do painel, da proposta com transportadoras, ligados por uma seta azul">
+          <div class="slide-dots" aria-hidden="true"></div>
+          <button class="sl-arrow sl-prev" type="button" aria-label="Imagem anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button class="sl-arrow sl-next" type="button" aria-label="Próxima imagem"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+        <div class="info">
+          <span class="sl-wip"><i aria-hidden="true"></i>Projeto acadêmico · protótipo</span>
+          <span class="mono">UX/UI Design · Engenharia de Software · Logística</span>
+          <h3>SEALog: cada entrega mais visível</h3>
+          <p>Plataforma de gestão logística que centraliza pedidos, automatiza a distribuição entre transportadoras e facilita o acompanhamento das entregas. Solução projetada e prototipada no desafio da SEAL, do CIn-UFPE.</p>
+          <div class="tags"><span>UX/UI</span><span>Engenharia de Software</span><span>Logística</span><span>Design System</span></div>
           <span class="case-cta">Ver estudo de caso <span aria-hidden="true">→</span></span>
         </div>
       </a>
@@ -3582,6 +3816,358 @@ code{font-family:var(--mono); font-size:.86em; color:#E4DCFF; background:rgba(13
     </section>
   </main>
 
+  <!-- ===== Estudo de caso: SEALog (abre em #sealog) ===== -->
+  <main id="case-sealog" class="case sl" hidden>
+    <div class="case-top"><a class="back-link" href="#projetos"><span aria-hidden="true">←</span> Voltar aos projetos</a></div>
+
+    <header class="sl-hero">
+      <div class="sl-hero-copy">
+        <div class="sl-eyes"><span class="sl-eyebrow"><i aria-hidden="true"></i>Estudo de caso · UX/UI e Engenharia de Software</span></div>
+        <h1 class="sl-title"><img src="sl/logo-white.png" width="900" height="610" alt="SEALog"></h1>
+        <p class="sl-claim">Uma operação conectada. Cada entrega mais visível.</p>
+        <p class="sl-lede">Plataforma de gestão logística que centraliza pedidos, automatiza a distribuição entre transportadoras e facilita o acompanhamento das entregas. Projetada e prototipada em equipe, no desafio prático da SEAL, do CIn-UFPE.</p>
+        <ul class="tags" aria-label="Tags do projeto"><li><span>UX/UI Design</span></li><li><span>Engenharia de Software</span></li><li><span>Logística</span></li><li><span>Prototipação</span></li></ul>
+        <div class="sl-links">
+          <button class="sl-btn pri" type="button" data-jump="sl-video">Assistir ao vídeo pitch <span aria-hidden="true">↓</span></button>
+          <button class="sl-btn sec" type="button" data-jump="sl-processo">Do wireframe à tela final <span aria-hidden="true">↓</span></button>
+        </div>
+      </div>
+      <div class="sl-hero-stage" aria-hidden="true">
+        <span class="sl-orb"></span>
+        <img class="sl-hl" src="sl/m/laptop-t02-painel.webp" width="1300" height="840" alt="">
+        <img class="sl-hp" src="sl/m/phone_track.webp" width="560" height="1080" alt="">
+        <span class="sl-chip c1"><i>⚡</i>Atribuição automática</span>
+        <span class="sl-chip c2"><i>✓</i>Status com data, hora e origem</span>
+      </div>
+    </header>
+
+    <div class="sl-about">
+      <dl class="facts sl-facts">
+        <div><dt>Contexto</dt><dd>Desafio prático SEAL 2026.2 · CIn-UFPE</dd></div>
+        <div><dt>Empresa</dt><dd>SEALog, logística regional fictícia</dd></div>
+        <div><dt>Entrega</dt><dd>Solução projetada e prototipada</dd></div>
+        <div><dt>Formato</dt><dd>Projeto em equipe</dd></div>
+      </dl>
+      <p class="sl-status"><i aria-hidden="true"></i><span>A SEALog é uma <b>solução projetada e prototipada</b>, não um sistema comercial implantado. Não há resultados de uso, métricas de impacto nem testes com usuários. Nomes, pedidos, datas e números nas telas são ilustrativos.</span></p>
+    </div>
+
+    <!-- 01 -->
+    <section class="sl-sec sl-rv" aria-labelledby="sl-sobre">
+      <span class="cs-num">01 / Sobre o projeto</span>
+      <h2 id="sl-sobre">Um desafio de Engenharia de Software.</h2>
+      <div class="sl-prose">
+        <p>A <b>SEALog</b> é uma empresa fictícia de logística regional, criada para o desafio prático do processo seletivo da Liga Acadêmica de Engenharia de Software (SEAL). Ela faz entregas para pequenos negócios, como lojas de roupas, farmácias, floriculturas e papelarias.</p>
+        <p>O objetivo foi <b>propor uma solução viável</b> para os problemas operacionais da empresa. O desafio valoriza a documentação, o levantamento de requisitos, a modelagem de processos, a colaboração e a justificativa das decisões. Por isso este estudo de caso mostra o caminho inteiro, e não só as telas finais.</p>
+      </div>
+    </section>
+
+    <!-- 02 -->
+    <section class="sl-sec sl-rv" aria-labelledby="sl-problema">
+      <span class="cs-num">02 / O problema</span>
+      <h2 id="sl-problema">Pedidos que se perdem pelo caminho.</h2>
+      <p class="jr-intro">A operação dependia de mensagens e planilhas. O levantamento do processo atual, feito em BPMN, apontou dores que se repetiam em várias etapas.</p>
+      <ol class="sl-grid5">
+        <li class="sl-box"><span class="sl-ci" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg></span><h3>Pedidos pelo WhatsApp</h3><p>Chegam em texto, áudio ou planilhas próprias, sem padrão.</p></li>
+        <li class="sl-box"><span class="sl-ci" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg></span><h3>Informações incompletas</h3><p>Cerca de 1 em cada 5 pedidos chegava incompleto.</p></li>
+        <li class="sl-box"><span class="sl-ci" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M10 3v18"/></svg></span><h3>Planilhas paralelas</h3><p>Uma por dia e por analista, com cópias divergentes.</p></li>
+        <li class="sl-box"><span class="sl-ci" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Atualizações atrasadas</h3><p>Status enviados em lote, no almoço ou no fim do dia.</p></li>
+        <li class="sl-box"><span class="sl-ci" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><h3>Pouca visibilidade</h3><p>Responder “cadê minha entrega?” levava de 20 minutos a mais de 2 horas.</p></li>
+      </ol>
+      <p class="rb-note">Fonte: planejamento do grupo e processo atual (AS-IS) em BPMN.</p>
+    </section>
+
+    <!-- 03 -->
+    <section class="sl-sec sl-rv" aria-labelledby="sl-mudanca">
+      <span class="cs-num">03 / O desafio e a mudança de requisitos</span>
+      <h2 id="sl-mudanca">No meio do caminho, a proposta mudou.</h2>
+      <p class="jr-intro">A primeira solução previa uma SEALog com motoristas próprios. Durante o desafio, o cliente comunicou que a empresa deixaria de executar entregas com frota própria e passaria a operar com duas transportadoras terceirizadas: a <b>Refactor Express</b> e a <b>Fretes do Seu Zé</b>.</p>
+      <div class="sl-shift">
+        <img class="sl-shot" src="sl/fig/shift.jpg" width="1600" height="900" loading="lazy" alt="Antes: a SEALog com motoristas próprios. Agora: a SEALog conectada às transportadoras Refactor Express e Fretes do Seu Zé">
+        <div>
+          <div class="sl-ba-h" aria-hidden="true"><span>Antes</span><i>→</i><span>Depois</span></div>
+          <ul class="sl-ba" aria-label="O que mudou">
+            <li><span class="a">Motoristas próprios</span><span class="ar" aria-hidden="true">→</span><span class="d">Transportadoras parceiras</span></li>
+            <li><span class="a">Coordenação atribui o motorista</span><span class="ar" aria-hidden="true">→</span><span class="d">Atribuição automática por região e capacidade</span></li>
+            <li><span class="a">App mobile do motorista</span><span class="ar" aria-hidden="true">→</span><span class="d">Portal da transportadora e registro assistido</span></li>
+            <li><span class="a">Status vindo do campo</span><span class="ar" aria-hidden="true">→</span><span class="d">Status por transportadora, com origem e responsável</span></li>
+          </ul>
+        </div>
+      </div>
+      <h3 class="sl-sub">O que a mudança alterou</h3>
+      <ul class="sl-grid3">
+        <li class="sl-box"><span class="sl-ci" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h7"/></svg></span><h3>Requisitos</h3><p>Entraram regiões atendidas e capacidade diária das parceiras, o portal da transportadora, o registro assistido e a conferência financeira. A SEALog paga as empresas, não os motoristas.</p></li>
+        <li class="sl-box"><span class="sl-ci" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="7" height="6" rx="1"/><rect x="14" y="4" width="7" height="6" rx="1"/><rect x="8.5" y="14" width="7" height="6" rx="1"/><path d="M6.5 10v2h11v-2M12 12v2"/></svg></span><h3>Arquitetura</h3><p>O desenho original previa um app mobile para o motorista. Na nova proposta não há aplicativo nativo obrigatório, e os diagramas precisam refletir as transportadoras.</p></li>
+        <li class="sl-box"><span class="sl-ci" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 5.5a3 3 0 0 1 0 5.7M18 14.4c1.8.8 3 2.6 3 5.6"/></svg></span><h3>Experiência</h3><p>Três perfis passaram a ter telas próprias: a equipe SEALog, a transportadora e o cliente. A implantação é gradual: WhatsApp, telefone e planilhas continuam funcionando.</p></li>
+      </ul>
+    </section>
+
+    <!-- 04 -->
+    <section class="sl-sec sl-rv" aria-labelledby="sl-solucao">
+      <span class="cs-num">04 / Nossa solução</span>
+      <h2 id="sl-solucao">O MVP, tela a tela.</h2>
+      <p class="jr-intro">O WhatsApp continua sendo o canal de entrada. A plataforma centraliza o cadastro, distribui os pedidos e dá a cada perfil uma visão do que importa. Selecione uma funcionalidade e toque na tela para ampliar.</p>
+      <div class="sl-fx">
+        <ul class="sl-tabs" role="tablist" aria-label="Funcionalidades do SEALog">
+          <li><button class="sl-tab" type="button" role="tab" id="sl-tab-0" aria-controls="sl-p-0" aria-selected="true"><span class="sl-tn">01</span><span>Solicitação pelo WhatsApp</span></button></li>
+          <li><button class="sl-tab" type="button" role="tab" id="sl-tab-1" aria-controls="sl-p-1" aria-selected="false" tabindex="-1"><span class="sl-tn">02</span><span>Cadastro e painel da equipe</span></button></li>
+          <li><button class="sl-tab" type="button" role="tab" id="sl-tab-2" aria-controls="sl-p-2" aria-selected="false" tabindex="-1"><span class="sl-tn">03</span><span>Distribuição automática</span></button></li>
+          <li><button class="sl-tab" type="button" role="tab" id="sl-tab-3" aria-controls="sl-p-3" aria-selected="false" tabindex="-1"><span class="sl-tn">04</span><span>Detalhe e histórico da entrega</span></button></li>
+          <li><button class="sl-tab" type="button" role="tab" id="sl-tab-4" aria-controls="sl-p-4" aria-selected="false" tabindex="-1"><span class="sl-tn">05</span><span>Portal da transportadora</span></button></li>
+          <li><button class="sl-tab" type="button" role="tab" id="sl-tab-5" aria-controls="sl-p-5" aria-selected="false" tabindex="-1"><span class="sl-tn">06</span><span>Status e comprovantes</span></button></li>
+          <li><button class="sl-tab" type="button" role="tab" id="sl-tab-6" aria-controls="sl-p-6" aria-selected="false" tabindex="-1"><span class="sl-tn">07</span><span>Registro assistido</span></button></li>
+          <li><button class="sl-tab" type="button" role="tab" id="sl-tab-7" aria-controls="sl-p-7" aria-selected="false" tabindex="-1"><span class="sl-tn">08</span><span>Acompanhamento do cliente</span></button></li>
+          <li><button class="sl-tab" type="button" role="tab" id="sl-tab-8" aria-controls="sl-p-8" aria-selected="false" tabindex="-1"><span class="sl-tn">09</span><span>Indicadores e financeiro</span></button></li>
+        </ul>
+        <div class="sl-stage">
+          <div class="sl-panel" id="sl-p-0" role="tabpanel" aria-labelledby="sl-tab-0">
+            <div class="sl-phones">
+              <button class="sl-phone-btn" type="button" data-full="sl/m/phone_chat.webp" data-cap="Conversa no WhatsApp entre a loja e o atendimento da SEALog" aria-label="Ampliar: conversa no WhatsApp"><img src="sl/m/phone_chat.webp" width="560" height="1080" loading="lazy" alt="Celular com a conversa de WhatsApp: a loja pede uma entrega, o atendimento pede os dados do destinatário, confirma o pedido e envia o link seguro Acompanhar meus pedidos"></button>
+            </div>
+            <div class="sl-cap"><h3>Solicitação pelo WhatsApp</h3><p>A loja continua pedindo pela conversa que já usa. O atendimento confere os dados obrigatórios, pede o que faltar e, depois do registro, envia o <b>código do pedido e um link seguro</b> de acompanhamento.</p><span class="sl-tag">Canal mantido</span><span class="sl-tag am">Sem bot nativo no MVP</span></div>
+          </div>
+          <div class="sl-panel" id="sl-p-1" role="tabpanel" aria-labelledby="sl-tab-1" hidden>
+            <button class="bw" type="button" data-full="sl/t/01-painel.jpg" data-cap="Painel da equipe SEALog · Pedidos de hoje" data-scroll aria-label="Ampliar tela: Pedidos de hoje"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">sealog · pedidos de hoje</span></span><span class="bw-scr"><img src="sl/t/01-painel.jpg" width="1440" height="1296" loading="lazy" decoding="async" alt="Painel Pedidos de hoje: aviso de 1 pedido pendente de atribuição, indicadores do dia e tabela de pedidos com transportadora, status, prazo e última atualização"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button>
+            <div class="sl-cap"><h3>Cadastro e painel da equipe</h3><p>Todos os pedidos ficam em <b>uma única base</b>. O painel mostra os indicadores do dia, filtros, a transportadora de cada entrega e destaca o que exige ação, como um pedido sem transportadora elegível.</p><span class="sl-tag">Fonte única de dados</span></div>
+          </div>
+          <div class="sl-panel" id="sl-p-2" role="tabpanel" aria-labelledby="sl-tab-2" hidden>
+            <button class="bw" type="button" data-full="sl/t/03-transportadoras.jpg" data-cap="Transportadoras e capacidade" data-scroll aria-label="Ampliar tela: Transportadoras e capacidade"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">sealog · transportadoras e capacidade</span></span><span class="bw-scr"><img src="sl/t/03-transportadoras.jpg" width="1440" height="1144" loading="lazy" decoding="async" alt="Tela Transportadoras e capacidade, com as regiões atendidas e a barra de capacidade diária de cada parceira"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button>
+            <div class="sl-cap"><h3>Distribuição automática</h3><p>O sistema só considera a transportadora que <b>atende a região</b> do pedido e ainda tem <b>capacidade declarada</b> na data. Se ninguém for elegível, o pedido fica pendente para análise manual da Coordenação, que também pode trocar uma atribuição registrando o motivo.</p><span class="sl-tag">Regra de negócio, não IA</span></div>
+          </div>
+          <div class="sl-panel" id="sl-p-3" role="tabpanel" aria-labelledby="sl-tab-3" hidden>
+            <button class="bw" type="button" data-full="sl/t/02-detalhe.jpg" data-cap="Detalhe da entrega" data-scroll aria-label="Ampliar tela: Detalhe da entrega"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">sealog · detalhe da entrega</span></span><span class="bw-scr"><img src="sl/t/02-detalhe.jpg" width="1440" height="1001" loading="lazy" decoding="async" alt="Detalhe de uma entrega com dados do pedido, transportadora, linha do tempo de status e comprovante"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button>
+            <div class="sl-cap"><h3>Detalhe e histórico da entrega</h3><p>Cada atualização guarda <b>data, hora, origem e responsável</b>. Assim a equipe responde “cadê minha entrega?” olhando uma tela, sem repassar a pergunta por várias pessoas.</p></div>
+          </div>
+          <div class="sl-panel" id="sl-p-4" role="tabpanel" aria-labelledby="sl-tab-4" hidden>
+            <button class="bw" type="button" data-full="sl/t/04-portal.jpg" data-cap="Portal da transportadora · Minhas entregas" data-scroll aria-label="Ampliar tela: Minhas entregas"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">portal da transportadora · minhas entregas</span></span><span class="bw-scr"><img src="sl/t/04-portal.jpg" width="1440" height="976" loading="lazy" decoding="async" alt="Portal da transportadora Refactor Express com a lista Minhas entregas, indicadores e ações rápidas por entrega"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button>
+            <div class="sl-cap"><h3>Portal da transportadora</h3><p>Cada parceira vê <b>só as entregas atribuídas a ela</b>, numa interface mais simples que a da SEALog. A transportadora organiza motoristas e rotas por conta própria; a SEALog não controla motoristas.</p></div>
+          </div>
+          <div class="sl-panel" id="sl-p-5" role="tabpanel" aria-labelledby="sl-tab-5" hidden>
+            <div class="sl-two">
+              <button class="bw crop" type="button" data-full="sl/t/05-status.jpg" data-cap="Atualização de status em quatro passos" data-scroll aria-label="Ampliar tela: Atualização de status"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">portal · atualizar entrega</span></span><span class="bw-scr"><img src="sl/t/05-status.jpg" width="1440" height="1315" loading="lazy" decoding="async" alt="Formulário Atualizar entrega em quatro passos: nova situação, quando aconteceu, observação e comprovante"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button>
+              <button class="bw crop" type="button" data-full="sl/t/08-comprovantes.jpg" data-cap="Comprovantes e contestações" data-scroll aria-label="Ampliar tela: Comprovantes e contestações"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">sealog · comprovantes</span></span><span class="bw-scr"><img src="sl/t/08-comprovantes.jpg" width="1440" height="1039" loading="lazy" decoding="async" alt="Tela Comprovantes e contestações da equipe SEALog, com entregas concluídas e comprovantes anexados ou pendentes"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button>
+            </div>
+            <div class="sl-cap"><h3>Status e comprovantes</h3><p>A transportadora atualiza a situação em quatro passos curtos. O comprovante é opcional, mas, se faltar, a entrega fica <b>sinalizada como pendente</b> em vez de escondida. A equipe confere tudo na tela de comprovantes.</p><span class="sl-tag">Pendência sinalizada</span></div>
+          </div>
+          <div class="sl-panel" id="sl-p-6" role="tabpanel" aria-labelledby="sl-tab-6" hidden>
+            <button class="bw" type="button" data-full="sl/t/07-assistido.jpg" data-cap="Registro assistido pela SEALog" data-scroll aria-label="Ampliar tela: Registro assistido"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">sealog · registro assistido</span></span><span class="bw-scr"><img src="sl/t/07-assistido.jpg" width="1440" height="983" loading="lazy" decoding="async" alt="Tela de registro assistido: a equipe SEALog registra uma atualização informada por telefone ou WhatsApp pela transportadora"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button>
+            <div class="sl-cap"><h3>Registro assistido</h3><p>Nem toda parceira vai usar o portal desde o início. Quando a informação chega por telefone ou WhatsApp, um analista da SEALog registra a atualização, e o histórico mostra <b>quem informou e quem registrou</b>.</p><span class="sl-tag">Adaptação às parceiras</span></div>
+          </div>
+          <div class="sl-panel" id="sl-p-7" role="tabpanel" aria-labelledby="sl-tab-7" hidden>
+            <div class="sl-phones">
+              <button class="sl-phone-btn" type="button" data-full="sl/m/phone_track.webp" data-cap="Página de acompanhamento do pedido" aria-label="Ampliar: página de acompanhamento"><img src="sl/m/phone_track.webp" width="560" height="1080" loading="lazy" alt="Celular com a página de acompanhamento do pedido SL-20418: status Em rota, prazo contratado, transportadora e linha do tempo do histórico"></button>
+            </div>
+            <div class="sl-cap"><h3>Acompanhamento do cliente</h3><p>A loja abre o link e vê o <b>status atual, o horário da última atualização, o prazo e a linha do tempo</b>. Não há GPS nem localização em tempo real: o status vem das atualizações registradas, e a página não expõe dados de terceiros.</p><span class="sl-tag am">Sem GPS no MVP</span></div>
+          </div>
+          <div class="sl-panel" id="sl-p-8" role="tabpanel" aria-labelledby="sl-tab-8" hidden>
+            <div class="sl-two">
+              <button class="bw crop" type="button" data-full="sl/t/09-desempenho.jpg" data-cap="Desempenho das transportadoras" data-scroll aria-label="Ampliar tela: Desempenho das transportadoras"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">sealog · desempenho</span></span><span class="bw-scr"><img src="sl/t/09-desempenho.jpg" width="1440" height="1032" loading="lazy" decoding="async" alt="Tela Desempenho das transportadoras, com entregas, percentual no prazo, atrasos, ocorrências e comprovantes pendentes por parceira"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button>
+              <button class="bw crop" type="button" data-full="sl/t/10-financeiro.jpg" data-cap="Visão financeira simplificada" data-scroll aria-label="Ampliar tela: Visão financeira simplificada"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">sealog · financeiro</span></span><span class="bw-scr"><img src="sl/t/10-financeiro.jpg" width="1440" height="1058" loading="lazy" decoding="async" alt="Visão financeira simplificada com as entregas concluídas e seus comprovantes para conferência"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button>
+            </div>
+            <div class="sl-cap"><h3>Indicadores e financeiro</h3><p>A Coordenação acompanha entregas, percentual no prazo, atrasos, ocorrências e comprovantes pendentes <b>por transportadora</b>. O financeiro consulta as entregas concluídas para conferência. Não é um ERP financeiro, e os números das telas são ilustrativos.</p><span class="sl-tag am">Dados ilustrativos</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 -->
+    <section class="sl-sec sl-rv" id="sl-processo" aria-labelledby="sl-proc">
+      <span class="cs-num">05 / Processo de design</span>
+      <h2 id="sl-proc">Do wireframe à tela final.</h2>
+      <p class="jr-intro">O processo começou em baixa fidelidade, em tons de cinza, para resolver estrutura, navegação e fluxos antes de qualquer decisão visual. Esses wireframes foram feitos para o modelo original, com motoristas próprios.</p>
+
+      <h3 class="sl-sub">Baixa fidelidade</h3>
+      <div class="sl-wf">
+        <button class="sl-comp" type="button" data-full="sl/w/painel.jpg" data-cap="Wireframes v1 · painel de gestão de entregas, atribuição de motorista, detalhes e busca sem resultado" data-scroll><img src="sl/w/painel.jpg" width="1800" height="1140" loading="lazy" decoding="async" alt="Wireframes em cinza do painel de gestão de entregas, com o modal de atribuição de motorista, a gaveta de detalhes e o estado de busca sem resultado"><span>Painel de gestão · 4 estados</span></button>
+        <button class="sl-comp" type="button" data-full="sl/w/solicitacao.jpg" data-cap="Wireframes v1 · solicitação de entrega" data-scroll><img src="sl/w/solicitacao.jpg" width="1400" height="1202" loading="lazy" decoding="async" alt="Wireframes em cinza da solicitação de entrega no desktop e no celular: formulário vazio, com erros de validação e confirmação"><span>Solicitação de entrega</span></button>
+        <button class="sl-comp" type="button" data-full="sl/w/fluxos.jpg" data-cap="Wireframes v1 · fluxos de navegação" data-scroll><img src="sl/w/fluxos.jpg" width="966" height="1400" loading="lazy" decoding="async" alt="Fluxos de navegação dos wireframes, com as telas ligadas por setas"><span>Fluxos de navegação</span></button>
+      </div>
+
+      <h3 class="sl-sub">Antes e depois da mudança</h3>
+      <div class="sl-cmp">
+        <div class="sl-cmp-side">
+          <span class="sl-k">Arraste para comparar</span>
+          <ul class="sl-changes">
+            <li><b>Motorista → transportadora</b>A coluna “Motorista” virou “Transportadora”, e cada linha mostra se a atribuição foi automática.</li>
+            <li><b>Atribuir → atribuição automática</b>O botão “Atribuir” saiu da linha. Só o pedido sem transportadora elegível pede análise da Coordenação, com um alerta no topo.</li>
+            <li><b>Indicadores e filtros novos</b>Entram região, transportadora e período, e os indicadores passam a falar de entregas atribuídas automaticamente.</li>
+            <li><b>Status com cor, ícone e texto</b>O mesmo princípio dos wireframes, agora com a identidade da SEALog e oito estados.</li>
+          </ul>
+        </div>
+        <div class="sl-cmp-view">
+          <div class="sl-cmp-labels" aria-hidden="true"><span>Baixa fidelidade · v1</span><span>Alta fidelidade · atual</span></div>
+          <div class="sl-cmp-box" id="sl-cmp">
+            <img class="lo" src="sl/w/painel-v1.jpg" width="1100" height="912" loading="lazy" decoding="async" alt="Wireframe em tons de cinza do painel Entregas, com coluna Motorista e botão Atribuir">
+            <img class="hi" src="sl/w/painel-v2.jpg" width="1100" height="912" loading="lazy" decoding="async" alt="Tela final do painel Pedidos de hoje, com coluna Transportadora, atribuição automática e indicadores do dia">
+            <span class="sl-cmp-bar" aria-hidden="true"><i><svg viewBox="0 0 24 24"><path d="M9 6l-5 6 5 6M15 6l5 6-5 6"/></svg></i></span>
+            <input class="sl-cmp-range" type="range" min="0" max="100" value="50" aria-label="Comparar o wireframe e a tela final: arraste para os lados">
+          </div>
+          <p class="sl-cmp-hint" aria-hidden="true">← wireframe · tela final →</p>
+        </div>
+      </div>
+
+      <h3 class="sl-sub">Alta fidelidade</h3>
+      <p class="jr-intro">As telas finais foram desenhadas no Figma, a partir de um design system próprio. Role o trilho e toque numa tela para ampliar.</p>
+      <div class="sl-rail-wrap">
+        <ol class="sl-rail" aria-label="Telas de alta fidelidade">
+          <li class="sl-ri"><span class="sl-rn">01 · Painel da equipe</span><button class="bw crop" type="button" data-full="sl/t/01-painel.jpg" data-cap="Painel da equipe SEALog" data-scroll aria-label="Ampliar tela: Painel da equipe"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">sealog · pedidos de hoje</span></span><span class="bw-scr"><img src="sl/t/01-painel.jpg" width="1440" height="1296" loading="lazy" decoding="async" alt="Painel da equipe SEALog com os pedidos de hoje"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button></li>
+          <li class="sl-ri"><span class="sl-rn">02 · Detalhe da entrega</span><button class="bw crop" type="button" data-full="sl/t/02-detalhe.jpg" data-cap="Detalhe da entrega" data-scroll aria-label="Ampliar tela: Detalhe da entrega"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">sealog · detalhe</span></span><span class="bw-scr"><img src="sl/t/02-detalhe.jpg" width="1440" height="1001" loading="lazy" decoding="async" alt="Detalhe de uma entrega com histórico de atualizações"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button></li>
+          <li class="sl-ri"><span class="sl-rn">03 · Transportadoras</span><button class="bw crop" type="button" data-full="sl/t/03-transportadoras.jpg" data-cap="Transportadoras e capacidade" data-scroll aria-label="Ampliar tela: Transportadoras e capacidade"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">sealog · capacidade</span></span><span class="bw-scr"><img src="sl/t/03-transportadoras.jpg" width="1440" height="1144" loading="lazy" decoding="async" alt="Transportadoras, regiões atendidas e capacidade diária"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button></li>
+          <li class="sl-ri"><span class="sl-rn">04 · Portal da transportadora</span><button class="bw crop" type="button" data-full="sl/t/04-portal.jpg" data-cap="Portal da transportadora" data-scroll aria-label="Ampliar tela: Portal da transportadora"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">portal · minhas entregas</span></span><span class="bw-scr"><img src="sl/t/04-portal.jpg" width="1440" height="976" loading="lazy" decoding="async" alt="Portal da transportadora com a lista Minhas entregas"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button></li>
+          <li class="sl-ri"><span class="sl-rn">05 · Atualizar status</span><button class="bw crop" type="button" data-full="sl/t/05-status.jpg" data-cap="Atualização de status" data-scroll aria-label="Ampliar tela: Atualizar status"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">portal · atualizar entrega</span></span><span class="bw-scr"><img src="sl/t/05-status.jpg" width="1440" height="1315" loading="lazy" decoding="async" alt="Formulário de atualização de status em quatro passos"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button></li>
+          <li class="sl-ri"><span class="sl-rn">06 · Atualização registrada</span><button class="bw crop" type="button" data-full="sl/t/06-registrada.jpg" data-cap="Atualização registrada" data-scroll aria-label="Ampliar tela: Atualização registrada"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">portal · confirmação</span></span><span class="bw-scr"><img src="sl/t/06-registrada.jpg" width="1440" height="812" loading="lazy" decoding="async" alt="Confirmação com data, hora, origem e responsável da atualização"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button></li>
+          <li class="sl-ri"><span class="sl-rn">07 · Registro assistido</span><button class="bw crop" type="button" data-full="sl/t/07-assistido.jpg" data-cap="Registro assistido" data-scroll aria-label="Ampliar tela: Registro assistido"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">sealog · registro assistido</span></span><span class="bw-scr"><img src="sl/t/07-assistido.jpg" width="1440" height="983" loading="lazy" decoding="async" alt="Registro assistido pela equipe SEALog"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button></li>
+          <li class="sl-ri"><span class="sl-rn">08 · Comprovantes</span><button class="bw crop" type="button" data-full="sl/t/08-comprovantes.jpg" data-cap="Comprovantes e contestações" data-scroll aria-label="Ampliar tela: Comprovantes"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">sealog · comprovantes</span></span><span class="bw-scr"><img src="sl/t/08-comprovantes.jpg" width="1440" height="1039" loading="lazy" decoding="async" alt="Comprovantes e contestações"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button></li>
+          <li class="sl-ri"><span class="sl-rn">09 · Desempenho</span><button class="bw crop" type="button" data-full="sl/t/09-desempenho.jpg" data-cap="Desempenho das transportadoras" data-scroll aria-label="Ampliar tela: Desempenho"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">sealog · desempenho</span></span><span class="bw-scr"><img src="sl/t/09-desempenho.jpg" width="1440" height="1032" loading="lazy" decoding="async" alt="Desempenho das transportadoras"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button></li>
+          <li class="sl-ri"><span class="sl-rn">10 · Financeiro</span><button class="bw crop" type="button" data-full="sl/t/10-financeiro.jpg" data-cap="Visão financeira simplificada" data-scroll aria-label="Ampliar tela: Financeiro"><span class="bw-bar" aria-hidden="true"><i></i><i></i><i></i><span class="bw-url">sealog · financeiro</span></span><span class="bw-scr"><img src="sl/t/10-financeiro.jpg" width="1440" height="1058" loading="lazy" decoding="async" alt="Visão financeira simplificada"></span><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button></li>
+        </ol>
+        <div class="sl-rail-nav"><button class="sl-rail-btn" type="button" data-dir="-1" aria-label="Telas anteriores"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button class="sl-rail-btn" type="button" data-dir="1" aria-label="Próximas telas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div>
+      </div>
+      <p class="rb-note">Telas exportadas do arquivo do projeto no Figma. A página de acompanhamento do cliente (celular) aparece na seção anterior.</p>
+
+      <h3 class="sl-sub">Identidade visual e design system</h3>
+      <div class="sl-ds">
+        <div class="sl-ds-card">
+          <span class="sl-k">Logo</span>
+          <div class="sl-logos"><span class="sl-lt"><img src="sl/logo-navy.png" width="900" height="610" loading="lazy" alt="Logo da SEALog: foca com linhas de velocidade e pino de localização, acima do nome SEALog, em azul-marinho"></span><span class="sl-ln"><img src="sl/logo-white.png" width="900" height="610" loading="lazy" alt="Versão da logo em branco sobre azul-marinho"></span></div>
+          <div class="sl-values" aria-label="Atributos da marca"><span>Confiança</span><span>Clareza</span><span>Agilidade</span></div>
+        </div>
+        <div class="sl-ds-card">
+          <span class="sl-k">Cores</span>
+          <div class="sl-sw">
+            <div style="--c:#0B1F3A"><i></i><b>Azul-marinho</b><code>#0B1F3A</code><small>Marca</small></div>
+            <div style="--c:#12315C"><i></i><b>Marinho 800</b><code>#12315C</code><small>Menu e fundos</small></div>
+            <div style="--c:#2563EB"><i></i><b>Azul 600</b><code>#2563EB</code><small>Ação primária</small></div>
+            <div style="--c:#DBEAFE"><i></i><b>Azul 100</b><code>#DBEAFE</code><small>Atribuída</small></div>
+            <div style="--c:#F59E0B"><i></i><b>Âmbar</b><code>#F59E0B</code><small>Destaque logístico</small></div>
+            <div style="--c:#15803D"><i></i><b>Sucesso</b><code>#15803D</code><small>Entregue</small></div>
+            <div style="--c:#B91C1C"><i></i><b>Erro</b><code>#B91C1C</code><small>Ocorrência</small></div>
+            <div style="--c:#128C4A"><i></i><b>WhatsApp</b><code>#128C4A</code><small>Canal</small></div>
+          </div>
+          <p class="sl-ds-note">Todas as cores são variáveis no Figma. O texto sobre os pares de status mantém contraste mínimo de 4,5:1.</p>
+        </div>
+        <div class="sl-ds-card">
+          <span class="sl-k">Tipografia</span>
+          <div class="sl-tp"><span class="aa" style="font-weight:800">Aa</span><span><b>Plus Jakarta Sans</b><small>Títulos e números · Bold e ExtraBold</small></span></div>
+          <div class="sl-tp"><span class="aa">Aa</span><span><b>Inter</b><small>Textos e rótulos · Regular a Bold</small></span></div>
+          <p class="sl-ds-note">Escala de espaçamento de 4 px. Alvos de toque de 40 px no painel e 56 px no celular.</p>
+        </div>
+      </div>
+      <div class="sl-comps">
+        <button class="sl-comp tall" type="button" data-full="sl/ds/botoes.png" data-cap="Botões: 5 variantes em 2 tamanhos"><img src="sl/ds/botoes.png" width="653" height="472" loading="lazy" alt="Botões do design system em cinco variantes (primário, secundário, fantasma, perigo e WhatsApp) e dois tamanhos"><span>Botões · 5 variantes × 2 tamanhos</span></button>
+        <button class="sl-comp" type="button" data-full="sl/ds/badges.png" data-cap="Badges de status: oito estados, com cor, ícone e texto"><img src="sl/ds/badges.png" width="652" height="196" loading="lazy" alt="Oito badges de status: aguardando dados, sem transportadora, atribuída, recebida, em rota, entregue, ocorrência e em contestação"><span>Badges de status · cor + ícone + texto</span></button>
+        <button class="sl-comp" type="button" data-full="sl/ds/etiquetas.png" data-cap="Etiquetas de origem e pendência"><img src="sl/ds/etiquetas.png" width="713" height="152" loading="lazy" alt="Etiquetas Comprovante pendente, Registro assistido, Atribuição automática e Hipótese de design"><span>Etiquetas · origem e pendências</span></button>
+        <button class="sl-comp" type="button" data-full="sl/ds/capacidade.png" data-cap="Barra de capacidade: normal, alta e esgotada"><img src="sl/ds/capacidade.png" width="816" height="162" loading="lazy" alt="Barra de capacidade diária da transportadora nos níveis normal, alta e esgotada"><span>Barra de capacidade · 3 níveis</span></button>
+      </div>
+
+      <h3 class="sl-sub">Decisões de usabilidade</h3>
+      <ul class="sl-grid3">
+        <li class="sl-box"><h3>Estado nunca só por cor</h3><p>Cada status tem cor, ícone e texto. Itens que pedem ação sobem para o topo, com borda e destaque.</p></li>
+        <li class="sl-box"><h3>Prevenção de erros</h3><p>Rótulos sempre visíveis, mensagem de erro junto ao campo e resumo no topo do formulário. O pedido não é cadastrado com dados essenciais faltando.</p></li>
+        <li class="sl-box"><h3>Uma ação principal por tela</h3><p>Hierarquia clara: título, indicadores e tabela. Detalhes completos abrem sem sair da lista.</p></li>
+        <li class="sl-box"><h3>Honestidade nos dados</h3><p>Datas sempre com hora e origem da última atualização. Nada de localização em tempo real que o MVP não tem como sustentar.</p></li>
+        <li class="sl-box"><h3>Linguagem simples para o cliente</h3><p>A página de acompanhamento mostra só o andamento do pedido, sem dados pessoais de terceiros.</p></li>
+        <li class="sl-box"><h3>Interface mais simples para a parceira</h3><p>O portal da transportadora tem menos opções que o painel da SEALog e botões grandes para as ações do dia.</p></li>
+      </ul>
+    </section>
+
+    <!-- 06 -->
+    <section class="sl-sec sl-rv" aria-labelledby="sl-eng">
+      <span class="cs-num">06 / Engenharia de Software</span>
+      <h2 id="sl-eng">Os artefatos por trás das telas.</h2>
+      <p class="jr-intro">O desafio avaliava o processo tanto quanto o produto. Aqui estão os artefatos que existem no repositório do projeto e os que ainda precisam ser atualizados para a nova proposta.</p>
+
+      <h3 class="sl-sub">Modelagem de processos · BPMN</h3>
+      <div class="sl-art">
+        <button class="sl-art-img" type="button" data-full="sl/bpmn-as-is.svg" data-cap="BPMN do processo atual (AS-IS) da SEALog" data-scroll aria-label="Ampliar o diagrama BPMN AS-IS"><img src="sl/bpmn-as-is.svg" width="4120" height="1810" loading="lazy" decoding="async" alt="Diagrama BPMN do processo atual de solicitação e entrega, com raias para Cliente, Atendimento, Analista, Coordenador, Motorista e Financeiro, regras de negócio e dores identificadas"><span class="bw-zoom" aria-hidden="true">Ampliar ⤢</span></button>
+        <div class="sl-art-cap"><span><b>AS-IS · processo atual.</b> Arquivo <code>docs/processos/sealog-processo-as-is.bpmn</code> do repositório, redesenhado aqui a partir do próprio arquivo. Mostra as raias, as dores e as regras de negócio.</span></div>
+        <div class="sl-ph"><span class="sl-tag am">A produzir</span><b>BPMN TO-BE · processo proposto</b><p>O processo futuro, com as transportadoras parceiras, ainda não foi modelado. Este espaço fica reservado até o diagrama existir.</p></div>
+      </div>
+
+      <h3 class="sl-sub">Regras de negócio</h3>
+      <p class="jr-intro">As regras abaixo foram registradas no BPMN do processo atual. As marcadas em âmbar falam de motorista e de planilha, e precisam ser revistas depois da mudança de requisitos.</p>
+      <ul class="sl-rn-list">
+        <li><b>RN01</b><span>Prazo padrão: dia útil seguinte à solicitação; o cliente pode agendar uma data específica.</span></li>
+        <li><b>RN02</b><span>Dados obrigatórios por entrega: destinatário, endereço completo, volume aproximado e data desejada.</span></li>
+        <li><b>RN03</b><span>O pedido só é encaminhado à Operação com os dados completos.</span></li>
+        <li><b>RN04</b><span>Coleta no estabelecimento entre 14h e 18h; volumes levados pelo cliente ao galpão até 17h.</span></li>
+        <li><b>RN05</b><span>Operação de segunda a sábado, 7h–19h. Atendimento de segunda a sexta, 8h–18h, e sábado, 8h–12h.</span></li>
+        <li><b>RN06</b><span>Cada analista é responsável por um grupo de clientes.</span></li>
+        <li class="rev"><b>RN07</b><span>A cada entrega, o motorista envia o status e a foto do comprovante.</span></li>
+        <li class="rev"><b>RN08</b><span>Os motoristas retornam ao galpão entre 17h e 18h com os volumes não entregues.</span></li>
+        <li class="rev"><b>RN09</b><span>Às 19h a planilha do dia é considerada fechada.</span></li>
+        <li class="rev"><b>RN10</b><span>O Financeiro calcula a cobrança dos clientes com base nos registros da planilha.</span></li>
+      </ul>
+
+      <h3 class="sl-sub">Arquitetura · C4</h3>
+      <div class="sl-two-ph">
+        <div class="sl-ph"><span class="sl-tag am">Em atualização</span><b>C4 · Contexto do sistema</b><p>O diagrama existente foi feito para o modelo anterior, com motorista e app mobile. A versão atualizada, com as transportadoras e sem app nativo obrigatório, ainda será produzida.</p></div>
+        <div class="sl-ph"><span class="sl-tag am">Em atualização</span><b>C4 · Contêineres</b><p>Mesma situação: o desenho precisa refletir o portal da transportadora, o registro assistido e a página de acompanhamento. Nenhuma arquitetura foi confirmada pelo grupo até aqui.</p></div>
+      </div>
+
+      <h3 class="sl-sub">Requisitos, priorização e backlog</h3>
+      <p class="jr-intro">A priorização abaixo é a <b>proposta do grupo, ainda em validação</b>, derivada do planejamento e do escopo do MVP.</p>
+      <div class="sl-moscow">
+        <div class="sl-box"><h3><span class="sl-ci" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span>Must · MVP</h3><ul><li>Cadastro de pedidos com validação</li><li>Atribuição automática</li><li>Atualização de status e comprovantes</li><li>Consulta do pedido pelo cliente</li></ul></div>
+        <div class="sl-box"><h3><span class="sl-ci a" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>Should</h3><ul><li>Registro assistido pela SEALog</li><li>Indicadores por transportadora</li><li>Conferência financeira simplificada</li></ul></div>
+        <div class="sl-box"><h3><span class="sl-ci" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></span>Fora do MVP</h3><ul><li>Roteirização otimizada</li><li>GPS em tempo real</li><li>Bot nativo no WhatsApp</li><li>Cobrança automatizada</li></ul></div>
+      </div>
+      <div class="sl-ph"><span class="sl-tag am">A adicionar</span><b>Backlog e quadro de tarefas (Jira)</b><p>Os prints do backlog e do quadro do grupo ainda não foram incluídos. O espaço fica reservado para quando o material estiver disponível.</p></div>
+    </section>
+
+    <!-- 07 -->
+    <section class="sl-sec sl-rv" id="sl-video" aria-labelledby="sl-vid">
+      <span class="cs-num">07 / Vídeo pitch</span>
+      <h2 id="sl-vid">A SEALog em 1 minuto e 45.</h2>
+      <p class="jr-intro">O vídeo resume o problema, a mudança de requisitos e a solução proposta, com as telas do protótipo. A narração é em português.</p>
+      <div class="sl-video">
+        <video controls preload="metadata" playsinline poster="sl/pitch-poster.jpg" aria-label="Vídeo pitch da SEALog, com 1 minuto e 45 segundos"><source src="sl/pitch.mp4" type="video/mp4">Seu navegador não reproduz este vídeo. <a href="sl/pitch.mp4">Baixe o arquivo.</a></video>
+      </div>
+      <p class="rb-note">Vídeo produzido pelo grupo para a apresentação do desafio. Os dados mostrados são ilustrativos.</p>
+    </section>
+
+    <!-- 08 -->
+    <section class="sl-sec sl-rv" aria-labelledby="sl-eu">
+      <span class="cs-num">08 / Minha contribuição</span>
+      <h2 id="sl-eu">O que eu fiz, dentro de um time.</h2>
+      <div class="sl-me">
+        <ol class="sl-me-list">
+          <li>UX/UI Design das interfaces</li>
+          <li>Wireframes e prototipação no Figma</li>
+          <li>Refinamento das telas, do design system e dos estados</li>
+          <li>Discussão dos fluxos e dos requisitos com o grupo</li>
+          <li>Adaptação da solução ao cenário das transportadoras</li>
+          <li>Colaboração nas decisões do projeto</li>
+        </ol>
+        <div class="sl-team"><b>Um projeto em equipe</b><p>A SEALog foi realizada em grupo, e as etapas de engenharia, como a modelagem de processos, os requisitos, o planejamento e a organização das tarefas, foram trabalhadas coletivamente. Aqui destaco a parte de design, que é onde atuei com mais profundidade.</p></div>
+      </div>
+    </section>
+
+    <!-- 09 -->
+    <section class="sl-sec sl-rv" aria-labelledby="sl-apr">
+      <span class="cs-num">09 / Aprendizados</span>
+      <h2 id="sl-apr">Entender antes de desenhar.</h2>
+      <ol class="sl-grid3">
+        <li class="sl-box"><span class="n">01</span><h3>O problema vem antes da tela</h3><p>Mapear o processo atual e as dores mostrou onde a interface realmente precisava ajudar. As telas só ficaram claras depois que o fluxo estava claro.</p></li>
+        <li class="sl-box"><span class="n">02</span><h3>Requisitos mudam, e tudo bem</h3><p>Trocar motoristas próprios por transportadoras alterou perfis, fluxos, telas e arquitetura. Documentar as decisões ajudou a adaptar a solução sem recomeçar do zero.</p></li>
+        <li class="sl-box"><span class="n">03</span><h3>Design é decisão de equipe</h3><p>Cada escolha de interface dependia de uma regra de negócio ou de uma restrição técnica. Discutir com o grupo evitou telas bonitas que não se sustentavam.</p></li>
+      </ol>
+    </section>
+
+    <!-- final -->
+    <section class="cs-final glass sl-final">
+      <div class="final-logo sl-final-logo" aria-hidden="true"><span class="fl-ring"></span><span class="fl-tile"><img src="sl/mark-white.png" width="400" height="176" alt=""></span><svg class="spark fs1" viewBox="0 0 100 100" aria-hidden="true"><use href="#star4"/></svg><svg class="spark fs2" viewBox="0 0 100 100" aria-hidden="true"><use href="#star4"/></svg></div>
+      <span class="cs-num">Encerramento</span>
+      <h2 class="chrome"><span>Cada entrega</span> <span>mais visível.</span></h2>
+      <p>A SEALog mostra como um problema operacional vira uma solução desenhada: do levantamento do processo à mudança de requisitos, passando por wireframes, design system e protótipo. É uma proposta, e este estudo de caso registra o raciocínio por trás dela.</p>
+      <div class="gh-btns sl-gh">
+        <a class="gh-btn" href="https://www.figma.com/design/YbVCH3qijUfjkSyuaG5E3y" target="_blank" rel="noopener noreferrer"><svg class="gh" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 2h3.5v6.5H8.5a3.25 3.25 0 0 1 0-6.5zM12 2h3.5a3.25 3.25 0 0 1 0 6.5H12zM8.5 8.5H12V15H8.5a3.25 3.25 0 0 1 0-6.5zM15.5 8.5a3.25 3.25 0 1 1 0 6.5 3.25 3.25 0 0 1 0-6.5zM8.5 15H12v3.25A3.25 3.25 0 1 1 8.5 15z"/></svg><span><b>Ver protótipo no Figma</b><small>Design system · alta fidelidade</small></span><i aria-hidden="true">↗</i><span class="sr-only"> (abre em nova aba)</span></a>
+        <a class="gh-btn" href="https://github.com/agatagio/SEALog" target="_blank" rel="noopener noreferrer"><svg class="gh" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg><span><b>Ver a documentação no GitHub</b><small>Planejamento · BPMN · wireframes</small></span><i aria-hidden="true">↗</i><span class="sr-only"> (abre em nova aba)</span></a>
+        <a class="gh-btn" href="https://www.canva.com/d/2-EqGb8k5fzc2VK" target="_blank" rel="noopener noreferrer"><svg class="gh" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M3 3h18v13H3zM5 5v9h14V5zM9 18h6v2H9z"/></svg><span><b>Ver a apresentação no Canva</b><small>Slides do pitch</small></span><i aria-hidden="true">↗</i><span class="sr-only"> (abre em nova aba)</span></a>
+      </div>
+      <div class="ctas"><a class="btn quiet" href="#projetos">← Voltar aos projetos</a><a class="btn quiet" href="#monitube">Próximo: MoniTube →</a></div>
+    </section>
+  </main>
+
   <footer>
     <span>© 2026 Ágata · UX/UI Designer</span>
     <a href="#" id="to-top" style="text-decoration:none">Voltar ao topo ↑</a>
@@ -3641,7 +4227,7 @@ document.getElementById('copy').addEventListener('click', function(){
 var FIGMA_URL = 'https://www.figma.com/design/ispd7fMVEUdLTqyocDwiTz/aprende-?node-id=1-2&p=f&t=32l1nICiw6KGFsgR-0'; // cole aqui o link do protótipo no Figma
 (function(){
   var home = document.getElementById('home'), baseTitle = document.title;
-  var cases = { 'aprende-plus': [document.getElementById('case-aprende'), 'Aprende+ · Ágata'], 'regulariza-br': [document.getElementById('case-regulariza'), 'Regulariza BR · Ágata'], 'cinova': [document.getElementById('case-cinova'), 'CINOVA · Ágata'], 'cintegre': [document.getElementById('case-cintegre'), 'CIntegre+ · Ágata'], 'monitube': [document.getElementById('case-monitube'), 'MoniTube · Ágata'] };
+  var cases = { 'aprende-plus': [document.getElementById('case-aprende'), 'Aprende+ · Ágata'], 'regulariza-br': [document.getElementById('case-regulariza'), 'Regulariza BR · Ágata'], 'cinova': [document.getElementById('case-cinova'), 'CINOVA · Ágata'], 'cintegre': [document.getElementById('case-cintegre'), 'CIntegre+ · Ágata'], 'monitube': [document.getElementById('case-monitube'), 'MoniTube · Ágata'], 'sealog': [document.getElementById('case-sealog'), 'SEALog · Ágata'] };
   var fb = document.getElementById('figma-btn');
   if(FIGMA_URL){ fb.href = FIGMA_URL; } else { fb.setAttribute('aria-disabled','true'); fb.removeAttribute('href'); fb.textContent = 'Protótipo no Figma · em breve'; }
   function route(){
@@ -3980,6 +4566,55 @@ document.querySelectorAll('.cr').forEach(function(root){
   document.documentElement.classList.add('mt-rv-on');
   var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ io.unobserve(e.target); e.target.classList.add('in'); } }); }, { rootMargin:'0px 0px -10% 0px', threshold:.05 });
   root.querySelectorAll('.mt-rv').forEach(function(s){ io.observe(s); });
+})();
+
+// SEALog: abas de funcionalidades, comparador wireframe × tela final, trilho de telas e entrada das seções
+(function(){
+  var root = document.getElementById('case-sealog'); if(!root) return;
+  var sfx = function(n){ if(window.__sfx && window.__sfx[n]) window.__sfx[n](); };
+  var calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // pular para uma seção
+  root.querySelectorAll('[data-jump]').forEach(function(b){ b.addEventListener('click', function(){ var t = document.getElementById(b.dataset.jump); if(t) t.scrollIntoView({behavior: calm ? 'auto' : 'smooth', block:'start'}); }); });
+  // funcionalidades
+  var tabs = [].slice.call(root.querySelectorAll('.sl-tab')), panels = [].slice.call(root.querySelectorAll('.sl-panel'));
+  function go(i, focus){
+    if(tabs[i].getAttribute('aria-selected') === 'true') return;
+    tabs.forEach(function(t, k){ t.setAttribute('aria-selected', k === i ? 'true' : 'false'); t.tabIndex = k === i ? 0 : -1; panels[k].hidden = k !== i; });
+    if(focus){ tabs[i].focus(); tabs[i].scrollIntoView({block:'nearest', inline:'nearest'}); }
+    sfx('swoosh');
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ go(i); });
+    t.addEventListener('keydown', function(e){
+      var n = tabs.length, k = null;
+      if(e.key === 'ArrowDown' || e.key === 'ArrowRight') k = (i + 1) % n;
+      if(e.key === 'ArrowUp' || e.key === 'ArrowLeft') k = (i + n - 1) % n;
+      if(e.key === 'Home') k = 0; if(e.key === 'End') k = n - 1;
+      if(k !== null){ e.preventDefault(); go(k, true); }
+    });
+  });
+  // comparador
+  var box = root.querySelector('#sl-cmp'), range = box && box.querySelector('.sl-cmp-range');
+  if(box && range){
+    function setX(v){ box.style.setProperty('--x', v + '%'); }
+    range.addEventListener('input', function(){ setX(range.value); });
+    // pequena demonstração quando o comparador aparece pela primeira vez
+    if(!calm && window.IntersectionObserver){
+      var seen = new IntersectionObserver(function(es){ es.forEach(function(e){ if(!e.isIntersecting) return; seen.disconnect();
+        var t0 = performance.now();
+        (function step(now){ var k = Math.min((now - t0) / 1400, 1), v = 50 + 34 * Math.sin(k * Math.PI * 2) * (1 - k); setX(v); range.value = v; if(k < 1) requestAnimationFrame(step); else { setX(50); range.value = 50; } })(t0);
+      }); }, {threshold:.6});
+      seen.observe(box);
+    }
+  }
+  // trilho de telas
+  var rail = root.querySelector('.sl-rail');
+  root.querySelectorAll('.sl-rail-btn').forEach(function(b){ b.addEventListener('click', function(){ rail.scrollBy({left: rail.clientWidth * .8 * (+b.dataset.dir), behavior: calm ? 'auto' : 'smooth'}); }); });
+  // entrada das seções
+  if(calm || !window.IntersectionObserver) return;
+  document.documentElement.classList.add('sl-rv-on');
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ io.unobserve(e.target); e.target.classList.add('in'); } }); }, { rootMargin:'0px 0px -10% 0px', threshold:.05 });
+  root.querySelectorAll('.sl-rv').forEach(function(s){ io.observe(s); });
 })();
 
 // molduras de iPhone: --u = 1% da largura do aparelho, em px (o Safari às vezes erra a unidade cqw em painéis escondidos)
